@@ -1,7 +1,7 @@
 name: Docker Image CI
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" , "Alg1-4-Dockerization"]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:

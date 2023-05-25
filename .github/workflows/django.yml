@@ -27,7 +27,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Tests
-      # env:
+      env:
+          DJANGO_KEY: 69tgugtg%^fgJO&*&
       #   SECRET_KEY: 69tgugtg%^fgJO&*&
       #   DB_NAME: mydb
       #   DB_USER: userdb
@@ -37,5 +38,6 @@ jobs:
       #   TIME_ZONE: Africa/Bangui
       #   CACHE_KEY_PREFIX: Halo
       run: |
-        # python src/manage.py test
         python src/manage.py runserver
+
+#  python src/manage.py test

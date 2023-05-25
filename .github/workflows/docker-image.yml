@@ -4,6 +4,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 jobs:
   test_django:
     uses: SENG-499-Company2-B01/Algs1/.github/workflows/django.yml@main

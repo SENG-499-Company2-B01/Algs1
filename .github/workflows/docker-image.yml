@@ -1,13 +1,13 @@
 name: Docker Image CI
 on:
   push:
-    branches: [ "main" , "Alg1-4-Dockerization"]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
 jobs:
   test_django:
-    uses: SENG-499-Company2-B01/Algs1/.github/workflows/django.yml@Alg1-4-Dockerization
+    uses: SENG-499-Company2-B01/Algs1/.github/workflows/django.yml@main
   build:
     runs-on: ubuntu-latest
     needs: [test_django]

@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  algs1:
+    image: algs1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: ["sh", "-c", "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 src/manage.py runserver 0.0.0.0:8017 --nothreading --noreload"]
+    ports:
+      - 8017:8017
+      - 5678:5678

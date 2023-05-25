@@ -20,3 +20,11 @@ Once venv is created on Algs1 directory, we can go ahead to install the required
 # to run
 > python3 manage.py runserver
 ```
+
+
+# Docker compose
+to run container
+
+```sh
+> docker compose up
+```

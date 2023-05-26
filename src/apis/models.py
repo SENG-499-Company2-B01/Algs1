@@ -3,7 +3,6 @@
 # Create your models here.
 
 class Course:
-
 	def __init__(self,
 			course_name: str,
 			course_size: int = 0,
@@ -31,6 +30,8 @@ class Course:
 		self.coreqs = coreqs
 		self.core = core
 
+
+	# Directly change any field (except course name)
 	def changeInfo(
 			course_size: int = None,
 			session: str = None,
@@ -76,6 +77,7 @@ class Course:
 	def addCoreq(new_coreq: str):
 		self.coreqs.append(new_coreq)
 
+	# Gets a dictionary containing information the scheduler needs to output
 	def getOutputDict(self):
 		out = {
 			'Course': self.course_name,
@@ -89,6 +91,9 @@ class Course:
 		}
 		return out
 
+	# Copies course details to a different term
+	# Use case: courses that are run by the same prof multiple semesters
+	# returns the new Course object
 	def cloneToSession(self, new_session: str):
 		if new_session == self.session:
 			return None
@@ -106,6 +111,9 @@ class Course:
 			core = self.core
 			)
 
+	# Adds another section for the same course.
+	# Increments the section number if none is provided
+	# same_info: copies the same info, used for lectures split into sections but still at the same time/room
 	def addSection(self,
 			new_section: str = None,
 			same_info = False #,

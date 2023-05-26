@@ -1,6 +1,6 @@
 import json
 
-from Course import Course
+from models import Course
 
 '''
   "courses": {
@@ -43,7 +43,7 @@ def scheduler(input_data):
 
 
 
-def response(input_sessions, courses: list)
+def response(input_sessions, courses: list):
 	sessions = {s:[] for s in input_sessions}
 	for c in courses:
 		sessions[c.getSession()].append(c.getOutputDict())

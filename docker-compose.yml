@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  algs1:
+    image: algs1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8017:8017

@@ -1,3 +1,7 @@
+#from django.db import models
+
+# Create your models here.
+
 class Course:
 
 	def __init__(self,
@@ -126,3 +130,4 @@ class Course:
 				)
 		
 		return Course(course_name = self.course_name, session = self.session, section = new_section, core = self.core)
+

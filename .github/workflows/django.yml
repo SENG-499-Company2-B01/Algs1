@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+  workflow_call:
   
 jobs:
   build:
@@ -14,7 +15,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8, 3.9, 3.10, 3.11]
+        python-version: ['3.8', '3.9', '3.10', '3.11']
 
     steps:
     - uses: actions/checkout@v3
@@ -27,5 +28,17 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Tests
+      env:
+          DJANGO_KEY: 69tgugtg%^fgJO&*&
+      #   SECRET_KEY: 69tgugtg%^fgJO&*&
+      #   DB_NAME: mydb
+      #   DB_USER: userdb
+      #   DB_PASSWORD: password
+      #   DJANGO_ALLOWED_HOSTS: localhost 127.0.0.1 [::1]
+      #   DEBUG_MODE: False
+      #   TIME_ZONE: Africa/Bangui
+      #   CACHE_KEY_PREFIX: Halo
       run: |
-        python manage.py test
+        python src/manage.py test
+
+#  python src/manage.py runserver

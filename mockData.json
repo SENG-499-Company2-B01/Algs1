@@ -1,0 +1,47 @@
+{
+    "courses": [
+        {
+            "course": "CSC 105",
+            "term": {
+                "winter": false,
+                "spring": true,
+                "summer": true
+            },
+            "enrollment": 40,
+            "prereqs": [
+                [ "CSC 115", "CSC 116" ],
+                [ "MATH 122"]
+            ],
+            "Coreqs": [
+                ["CSC 330"]
+            ]
+        },
+        {
+            "course": "CSC 120",
+            "term": {
+                "winter": true,
+                "spring": false,
+                "summer": false
+            },
+            "enrollment": 100,
+            "prereqs": [
+            ],
+            "Coreqs": [
+            ]
+        },
+        {
+            "course": "SENG 474",
+            "term": {
+                "winter": true,
+                "spring": true,
+                "summer": true
+            },
+            "enrollment": 40,
+            "prereqs": [
+                [ "CSC 120", "CSC 105" ]
+            ],
+            "Coreqs": [
+            ]
+        }
+    ]
+}

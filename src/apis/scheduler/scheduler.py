@@ -1,6 +1,7 @@
 import json
+import sys
 
-from models import Course
+from src.apis.models import Course
 
 # Takes json as input, schedules the courses, and returns schedules for the input data
 # Arguments:
@@ -10,15 +11,17 @@ def scheduler(input_data):
 	#parsing input_data (json)
 	data = json.loads(input_data)
 	courses = []
-	sessions = data["courses"][0]["Term"].keys() # getting list of sessions from input data
+	sessions = data["courses"][0]["term"].keys() # getting list of sessions from input data
+
+	# reading course information into course objects
 	for c in data["courses"]:
-		for t,b in c["Term"].items():
+		for t,b in c["term"].items():
 			if b:
-				course = Course(course_name = c["Course"], 
-					course_size = c["Capacity"], 
+				course = Course(course_name = c["course"], 
+					course_size = c["enrollment"], 
 					session = t, 
-					prereqs = c["Prereqs"], 
-					coreqs = c["Coreqs"])
+					prereqs = c["prereqs"], 
+					coreqs = c["coreqs"])
 				courses.append(course)
 
 	# Scheduling Algorithm here
@@ -42,7 +45,14 @@ def response(input_sessions: list, courses: list):
 
 
 def main():
-	pass
+	if len(sys.argv) < 2:
+		print("Usage: python scheduler.py path/to/input_data.json")
+		exit()
+	with open(sys.argv[1], 'r') as f:
+		input_data = f.read()
+
+	with open("test_output.json", 'w') as fo:
+		fo.write(scheduler(input_data))
 
 if __name__ == '__main__':
 	main()

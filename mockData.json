@@ -12,7 +12,7 @@
                 [ "CSC 115", "CSC 116" ],
                 [ "MATH 122"]
             ],
-            "Coreqs": [
+            "coreqs": [
                 ["CSC 330"]
             ]
         },
@@ -26,7 +26,7 @@
             "enrollment": 100,
             "prereqs": [
             ],
-            "Coreqs": [
+            "coreqs": [
             ]
         },
         {
@@ -40,7 +40,7 @@
             "prereqs": [
                 [ "CSC 120", "CSC 105" ]
             ],
-            "Coreqs": [
+            "coreqs": [
             ]
         }
     ]

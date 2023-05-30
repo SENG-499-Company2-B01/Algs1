@@ -93,12 +93,12 @@ class Course:
 			coreqs: list = None,
 			core: bool = None
 		):
-		if new_course_size:
-			self.course_size = new_course_size
-		if new_session:
-			self.session = new_session
-		if new_section:
-			self.section = new_section
+		if course_size is not None:
+			self.course_size = course_size
+		if session is not None:
+			self.session = session
+		if section is not None:
+			self.section = section
 		if prof is not None:
 			self.prof = prof
 		if times is not None:

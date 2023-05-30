@@ -39,6 +39,6 @@ jobs:
       #   TIME_ZONE: Africa/Bangui
       #   CACHE_KEY_PREFIX: Halo
       run: |
-        python src/manage.py test
-
+        python pytest
+#  python src/manage.py test
 #  python src/manage.py runserver

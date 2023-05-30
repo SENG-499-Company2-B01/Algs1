@@ -31,49 +31,49 @@ class Course:
 		self.coreqs = coreqs
 		self.core = core
 
-	def changeInfo(
-			course_size: int = None,
-			session: str = None,
-			section: str = None,
-			prof: str = None,
-			start_time: str = None,
-			end_time: str = None,
-			days: str = None,
-			classroom: str = None,
-			prereqs: list = None,
-			coreqs: list = None,
-			core: bool = None
+	def changeInfo(self,
+			new_course_size = None,
+			new_session: str = '',
+			new_section: str = '',
+			new_prof: str = '',
+			new_start_time: str = '',
+			new_end_time: str = '',
+			new_days: str = '',
+			new_classroom: str = '',
+			new_prereqs: list = [],
+			new_coreqs: list = [],
+			new_core = None
 		):
-		if course_size is not None:
-			self.course_size = course_size
-		if session is not None:
-			self.session = session
-		if section is not None:
+		if new_course_size:
+			self.course_size = new_course_size
+		if new_session:
+			self.session = new_session
+		if new_section:
 			self.section = new_section
-		if prof is not None:
-			self.prof = prof
-		if start_time is not None:
-			self.start_time = start_time
-		if end_time is not None:
-			self.end_time = end_time
-		if days is not None:
-			self.days = days
-		if classroom is not None:
-			self.classroom = classroom
-		if prereqs is not None:
-			self.prereqs = prereqs
-		if coreqs is not None:
-			self.coreqs = coreqs
-		if core is not None:
-			self.core = core
+		if new_prof:
+			self.prof = new_prof
+		if new_start_time:
+			self.start_time = new_start_time
+		if new_end_time:
+			self.end_time = new_end_time
+		if new_days:
+			self.days = new_days
+		if new_classroom:
+			self.classroom = new_classroom
+		if new_prereqs:
+			self.prereqs = new_prereqs
+		if new_coreqs:
+			self.coreqs = new_coreqs
+		if new_core:
+			self.core = new_core
 
 	def getSession(self):
 		return self.session
 
-	def addPrereq(new_prereq: str):
+	def addPrereq(self, new_prereq: str):
 		self.prereqs.append(new_prereq)
 
-	def addCoreq(new_coreq: str):
+	def addCoreq(self, new_coreq: str):
 		self.coreqs.append(new_coreq)
 
 	def getOutputDict(self):
@@ -107,12 +107,12 @@ class Course:
 			)
 
 	def addSection(self,
-			new_section: str = None,
+			new_section: str,
 			same_info = False #,
 		):
 
 		if not new_section:
-			new_section = self.section[0] + format(int(section[1:]) + 1, '02d')
+			new_section = self.section[0] + format(int(self.section[1:]) + 1, '02d')
 		if same_info:
 			return Course(
 				course_name = self.course_name,
@@ -130,4 +130,3 @@ class Course:
 				)
 		
 		return Course(course_name = self.course_name, session = self.session, section = new_section, core = self.core)
-

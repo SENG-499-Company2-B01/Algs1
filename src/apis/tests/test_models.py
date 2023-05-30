@@ -37,8 +37,8 @@ def test_change_courseInfo():
 	assert course.prereqs == ["CSC 110", "CSC 120"]
 	assert course.coreqs == ["SENG 250"]
 	assert course.core == True
-# Test2: Test for getSession
 
+# Test2: Test for getSession
 def test_getSession():
 	course = models.Course("SENG 275", 300, "FALL", "A01", "Prof", "9:00", "10:00", "MWF", "CAB 269", ["CSC 110"], ["SENG 250"], False)
 	assert course.getSession() == "FALL"

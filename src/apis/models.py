@@ -2,6 +2,60 @@
 
 # Create your models here.
 
+class TimeBlock:
+	def __init__(self,
+			label: str,
+			M_start_time: str = None,
+			M_end_time: str = None,
+			T_start_time: str = None,
+			T_end_time: str = None,
+			W_start_time: str = None,
+			W_end_time: str = None,
+			H_start_time: str = None,
+			H_end_time: str = None,
+			F_start_time: str = None,
+			F_end_time: str = None):
+		self.label = label
+		self.days = {
+			"M": None,
+			"T": None,
+			"W": None,
+			"H": None,
+			"F": None
+		}
+		if M_start_time is not None and M_end_time is not None:
+			days["M"] = {"start": M_start_time, "end": M_end_time}
+		if T_start_time is not None and T_end_time is not None:
+			days["T"] = {"start": T_start_time, "end": T_end_time}
+		if W_start_time is not None and W_end_time is not None:
+			days["W"] = {"start": W_start_time, "end": W_end_time}
+		if H_start_time is not None and H_end_time is not None:
+			days["H"] = {"start": H_start_time, "end": H_end_time}
+		if F_start_time is not None and F_end_time is not None:
+			days["F"] = {"start": F_start_time, "end": F_end_time}
+
+	def changeTime(self, day, new_start: str = None, new_end: str = None):
+		if new_start is None or new_end is None:
+			self.days[day] = None
+		else:
+			self.days[day] = {"Start": new_start, "End": new_end}
+
+	def getOutputDict(self):
+		times = {}
+		for k,v in self.days.items():
+			if v is not None:
+				times[k] = v
+		return times
+
+	def getLabel(self):
+		return self.label
+
+def getBlock(blocks: list[TimeBlock], label: str):
+	for block in blocks:
+		if block.getLabel == label:
+			return block
+	return -1
+
 class Course:
 	def __init__(self,
 			course_name: str,
@@ -9,9 +63,7 @@ class Course:
 			session: str = "",
 			section: str = "A01",
 			prof: str = "", #maybe change to a prof object in the future
-			start_time: str = "",
-			end_time: str = "",
-			days: str = "", #maybe make a list?
+			times: TimeBlock = None,
 			classroom: str = "", #maybe change to a classroom object in the future
 			prereqs: list = [],
 			coreqs: list = [],
@@ -22,9 +74,7 @@ class Course:
 		self.session = session
 		self.section = section
 		self.prof = prof
-		self.start_time = start_time
-		self.end_time = end_time
-		self.days = days
+		self.times = None
 		self.classroom = classroom
 		self.prereqs = prereqs
 		self.coreqs = coreqs
@@ -37,9 +87,7 @@ class Course:
 			session: str = None,
 			section: str = None,
 			prof: str = None,
-			start_time: str = None,
-			end_time: str = None,
-			days: str = None,
+			times: TimeBlock = None,
 			classroom: str = None,
 			prereqs: list = None,
 			coreqs: list = None,
@@ -53,12 +101,8 @@ class Course:
 			self.section = new_section
 		if prof is not None:
 			self.prof = prof
-		if start_time is not None:
-			self.start_time = start_time
-		if end_time is not None:
-			self.end_time = end_time
-		if days is not None:
-			self.days = days
+		if times is not None:
+			self.times = times
 		if classroom is not None:
 			self.classroom = classroom
 		if prereqs is not None:
@@ -71,11 +115,13 @@ class Course:
 	def getSession(self):
 		return self.session
 
-	def addPrereq(new_prereq: str):
+	def addPrereq(self,new_prereq: str):
 		self.prereqs.append(new_prereq)
 
-	def addCoreq(new_coreq: str):
+	def addCoreq(self,new_coreq: str):
 		self.coreqs.append(new_coreq)
+
+
 
 	# Gets a dictionary containing information the scheduler needs to output
 	def getOutputDict(self):
@@ -83,9 +129,7 @@ class Course:
 			'Course': self.course_name,
 			'Section': self.section,
 			'Prof': self.prof,
-			'Start Time': self.start_time,
-			'End Time': self.end_time,
-			'Days': self.days,
+			'Times': self.times.getOutputDict() if self.times is not None else "",
 			'Class': self.classroom,
 			'Course Size': self.course_size
 		}
@@ -102,9 +146,7 @@ class Course:
 			course_size = self.course_size,
 			session = new_session,
 			prof = self.prof,
-			start_time = self.start_time,
-			end_time = self.end_time,
-			days = self.days,
+			times = self.times,
 			classroom = self.classroom,
 			prereqs = self.prereqs,
 			coreqs = self.coreqs,
@@ -128,9 +170,7 @@ class Course:
 				session = self.session,
 				section = new_section,
 				prof = self.prof,
-				start_time = self.start_time,
-				end_time = self.end_time,
-				days = self.days,
+				times = self.times,
 				classroom = self.classroom,
 				prereqs = self.prereqs,
 				coreqs = self.coreqs,

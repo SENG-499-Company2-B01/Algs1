@@ -82,7 +82,7 @@ class Course:
 
 
 	# Directly change any field (except course name)
-	def changeInfo(
+	def changeInfo(self,
 			course_size: int = None,
 			session: str = None,
 			section: str = None,

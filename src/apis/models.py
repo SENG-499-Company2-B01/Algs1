@@ -2,17 +2,68 @@
 
 # Create your models here.
 
-class Course:
+class TimeBlock:
+	def __init__(self,
+			label: str,
+			M_start_time: str = None,
+			M_end_time: str = None,
+			T_start_time: str = None,
+			T_end_time: str = None,
+			W_start_time: str = None,
+			W_end_time: str = None,
+			H_start_time: str = None,
+			H_end_time: str = None,
+			F_start_time: str = None,
+			F_end_time: str = None):
+		self.label = label
+		self.days = {
+			"M": None,
+			"T": None,
+			"W": None,
+			"H": None,
+			"F": None
+		}
+		if M_start_time is not None and M_end_time is not None:
+			days["M"] = {"start": M_start_time, "end": M_end_time}
+		if T_start_time is not None and T_end_time is not None:
+			days["T"] = {"start": T_start_time, "end": T_end_time}
+		if W_start_time is not None and W_end_time is not None:
+			days["W"] = {"start": W_start_time, "end": W_end_time}
+		if H_start_time is not None and H_end_time is not None:
+			days["H"] = {"start": H_start_time, "end": H_end_time}
+		if F_start_time is not None and F_end_time is not None:
+			days["F"] = {"start": F_start_time, "end": F_end_time}
 
+	def changeTime(self, day, new_start: str = None, new_end: str = None):
+		if new_start is None or new_end is None:
+			self.days[day] = None
+		else:
+			self.days[day] = {"Start": new_start, "End": new_end}
+
+	def getOutputDict(self):
+		times = {}
+		for k,v in self.days.items():
+			if v is not None:
+				times[k] = v
+		return times
+
+	def getLabel(self):
+		return self.label
+
+def getBlock(blocks: list[TimeBlock], label: str):
+	for block in blocks:
+		if block.getLabel == label:
+			return block
+	return -1
+
+class Course:
 	def __init__(self,
 			course_name: str,
 			course_size: int = 0,
 			session: str = "",
 			section: str = "A01",
 			prof: str = "", #maybe change to a prof object in the future
-			start_time: str = "",
-			end_time: str = "",
-			days: str = "", #maybe make a list?
+			times: TimeBlock = None,
 			classroom: str = "", #maybe change to a classroom object in the future
 			prereqs: list = [],
 			coreqs: list = [],
@@ -23,26 +74,24 @@ class Course:
 		self.session = session
 		self.section = section
 		self.prof = prof
-		self.start_time = start_time
-		self.end_time = end_time
-		self.days = days
+		self.times = None
 		self.classroom = classroom
 		self.prereqs = prereqs
 		self.coreqs = coreqs
 		self.core = core
 
+
+	# Directly change any field (except course name)
 	def changeInfo(self,
-			new_course_size = None,
-			new_session: str = '',
-			new_section: str = '',
-			new_prof: str = '',
-			new_start_time: str = '',
-			new_end_time: str = '',
-			new_days: str = '',
-			new_classroom: str = '',
-			new_prereqs: list = [],
-			new_coreqs: list = [],
-			new_core = None
+			course_size: int = None,
+			session: str = None,
+			section: str = None,
+			prof: str = None,
+			times: TimeBlock = None,
+			classroom: str = None,
+			prereqs: list = None,
+			coreqs: list = None,
+			core: bool = None
 		):
 		if new_course_size:
 			self.course_size = new_course_size
@@ -50,45 +99,45 @@ class Course:
 			self.session = new_session
 		if new_section:
 			self.section = new_section
-		if new_prof:
-			self.prof = new_prof
-		if new_start_time:
-			self.start_time = new_start_time
-		if new_end_time:
-			self.end_time = new_end_time
-		if new_days:
-			self.days = new_days
-		if new_classroom:
-			self.classroom = new_classroom
-		if new_prereqs:
-			self.prereqs = new_prereqs
-		if new_coreqs:
-			self.coreqs = new_coreqs
-		if new_core:
-			self.core = new_core
+		if prof is not None:
+			self.prof = prof
+		if times is not None:
+			self.times = times
+		if classroom is not None:
+			self.classroom = classroom
+		if prereqs is not None:
+			self.prereqs = prereqs
+		if coreqs is not None:
+			self.coreqs = coreqs
+		if core is not None:
+			self.core = core
 
 	def getSession(self):
 		return self.session
 
-	def addPrereq(self, new_prereq: str):
+	def addPrereq(self,new_prereq: str):
 		self.prereqs.append(new_prereq)
 
-	def addCoreq(self, new_coreq: str):
+	def addCoreq(self,new_coreq: str):
 		self.coreqs.append(new_coreq)
 
+
+
+	# Gets a dictionary containing information the scheduler needs to output
 	def getOutputDict(self):
 		out = {
 			'Course': self.course_name,
 			'Section': self.section,
 			'Prof': self.prof,
-			'Start Time': self.start_time,
-			'End Time': self.end_time,
-			'Days': self.days,
+			'Times': self.times.getOutputDict() if self.times is not None else "",
 			'Class': self.classroom,
 			'Course Size': self.course_size
 		}
 		return out
 
+	# Copies course details to a different term
+	# Use case: courses that are run by the same prof multiple semesters
+	# returns the new Course object
 	def cloneToSession(self, new_session: str):
 		if new_session == self.session:
 			return None
@@ -97,15 +146,16 @@ class Course:
 			course_size = self.course_size,
 			session = new_session,
 			prof = self.prof,
-			start_time = self.start_time,
-			end_time = self.end_time,
-			days = self.days,
+			times = self.times,
 			classroom = self.classroom,
 			prereqs = self.prereqs,
 			coreqs = self.coreqs,
 			core = self.core
 			)
 
+	# Adds another section for the same course.
+	# Increments the section number if none is provided
+	# same_info: copies the same info, used for lectures split into sections but still at the same time/room
 	def addSection(self,
 			new_section: str,
 			same_info = False #,
@@ -120,9 +170,7 @@ class Course:
 				session = self.session,
 				section = new_section,
 				prof = self.prof,
-				start_time = self.start_time,
-				end_time = self.end_time,
-				days = self.days,
+				times = self.times,
 				classroom = self.classroom,
 				prereqs = self.prereqs,
 				coreqs = self.coreqs,

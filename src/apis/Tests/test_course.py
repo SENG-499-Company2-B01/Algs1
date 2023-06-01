@@ -3,8 +3,23 @@ from unittest.mock import patch
 
 # Create your tests here.
 
+def test_course_init():
+	course = Course("SENG 275", 300, "FALL", "A01", "Prof", "9:00", "10:00", "MWF", "ECS 269", ["CSC 110"], ["SENG 250"], True)
+	assert course.course_name == "SENG 275"
+	assert course.course_size == 300
+	assert course.session == "FALL"
+	assert course.section == "A01"
+	assert course.prof == "Prof"
+	assert course.start_time == "9:00"
+	assert course.end_time == "10:00"
+	assert course.days == "MWF"
+	assert course.classroom == "ECS 269"
+	assert course.prereqs == ["CSC 110"]
+	assert course.coreqs == ["SENG 250"]
+	assert course.core == True
+
 # Test1: Test for ChangeInfo
-@patch(Course)
+@patch('apis.models.Course')
 def test_changeInfo(TestCourse):
     # Mock Model class object
     
@@ -49,8 +64,15 @@ def test_changeInfo(TestCourse):
     assert TestCourse.core is True
 
 # Test2: Test for getSession
+def test_getSession():
+	course = Course("SENG 275", 300, "FALL", "A01", "Prof", "9:00", "10:00", "MWF", "CAB 269", ["CSC 110"], ["SENG 250"], False)
+	assert course.getSession() == "FALL"
 
 # Test3: Test for addPrereq
+def test_addPrereq():
+	course = Course("SENG 275", 300, "FALL", "A01", "Prof", "9:00", "10:00", "MWF", "CAB 269", ["CSC 110"], ["SENG 250"], False)
+	course.addPrereq("CSC 120")
+	assert course.prereqs == ["CSC 110", "CSC 120"]
 
 # Test4: Test for addCoreq
 

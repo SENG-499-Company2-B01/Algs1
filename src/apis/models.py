@@ -74,7 +74,7 @@ class Course:
 		self.session = session
 		self.section = section
 		self.prof = prof
-		self.times = None
+		self.times = times
 		self.classroom = classroom
 		self.prereqs = prereqs
 		self.coreqs = coreqs

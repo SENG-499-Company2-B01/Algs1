@@ -24,15 +24,15 @@ class TimeBlock:
 			"F": None
 		}
 		if M_start_time is not None and M_end_time is not None:
-			days["M"] = {"start": M_start_time, "end": M_end_time}
+			self.days["M"] = {"start": M_start_time, "end": M_end_time}
 		if T_start_time is not None and T_end_time is not None:
-			days["T"] = {"start": T_start_time, "end": T_end_time}
+			self.days["T"] = {"start": T_start_time, "end": T_end_time}
 		if W_start_time is not None and W_end_time is not None:
-			days["W"] = {"start": W_start_time, "end": W_end_time}
+			self.days["W"] = {"start": W_start_time, "end": W_end_time}
 		if H_start_time is not None and H_end_time is not None:
-			days["H"] = {"start": H_start_time, "end": H_end_time}
+			self.days["H"] = {"start": H_start_time, "end": H_end_time}
 		if F_start_time is not None and F_end_time is not None:
-			days["F"] = {"start": F_start_time, "end": F_end_time}
+			self.days["F"] = {"start": F_start_time, "end": F_end_time}
 
 	def changeTime(self, day, new_start: str = None, new_end: str = None):
 		if new_start is None or new_end is None:

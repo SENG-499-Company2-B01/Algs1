@@ -1,5 +1,4 @@
 from .. import models
-from unittest.mock import patch
 
 # Create your tests here.
 

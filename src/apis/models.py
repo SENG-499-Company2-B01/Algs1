@@ -38,7 +38,7 @@ class TimeBlock:
 		if new_start is None or new_end is None:
 			self.days[day] = None
 		else:
-			self.days[day] = {"Start": new_start, "End": new_end}
+			self.days[day] = {"start": new_start, "end": new_end}
 
 	def getOutputDict(self):
 		times = {}
@@ -52,7 +52,7 @@ class TimeBlock:
 
 def getBlock(blocks: list[TimeBlock], label: str):
 	for block in blocks:
-		if block.getLabel == label:
+		if block.getLabel() == label:
 			return block
 	return -1
 

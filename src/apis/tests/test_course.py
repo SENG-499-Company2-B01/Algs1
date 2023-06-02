@@ -1,16 +1,16 @@
-from apis.models import Course, TimeBlock
+from .. import models
 from unittest.mock import patch
 
 # Create your tests here.
 
 def test_course_init():
-	course = Course( 
+	course = models.Course( 
 		course_name="SENG 275", 
 	    course_size= 300, 
 	    session="FALL", 
 	    section="A01", 
 	    prof="Prof", 
-	    times= TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
+	    times= models.TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
         classroom="ECS 269", 
 	    prereqs=["CSC 110"], 
 	    coreqs=["SENG 250"], 
@@ -32,16 +32,16 @@ def test_course_init():
 
 # Test1: Test for ChangeInfo
 def test_changeInfo():
-    course = Course(
+    course = models.Course(
 		course_name="SENG 275", 
 		course_size=300, session="FALL", 
 		section="A01", prof="Prof", 
-		times= TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
+		times= models.TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
 		classroom="CAB 269", 
 		prereqs=["CSC 110"], 
 		coreqs=["SENG 250"], 
 		core=False)
-    course.changeInfo(course_size = 350, section = "A02", times = TimeBlock("A", M_start_time="9:00", M_end_time="11:00"), classroom = "ECS 269", prereqs = ["CSC 110", "CSC 120"], core = True)
+    course.changeInfo(course_size = 350, section = "A02", times = models.TimeBlock("A", M_start_time="9:00", M_end_time="11:00"), classroom = "ECS 269", prereqs = ["CSC 110", "CSC 120"], core = True)
     assert course.course_name == "SENG 275"
     assert course.course_size == 350
     assert course.session == "FALL"
@@ -58,7 +58,7 @@ def test_changeInfo():
 
 # Test2: Test for getSession
 def test_getSession():
-	course = Course(
+	course = models.Course(
 		course_name="SENG 275", 
 	    course_size=300, 
 	    session="FALL", 
@@ -72,7 +72,7 @@ def test_getSession():
 
 # Test3: Test for addPrereq
 def test_addPrereq():
-	course = Course(
+	course = models.Course(
 		course_name="SENG 275", 
 	    course_size=300, 
 	    session="FALL", 
@@ -87,7 +87,7 @@ def test_addPrereq():
 
 # Test4: Test for addCoreq
 def test_addCoreq():
-	course = Course(
+	course = models.Course(
 		course_name="SENG 275", 
 	    course_size=300, 
 	    session="FALL", 
@@ -102,13 +102,13 @@ def test_addCoreq():
 
 # Test5: Test for getOutputDict
 def test_getOutputDict():
-	course = Course(
+	course = models.Course(
 		course_name="SENG 275", 
 	    course_size=300, 
 	    session="FALL", 
 	    section="A01",
 	    prof= "Prof",
-	    times= TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
+	    times= models.TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
 	    classroom="CAB 269", 
 	    prereqs=["CSC 110"], 
 	    coreqs=["SENG 250"], 
@@ -126,13 +126,13 @@ def test_getOutputDict():
 
 # Test6: Test for cloneToSession
 def test_cloneToSession():
-	courseToClone = Course(
+	courseToClone = models.Course(
 		course_name="SENG 275", 
 	    course_size=300, 
 	    session="FALL", 
 	    section="A01",
 	    prof= "Prof",
-	    times= TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
+	    times= models.TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
 	    classroom="CAB 269", 
 	    prereqs=["CSC 110"], 
 	    coreqs=["SENG 250"], 
@@ -150,13 +150,13 @@ def test_cloneToSession():
 
 # Test7: Test for addSection
 def test_addSection():
-	course = Course(
+	course = models.Course(
 		course_name="SENG 275", 
 	    course_size=300, 
 	    session="FALL", 
 	    section="A01",
 	    prof= "Prof",
-	    times= TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
+	    times= models.TimeBlock("A", M_start_time="9:00", M_end_time="10:00"), 
 	    classroom="CAB 269", 
 	    prereqs=["CSC 110"], 
 	    coreqs=["SENG 250"], 

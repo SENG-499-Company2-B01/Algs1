@@ -1,11 +1,11 @@
-from apis.models import Course, TimeBlock, getBlock
+from .. import models
 from unittest.mock import patch
 
 # Create your tests here.
 
 # Test1 init
 def test_timeblock_init():
-    timeBlock = TimeBlock(
+    timeBlock = models.TimeBlock(
         label="A",
         M_start_time="1:00",
         M_end_time="2:00",
@@ -29,7 +29,7 @@ def test_timeblock_init():
 
 # Test2 changeTime
 def test_changeTime():
-    timeBlock = TimeBlock(
+    timeBlock = models.TimeBlock(
         label="A",
         M_start_time="1:00",
         M_end_time="2:00",
@@ -62,7 +62,7 @@ def test_changeTime():
 
 # Test3 getOutputDict
 def test_getOutputDict():
-    timeBlock = TimeBlock(
+    timeBlock = models.TimeBlock(
         label="A",
         M_start_time="1:00",
         M_end_time="2:00",
@@ -85,7 +85,7 @@ def test_getOutputDict():
 
 # Test4 getLabel
 def test_getLabel():
-    timeBlock = TimeBlock(
+    timeBlock = models.TimeBlock(
         label="A",
         M_start_time="1:00",
         M_end_time="2:00",
@@ -104,11 +104,11 @@ def test_getLabel():
 # Test5 getBlock
 def test_getBlock():
     timeBlockLists = [
-        TimeBlock("A"),
-        TimeBlock("B"),
-        TimeBlock("C")
+        models.TimeBlock("A"),
+        models.TimeBlock("B"),
+        models.TimeBlock("C")
     ]
-    result = getBlock(timeBlockLists, "A")
+    result = models.getBlock(timeBlockLists, "A")
     assert result.getLabel() == "A"
-    result = getBlock(timeBlockLists, "N")
+    result = models.getBlock(timeBlockLists, "N")
     assert result == -1

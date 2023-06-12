@@ -21,6 +21,11 @@ Once venv is created on Algs1 directory, we can go ahead to install the required
 > python3 manage.py runserver
 ```
 
+To run test suite, change directory to src folder and execute command 'pytest'
+
+```
+> pytest
+```
 
 # Docker compose
 to run container

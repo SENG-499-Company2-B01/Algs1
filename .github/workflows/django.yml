@@ -2,9 +2,9 @@ name: Django CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
   workflow_dispatch:
   workflow_call:
   
@@ -15,7 +15,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11']
+        python-version: ['3.9', '3.10', '3.11']
 
     steps:
     - uses: actions/checkout@v3
@@ -39,6 +39,6 @@ jobs:
       #   TIME_ZONE: Africa/Bangui
       #   CACHE_KEY_PREFIX: Halo
       run: |
-        python src/manage.py test
-
+        pytest
+#  python src/manage.py test
 #  python src/manage.py runserver

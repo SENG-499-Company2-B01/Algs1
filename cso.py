@@ -1,6 +1,7 @@
 
 import random
 import datetime
+import math
 
 #declarations of file names
 fp = None
@@ -173,7 +174,7 @@ def check_wrong_coteaching(to_file,
 		fp3.write(f"Cost wrong co-teaching is {cost}")
 	return cost
 
-def swap(a:list, class1: int, timeslow1: int, timeslot2: int):
+def swap(a:list, class1: int, timeslot1: int, timeslot2: int):
 	temp = a[class1][timeslot1]
 	a[class1][timeslot1] = a[class1][timeslot2]
 	a[class1][timeslot2] = temp
@@ -324,3 +325,14 @@ def check_teachers_empty_periods(to_file: int,
 def calculate_ideal_teacher_dispersion(teacher11: int, total_hours1: int):
 	return 7 * total_hours1 / float(teachers[teacher11].availability_hours)
 
+def calculate_floor_ceil_number(floor_no: int, ceil_no: int, teacher11: int, total_hours1: int) -> int
+	ideal = calculate_ideal_teacher_dispersion(teacher11, total_hours1)
+	floor1 = math.floor(ideal)
+	ceil_no = total_hours1 % teachers[teacher11].availability_days
+
+	if floor1 == 0:
+		floor_no = 0
+	else:
+		floor_no = teachers[teacher11].availability_days - ceil_no
+	
+	return 1

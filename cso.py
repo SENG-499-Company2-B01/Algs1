@@ -62,7 +62,7 @@ class teacher_record:
 			total_hours: int = 0,
 			remaining_hours: int = 0,
 			availability_hours: int = 0,
-			availability_days: int = 0,
+			available_days: int = 0,
 			is_available_at_day: list = [1,1,1,1,1],
 			unavailable_timeslots: list = [1 for i in range(numSlots)],
 			classes_he_teaches: list = [[0 for i in range(3)] for j in range(classes_no1)],
@@ -74,7 +74,7 @@ class teacher_record:
 		self.total_hours = total_hours
 		self.remaining_hours = remaining_hours
 		self.availability_hours = availability_hours
-		self.availability_days = availability_days
+		self.available_days = available_days
 		self.is_available_at_day = is_available_at_day
 		self.unavailable_timeslots = unavailable_timeslots
 		self.classes_he_teaches = classes_he_teaches
@@ -328,12 +328,12 @@ def calculate_ideal_teacher_dispersion(teacher11: int, total_hours1: int):
 def calculate_floor_ceil_number(floor_no: int, ceil_no: int, teacher11: int, total_hours1: int) -> int:
 	ideal = calculate_ideal_teacher_dispersion(teacher11, total_hours1)
 	floor1 = math.floor(ideal)
-	ceil_no = total_hours1 % teachers[teacher11].availability_days
+	ceil_no = total_hours1 % teachers[teacher11].available_days
 
 	if floor1 == 0:
 		floor_no = 0
 	else:
-		floor_no = teachers[teacher11].availability_days - ceil_no
+		floor_no = teachers[teacher11].available_days - ceil_no
 	
 	return 1
 

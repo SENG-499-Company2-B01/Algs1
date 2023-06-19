@@ -549,6 +549,69 @@ def check_classes_dispersion(to_file: int, begin: int, end: int, a: list, number
 		print("\nThe classes with  wrong dispersion are %d. The days it occurs are %d\n", violation_cases, total_problem_days, file=open('fp3', 'a'))
 		print("\nWrong class dispersion cost is %.12f\n", total_cost, file=open('fp3', 'a'))
 	
+	return total_cost	
+
+def check_parallel_teaching(to_file: int,
+		mode: int,
+		start: int,
+		end: int,
+		a: list,
+		number_of_teachers1: int,
+		number_of_classes1: int,
+		show_results: int): #checks if there are parallel teachings and returns the relevant cost
+	number_of_cases = 0
+	cost = 0.0
+
+	if mode == 0:
+		for i in range(number_of_teachers1):
+			for t in range(start,end):
+				parallel_teaching = 0
+				for j in range(number_of_classes1):
+					if a[j][t] == i:
+						parallel_teaching += 1
+				if parallel_teaching > 1:
+					number_of_cases += 1
+					cost += HWC*pow(BASE,parallel_teaching - 1)
+
+		if show_results == 1:
+			print(f"Total cases of teacher parallel teaching are {number_of_cases}")
+		if to_file == 33:
+			fp3.write(f"Total cases of teacher parallel teaching is {number_of_cases}")
+		return cost
+
+	for i in range(number_of_teachers1):
+		for t in range(start,end):
+			parallel_teaching = 0
+
+			for j in range(number_of_classes1):
+				if teachers[i].kind == 0:
+					if a[j][t] == i:
+						parallel_teaching += 1
+					else:
+						co_class1 = co_class[j][i]
+						if co_class1 == j:
+							co_teacher1 = co_teacher[i][co_class1]
+						else:
+							co_teacher1 = 2015
+						if co_teacher1 < 0:
+							if a[j][t] == i:
+								parallel_teaching += 1
+							else:
+								if a[j][t] == i or a[j][t] == co_teacher1:
+									parallel_teaching += 1
+
+			if parallel_teaching > 1:
+				number_of_cases += 1
+				cost += HCW * pow(BASE,parallel_teaching - 1)
+
+	if show_results == 1:
+	print(f"Total cases of teacher parallel teaching are {number_of_cases}")
+	if to_file == 33:
+		fp3.write(f"Total cases of teacher parallel teaching is {number_of_cases}")
+		fp3.write(f"Parallel teaching cost is {cost}")
+	return cost
+
+
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):

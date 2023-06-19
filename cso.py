@@ -880,6 +880,7 @@ def check_hard_constraints(mode, start, end, a, number_of_teachers, number_of_cl
 	a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
 	return a1 + a2 + a3 + a4 + a4
 
+# locates the data of a co-teaching
 def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass: int, locate_coteacher: int, number_of_teachers1: int):
 	t, z, class1, class2: int
 	locate_coteacher = -2

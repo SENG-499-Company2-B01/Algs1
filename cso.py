@@ -534,3 +534,27 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 		for i in range(SMP):
 			if (tmp1 <= sel_prob[i]):
 				copy_matrices(0, 35, x, cat_copy[i], classes_no)
+
+
+def cat_trace(x: list, classes_no: int): #cat trace procedure
+	similarity = 0
+	distance = 0
+	sl = [0 for i in range(classes_no * 35)]
+
+	for k in range(classes_no):
+		for j in range(35):
+			if x[k][j] == global_best[k][j]:
+				similarity += 1
+
+	distance = (classes_no * 35) - similarity
+
+	#cells_to_swap = round_num((randd(0.0, 1.0)*float(distance))
+
+	unique_randint(s1,0,classes_no*35,cells_to_swap)
+
+	for k in range(cells_to_swap):
+		cn = math.floor(sl[k]/35)
+		tt1 = sl[k] % 35
+		tt2 = randint(0,34)
+
+		single_swap(x, tt1, tt2, cn ,classes_no)

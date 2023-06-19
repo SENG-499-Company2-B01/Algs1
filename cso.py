@@ -325,7 +325,7 @@ def check_teachers_empty_periods(to_file: int,
 def calculate_ideal_teacher_dispersion(teacher11: int, total_hours1: int):
 	return 7 * total_hours1 / float(teachers[teacher11].availability_hours)
 
-def calculate_floor_ceil_number(floor_no: int, ceil_no: int, teacher11: int, total_hours1: int) -> int
+def calculate_floor_ceil_number(floor_no: int, ceil_no: int, teacher11: int, total_hours1: int) -> int:
 	ideal = calculate_ideal_teacher_dispersion(teacher11, total_hours1)
 	floor1 = math.floor(ideal)
 	ceil_no = total_hours1 % teachers[teacher11].available_days
@@ -337,11 +337,218 @@ def calculate_floor_ceil_number(floor_no: int, ceil_no: int, teacher11: int, tot
 	
 	return 1
 
+# returns the total number (including co-teachings) of teaching hours of teacher
+def find_implied_and_actual_hours_of_teacher(teacher1: int, number_of_teachers1: int):
+	implied_hours_of_teacher = 0
+
+	if teachers[teacher1].kind == 0:
+		return teachers[teacher1].total_hours
+	
+	for t in range(0, number_of_teachers1):
+		if teachers[t].count_of_coteachers == 0:
+			continue
+		for z in range(0, teachers[t].count_of_coteachers):
+			if ((teachers[t].coteachings[z][0] == teacher1) and (teachers[t].coteachings[z][3] == teachers[t].coteachings[z][4])):
+				class1 = teachers[t].coteachings[z][3]
+
+				for c in range(0, teachers[teacher1].num_of_classes):
+					class2 = teachers[teacher1].classes_he_teaches[c][0]
+
+					if ((teachers[teacher1].classes_he_teaches[c][1] == 0) and (class2 == class1)):
+						implied_hours_of_teacher = implied_hours_of_teacher + teachers[t].coteachings[z][1]
+
+	teachers[teacher1].total_hours = teachers[teacher1].total_hours + implied_hours_of_teacher
+
+	return teachers[teacher1].total_hours
+
+def check_teachers_dispersion(to_file: int, begin: int, end: int, a: list, number_of_teachers1: int, IDTW: float, show_results: int):# checks the dispersion of teaching hours of the teacher and returns the relevant cost
+	start = 0
+	ceil_no = 0
+	floor_no = 0
+	absolute_error = 0.0
+	total_cost = 0.0
+	totalNumberOfWrongTeachers = 0
+	total_fault_days = 0
+	actualDistTable = []
+	idealDistrTable = []
+
+	for i in range(0, number_of_teachers1):
+		absolute_error = 0.0
+		ideal = calculate_ideal_teacher_dispersion(i, teachers[i].total_hours)
+		calculate_floor_ceil_number(floor_no, ceil_no, i, teachers[i].total_hours)
+
+		for start in range(begin, end, 7):
+			hours_per_day = 0
+
+			for j in range(0, teachers[i].num_of_classes):
+				hours_per_day_of_class = 0
+				class1 = teachers[i].classes_he_teaches[j][0]
+				co_class1 = co_class[class1][i]
+
+				if co_class1 == class1:
+					co_teacher1 = co_teacher[i][co_class1]
+				else:
+					co_teacher1 = 2015
+
+				for t in range(start, start + 7):
+					if teachers[i].kind == 0:
+						if a[class1][t] == i:
+							hours_per_day_of_class = hours_per_day_of_class + 1
+					else:
+						if co_teacher1 < 0:
+							if a[class1][t] == i:
+								hours_per_day_of_class = hours_per_day_of_class + 1
+
+						else:
+							if a[class1][t] == co_teacher1 or a[class1][t] == i:
+								hours_per_day_of_class = hours_per_day_of_class + 1
+
+				hours_per_day = hours_per_day + hours_per_day_of_class
+
+			actualDistTable[start / 7] = hours_per_day	
+
+		for j in range(0, 5):
+			if teachers[i].is_available_at_day[j] == -1:
+				idealDistrTable[j] = -1
+				continue
+			else:
+				if floor_no > 0:
+					idealDistrTable[j] = math.floor(ideal)
+					floor_no = floor_no - 1
+					continue
+				if ceil_no > 0:
+					idealDistrTable[j] = math.ceil(ideal)
+					ceil_no = ceil_no - 1
+					continue
+				if floor_no == 0 and ceil_no == 0:
+					idealDistrTable[j] = 0
+					continue
+		
+		for ii in range(0, 5):
+			for j in range(0, 5):
+				if actualDistTable[ii] == 0 and idealDistrTable[j] == -1 and ii == j:
+					actualDistTable[ii] = -2
+					idealDistrTable[j] = -2
+					break
+				if actualDistTable[ii] == idealDistrTable[j]:
+					actualDistTable[ii] = -2
+					idealDistrTable[j] = -2
+					break
+		
+		faultDays = 0
+		for ii in range(0, 5):
+			if actualDistTable[ii] == -2:
+				continue
+			diff1 = 50
+			diff2 = 100
+
+			index = -1
+			for j in range(0, 5):
+				if idealDistrTable[j] == -2:
+					continue
+				if idealDistrTable[j] == -1:
+					idealDistrTable[j] = 0
+				diff2 = abs(actualDistTable[ii] - idealDistrTable[j])
+				if diff2 < diff1:
+					diff1 = diff2
+					index = j
+			
+			if diff1 != 0:
+				absolute_error = absolute_error + diff1
+				faultDays = faultDays + 1
+				idealDistrTable[index] = -2
+
+		if faultDays > 0:
+			cost = absolute_error * pow(BASE, float(faultDays))
+			total_fault_days = total_fault_days + faultDays
+			total_cost = total_cost + cost
+			totalNumberOfWrongTeachers = totalNumberOfWrongTeachers + 1
+
+			if show_results == 1:
+				print("\nTeacher %s has %d days with wrong dispersion\n", teachers[i].surname, faultDays)
+				print("-----------------------------------------------------------------------------\n")
+			
+			if to_file == 33:
+				print("\nTeacher %s has %d days with wrong dispersion\n", teachers[i].surname, faultDays, file=open('fp3', 'a'))
+				print("-----------------------------------------------------------------------------\n", file=open('fp3', 'a'))
+	
+	if show_results == 1 or show_results == 2:
+		print("Total cases of Teachers wrong dispersion are %d. The number of these days are %d\n", totalNumberOfWrongTeachers, total_fault_days)
+
+	if to_file == 33:
+		print("\nTotal cases of Teachers wrong dispersion are %d. The number of these days are %d\n", totalNumberOfWrongTeachers, total_fault_days, file=open('fp3', 'a'))
+		print("\nWrong teacher dispersion cost is %.12f\n", IDTW * total_cost, file=open('fp3', 'a'))
+	
+	return IDTW * total_cost
 
 
+# checks the dispersion of lessons of each class and returns the relevant cost
+
+def check_classes_dispersion(to_file: int, begin: int, end: int, a: list, number_of_classes1: int, ICDW1: float, show_results: int) -> float:
+	i, k, start, t, hours_per_day_of_teacher, problem_days, violation_cases: int
+	hours, total_hours_per_class, total_problem_days, co_class1, co_teacher1, teacher1, jj: int
+	cost, total_cost:float = 0.0
+	index1 = 0
+	violation_cases = 0
+	total_problem_days = 0
+
+	for i in range(0, number_of_classes1):		
+		problem_days = 0
+		cost = 0.0
+		total_hours_per_class = 0
+		for start in range(begin, end, 7):
+			hours = 0
+			for k in range(0, classes[i].number_of_teachers):
+				hours_per_day_of_teacher = 0
+				teacher1 = classes[i].teachers_of_class_and_hours[k][0]
+				co_class1 = co_class[i][teacher1]
+				if co_class1 == i:
+					co_teacher1 = co_teacher[teacher1][co_class1]
+				else:
+					co_teacher1 = 2015
+				
+				for t in range(start, start + 7):
+					if (a[i][t] == teacher1 and co_class1 == -1) or (a[i][t] == co_teacher1):
+						hours_per_day_of_teacher = hours_per_day_of_teacher + 1
+				
+				if classes[i].teachers_of_class_and_hours[k][2] > 0 and hours_per_day_of_teacher > classes[i].teachers_of_class_and_hours[k][2]:
+					hours = hours + hours_per_day_of_teacher - classes[i].teachers_of_class_and_hours[k][2]
+				elif classes[i].teachers_of_class_and_hours[k][2] == 0:
+					for jj in range(0, classes[i].number_of_teachers):
+						if classes[i].teachers_of_class_and_hours[jj][0] == co_teacher1:
+							break
+					if hours_per_day_of_teacher > classes[i].teachers_of_class_and_hours[jj][2]:
+						hours = hours + hours_per_day_of_teacher - classes[i].teachers_of_class_and_hours[k][2]
 
 
+			if hours > 0:
+				total_hours_per_class = total_hours_per_class + hours
+				problem_days = problem_days + 1
 
+		if problem_days > 0:
+			total_problem_days = total_problem_days + problem_days
+			violation_cases = violation_cases + 1
+			index1 = index1 + 1
+
+			cost = ICDW1 * total_problem_days * pow(BASE, problem_days)
+
+			if show_results == 1:
+				print("\nThe class %s has %d repeated lessons at %d  days\n", classes[i].class_name, total_hours_per_class, problem_days)
+				print("---------------------------------------------------------------------------------\n")
+			
+			if to_file == 33:
+				print("\nThe class %s has %d repeated lessons at %d  days\n", classes[i].class_name, total_hours_per_class, problem_days, file=open('fp3', 'a'))
+				print("---------------------------------------------------------------------------------\n", file=open('fp3', 'a'))
+			
+		total_cost = total_cost + cost
+	
+	if show_results == 1 or show_results == 2:
+		print("The classes with  wrong dispersion are %d. The days it occurs are %d\n", violation_cases, total_problem_days)
+			
+	if to_file == 33:
+		print("\nThe classes with  wrong dispersion are %d. The days it occurs are %d\n", violation_cases, total_problem_days, file=open('fp3', 'a'))
+		print("\nWrong class dispersion cost is %.12f\n", total_cost, file=open('fp3', 'a'))
+	
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):

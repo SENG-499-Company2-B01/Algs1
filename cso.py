@@ -821,7 +821,29 @@ def accept_swap(mode: int,
 		return -1
 	return -1
 
+def perform_swap(mode: int,
+			begin: int,
+			end: int,
+			a: list,
+			timeslot1: int,
+			timeslot2: int,
+			class_no1: int,
+			teachers_number: int,
+			TEPW1: float): # performs a swap during the optimization phase
+	for i in range(class_no1):
+		ok = accept_swap(mode,begin,end,a,i,teachers_number,class_no1,timeslot1,timeslot2,TEPW1)
 
+		if ok == 1:
+			swap(a,i,timeslot1,timeslot2)
+
+			if teachers[a[i][timeslot1]].kind == 1:
+				co_class1 = co_class[i][a[i][timeslot1]]
+				co_teacher1 = co_Teacher[a[i][timeslot1]][i]
+
+				if co_class1 != -1 and ((co_teacher1 < 0 and a[co_class1][timeslot1] == -co_Teacher1) or (co_Teacher1 > 0 and a[co_class1][timeslot1] == co_Teacher1)):
+					swap(a,co_class1,timeslot1,timeslot2)
+
+	return 1
 
 
 

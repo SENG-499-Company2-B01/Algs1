@@ -845,7 +845,12 @@ def perform_swap(mode: int,
 
 	return 1
 
-
+# copies the contents of a matrix
+def copy_matrices(begin: int, end: int, destination: list, source: list, dim: int):
+	i, j: int
+	for i in range(0, dim):
+		for j in range(begin, end):
+			destination[i][j] = source[i][j]
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):

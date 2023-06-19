@@ -797,6 +797,32 @@ def check_validity(mode: int,
 		swap(a,class1,timeslot1,timeslot2)
 	return 1
 
+def accept_swap(mode: int,
+			begin: int,
+			end: int,
+			a: list,
+			class1: int,
+			teachers_number: int,
+			number_of_classes: int,
+			timeslot1: int,
+			timeslot2: int,
+			TEPW1: float): # approves or rejects a swap during the optimization phase
+	ok = check_validity(mode,begin,end,a,class1,teachers_number,numberof_classes,timeslot1,timeslot2,TEPW1)
+
+	if ok == 1:
+		return 1
+	elif ok == -1:
+		r1 = random.randint(0,2147483647)/(2147483647+1.0)
+
+		if r1 <= 1/92: # in order to improve the diversity of the results, swaps with hard constraint violations are rarely accepted
+			return 1 
+		return -1
+	elif ok == -1:
+		return -1
+	return -1
+
+
+
 
 
 # Calculates the fitness value

@@ -849,34 +849,28 @@ def perform_swap(mode: int,
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):
-	# TODO: Implement these Classes
-	# a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
-	# a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
-	# a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
-	# a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
-	# a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
-	# a6 = check_teachers_dispersion(0, start, end, a, number_of_teachers, ITDW, 0)
-	# a7 = check_classes_dispersion(0, start, end, a, number_of_classes, ICDW, 0)
-	# return a1 + a2 + a3 + a4 + a5 + a6 + a7
-	return 0
+	a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
+	a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
+	a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
+	a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
+	a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
+	a6 = check_teachers_dispersion(0, start, end, a, number_of_teachers, ITDW, 0)
+	a7 = check_classes_dispersion(0, start, end, a, number_of_classes, ICDW, 0)
+	return a1 + a2 + a3 + a4 + a5 + a6 + a7
 
 # calculates the fitness value without the costs of teachers' and classes' dispersion
 def calculate_partial_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW):
-	# TODO: Implement these Classes
-	# a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
-	# a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
-	# a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
-	# a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
-	# a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
-	# return a1 + a2 + a3 + a4 + a4 + a5
-	return 0
+	a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
+	a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
+	a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
+	a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
+	a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
+	return a1 + a2 + a3 + a4 + a4 + a5
 
 # calculates the fitness value only for the hard constraints
 def check_hard_constraints(mode, start, end, a, number_of_teachers, number_of_classes):
-	# TODO: Implement these Classes
-	# a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
-	# a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
-	# a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
-	# a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
-	# return a1 + a2 + a3 + a4 + a4
-	return 0
+	a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
+	a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
+	a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
+	a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
+	return a1 + a2 + a3 + a4 + a4

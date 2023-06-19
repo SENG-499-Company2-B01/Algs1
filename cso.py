@@ -845,7 +845,12 @@ def perform_swap(mode: int,
 
 	return 1
 
-
+# copies the contents of a matrix
+def copy_matrices(begin: int, end: int, destination: list, source: list, dim: int):
+	i, j: int
+	for i in range(0, dim):
+		for j in range(begin, end):
+			destination[i][j] = source[i][j]
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):
@@ -944,3 +949,36 @@ def display_results(to_file: int,
 		fp3.write(f"Cost of teachers empty periods : {a7}")
 		fp3.write(f"T o t a l   c o s t   i s   {a1+a2+a3+a4+a5+a6+a7}")
 	return
+
+# locates the data of a co-teaching
+def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass: int, locate_coteacher: int, number_of_teachers1: int):
+	t, z, class1, class2: int
+	locate_coteacher = -2
+
+	for t in range(0, number_of_teachers1):
+		if teachers[t].count_of_coteachers == 0:
+			continue
+		for z in range(0, teachers[t].count_of_coteachers):
+			if teachers[t].coteachings[z][0] == teacher3:
+				class1 = teachers[t].coteachings[z][3]
+				class2 = teachers[t].coteachings[z][4]
+
+				if class1 == class2 and class1 == class3:
+					coteacher = t
+					coclass = class3
+					locate_coteacher = 1
+					return
+				elif class1 != class2:
+					if class3 == class1:
+						coteacher = t
+						coclass = class2
+						locate_coteacher = -1
+						return
+					if class3 == class2:
+						coteacher = t
+						coclass = class1
+						locate_coteacher = -1
+						return
+					continue
+
+	

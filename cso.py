@@ -611,6 +611,94 @@ def check_parallel_teaching(to_file: int,
 		fp3.write(f"Parallel teaching cost is {cost}")
 	return cost
 
+def check_class_empty_periods(to_file: int,
+			begin: int,
+			end: int,
+			a: list,
+			number_of_classes1: int,
+			show_results: int): # checks the empty periods of each class and returns the relevant cost
+	number_of_cases = 0
+	cost = 0.0
+
+	for i in range(number_of_classes1):
+		for start in range(begin, end, 7):
+			for t in range(start, start+7):
+				if a[i][t] == -1 and t != 6 and t != 13 and t != 20 and t != 27 and t != 34:
+					number_of_cases += 1
+					cost += HCW*pow(2*BASE,BASE)
+
+					if show_results == 1:
+						print(f"Class {classes[i].class_name} has empty timeslot {t}")
+					if to_file == 33:
+						fp3.write(f"Class {classes[i].class_name} has empty timeslot {t}")
+
+	if show_results == 1:
+		print(f"Total cases of class empty periods are {number_of_cases}")
+
+	if to_file == 33:
+		fp3.write(f"Total cases of class empty periods are {number_of_cases}")
+		fp3.write(f"Total cost of empty class timeslots is {cost}")
+	return cost
+
+def check_teacher_unavailability(to_file: int,
+			mode: int,
+			start: int,
+			end: int,
+			a: list,
+			number_of_classes1: int,
+			show_results: int): # checks the unavailability of each teacher and returns the relevant cost
+	number_of_cases = 0
+	cost = 0.0
+	if mode == 0:
+		for i in range(number_of_classes1):
+			for j in range(classes[i].number_of_teachers):
+				for t in range(start,end):
+					if a[i][t] == classes[i].teachers_of_class_and_hours[j][0] and teachers[classes[i].teachers_of_class_and_hours[j][0]].unavailable_timeslots[t] == 1:
+						number_of_cases += 1
+		cost = number_of_cases * HCW * pow(BASE< 4.75)
+		if show_results == 1:
+			print(f"Total cases of teacher unavailability are {number_of_cases}")
+		if to_file == 33:
+			fp3.write(f"Total cases of teacher unavailability {number_of_cases}")
+		return cost
+
+	for i in range(number_of_classes1):
+		for j in range(classes[i].number_of_teachers):
+			first_teacher = classes[i].teachers_of_class_and_hours[j][0]
+
+			for t in range(start,end):
+				if teachers[first_teacher].kind == 0:
+					if first_teacher == a[i][t] and teachers[first_teacher].unavailable_timeslots[t] == 1:
+						number_of_cases += 1
+				else:
+					co_class1 = co_class[i][first_teacher]
+					if co_class1 == i:
+						co_teacher1 = co_teacher[first_teacher][co_class1]
+
+					if co_class1 == i:
+						co_teacher1 = co_teacher[first_teacher][co_class1]
+					else:
+						co_teacher1 = 2015
+
+					if co_teacher1 < 0:
+						if first_teacher == a[i][t] and teachers[first_teacher].unavailable_timeslots[t] == 1:
+							number_of_cases += 1
+						elif co_teacher1 == 2015:
+							if first_teacher == a[i][t] and teachers[first_teacher].unavailable_timeslots[t] == 1:
+								number_of_cases += 1
+						elif co_teacher1 > 0 and coteacher1 != 2015:
+							if co_teacher1 == a[i][t] amd teacjers[first_teacher].unavailable_timeslots[t] == 1:
+								number_of_cases += 1
+
+	cost = number_of_cases * HCW * pow(BASE,3)
+
+	if show_results == 1:
+		print(f"Total cases of teacher unavailability are {number_of_cases}")
+	if to_file == 33:
+		fp3.write(f"Total cases of teacher unavailability: {number_of_cases}")
+		fp3.write(f"Unavailability cost is {cost}")
+
+	return cost
 
 
 # Calculates the fitness value

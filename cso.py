@@ -571,7 +571,7 @@ def check_parallel_teaching(to_file: int,
 						parallel_teaching += 1
 				if parallel_teaching > 1:
 					number_of_cases += 1
-					cost += HWC*pow(BASE,parallel_teaching - 1)
+					cost += HCW*pow(BASE,parallel_teaching - 1)
 
 		if show_results == 1:
 			print(f"Total cases of teacher parallel teaching are {number_of_cases}")
@@ -605,7 +605,7 @@ def check_parallel_teaching(to_file: int,
 				cost += HCW * pow(BASE,parallel_teaching - 1)
 
 	if show_results == 1:
-	print(f"Total cases of teacher parallel teaching are {number_of_cases}")
+		print(f"Total cases of teacher parallel teaching are {number_of_cases}")
 	if to_file == 33:
 		fp3.write(f"Total cases of teacher parallel teaching is {number_of_cases}")
 		fp3.write(f"Parallel teaching cost is {cost}")
@@ -686,8 +686,8 @@ def check_teacher_unavailability(to_file: int,
 						elif co_teacher1 == 2015:
 							if first_teacher == a[i][t] and teachers[first_teacher].unavailable_timeslots[t] == 1:
 								number_of_cases += 1
-						elif co_teacher1 > 0 and coteacher1 != 2015:
-							if co_teacher1 == a[i][t] amd teacjers[first_teacher].unavailable_timeslots[t] == 1:
+						elif co_teacher1 > 0 and co_teacher1 != 2015:
+							if co_teacher1 == a[i][t] and teachers[first_teacher].unavailable_timeslots[t] == 1:
 								number_of_cases += 1
 
 	cost = number_of_cases * HCW * pow(BASE,3)
@@ -727,7 +727,7 @@ def check_validity(mode: int,
 			return -1
 
 		class2 = co_class[class1][a[class1][timeslot2]]
-		second_Teacher = co_Teacher[a[class1][timeslot2]][class1]
+		second_Teacher = co_teacher[a[class1][timeslot2]][class1]
 
 		if second_teacher < 0 and teachers[-second_teacher].unavailable_timeslots[timeslot2] == 1:
 			return -1
@@ -738,7 +738,7 @@ def check_validity(mode: int,
 	ok3 = check_parallel_teaching(0,mode,begin,end,a,number_of_teachers,number_of_classes,0)
 	swap(a,class1,timeslot1,timeslot2)
 
-	ok4 = check_parallel_teaching(0,mode,begin,end,a,number_of_Teachers,numberof_classes,0)
+	ok4 = check_parallel_teaching(0,mode,begin,end,a,number_of_teachers,number_of_classes,0)
 
 	if ok4 > ok3:
 		swap(a,class1,timeslot1,timeslot2)
@@ -763,7 +763,7 @@ def check_validity(mode: int,
 	if teachers[a[class1][timeslot1]].kind == 1:
 		swap(a,class1,timeslot1,timeslot2)
 		class2 = co_class[class1][a[class1][timeslot1]]
-		second_teacher = co_Teacher[a[class1][timeslot1]][class1]
+		second_teacher = co_teacher[a[class1][timeslot1]][class1]
 
 		if (class2 != -1 and a[class2][timeslot1] == second_teacher) or (second_teacher < 0 and a[class2][timeslot1] == -second_teacher):
 			swap(a, class2, timeslot1, timeslot2)
@@ -807,7 +807,7 @@ def accept_swap(mode: int,
 			timeslot1: int,
 			timeslot2: int,
 			TEPW1: float): # approves or rejects a swap during the optimization phase
-	ok = check_validity(mode,begin,end,a,class1,teachers_number,numberof_classes,timeslot1,timeslot2,TEPW1)
+	ok = check_validity(mode,begin,end,a,class1,teachers_number,number_of_classes,timeslot1,timeslot2,TEPW1)
 
 	if ok == 1:
 		return 1
@@ -838,9 +838,9 @@ def perform_swap(mode: int,
 
 			if teachers[a[i][timeslot1]].kind == 1:
 				co_class1 = co_class[i][a[i][timeslot1]]
-				co_teacher1 = co_Teacher[a[i][timeslot1]][i]
+				co_teacher1 = co_teacher[a[i][timeslot1]][i]
 
-				if co_class1 != -1 and ((co_teacher1 < 0 and a[co_class1][timeslot1] == -co_Teacher1) or (co_Teacher1 > 0 and a[co_class1][timeslot1] == co_Teacher1)):
+				if co_class1 != -1 and ((co_teacher1 < 0 and a[co_class1][timeslot1] == -co_teacher1) or (co_teacher1 > 0 and a[co_class1][timeslot1] == co_teacher1)):
 					swap(a,co_class1,timeslot1,timeslot2)
 
 	return 1
@@ -854,37 +854,31 @@ def copy_matrices(begin: int, end: int, destination: list, source: list, dim: in
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):
-	# TODO: Implement these Classes
-	# a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
-	# a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
-	# a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
-	# a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
-	# a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
-	# a6 = check_teachers_dispersion(0, start, end, a, number_of_teachers, ITDW, 0)
-	# a7 = check_classes_dispersion(0, start, end, a, number_of_classes, ICDW, 0)
-	# return a1 + a2 + a3 + a4 + a5 + a6 + a7
-	return 0
+	a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
+	a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
+	a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
+	a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
+	a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
+	a6 = check_teachers_dispersion(0, start, end, a, number_of_teachers, ITDW, 0)
+	a7 = check_classes_dispersion(0, start, end, a, number_of_classes, ICDW, 0)
+	return a1 + a2 + a3 + a4 + a5 + a6 + a7
 
 # calculates the fitness value without the costs of teachers' and classes' dispersion
 def calculate_partial_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW):
-	# TODO: Implement these Classes
-	# a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
-	# a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
-	# a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
-	# a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
-	# a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
-	# return a1 + a2 + a3 + a4 + a4 + a5
-	return 0
+	a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
+	a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
+	a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
+	a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
+	a5 = check_teachers_empty_periods(0, mode, start, end, a, number_of_teachers, TEPW, 0)
+	return a1 + a2 + a3 + a4 + a4 + a5
 
 # calculates the fitness value only for the hard constraints
 def check_hard_constraints(mode, start, end, a, number_of_teachers, number_of_classes):
-	# TODO: Implement these Classes
-	# a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
-	# a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
-	# a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
-	# a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
-	# return a1 + a2 + a3 + a4 + a4
-	return 0
+	a1 = check_teacher_unavailability(0, mode, start, end, a, number_of_classes, 0)
+	a2 = check_parallel_teaching(0, mode, start, end, a, number_of_teachers, number_of_classes, 0)
+	a3 = check_class_empty_periods(0, start, end, a, number_of_classes, 0)
+	a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
+	return a1 + a2 + a3 + a4 + a4
 
 # locates the data of a co-teaching
 def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass: int, locate_coteacher: int, number_of_teachers1: int):
@@ -917,4 +911,3 @@ def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass:
 						return
 					continue
 
-		

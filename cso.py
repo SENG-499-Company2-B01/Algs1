@@ -738,7 +738,7 @@ def check_validity(mode: int,
 	ok3 = check_parallel_teaching(0,mode,begin,end,a,number_of_teachers,number_of_classes,0)
 	swap(a,class1,timeslot1,timeslot2)
 
-	ok4 = check_parallel_teaching(0,mode,begin,end,a,number_of_Teachers,numberof_classes,0)
+	ok4 = check_parallel_teaching(0,mode,begin,end,a,number_of_teachers,numberof_classes,0)
 
 	if ok4 > ok3:
 		swap(a,class1,timeslot1,timeslot2)
@@ -880,3 +880,67 @@ def check_hard_constraints(mode, start, end, a, number_of_teachers, number_of_cl
 	# a4 = check_wrong_coteaching(0, start, end, a, number_of_classes, 0)
 	# return a1 + a2 + a3 + a4 + a4
 	return 0
+
+def display_results(to_file: int,
+		mode: int,
+		begin: int,
+		end: int,
+		a: list,
+		number_of_teachers1: int,
+		number_of_classes1: int,
+		TEPW1: float,
+		ITDW1: float,
+		ICDW1: float): # displays the results
+	if to_file == 4:
+		print("\n\nRESULTS BEFORE OPTIMIZATION\n----------------\nHard constraints")
+
+		a1 = check_teacher_unavailability(to_file,mode,begin,end,a,number_of_classes1,1)
+		a2 = check_parallel_teaching(to_file,mode,begin,end,a,number_of_teachers1,number_of_classes1,1)
+		a3 = check_class_empty_periods(to_file,begin,end,a,number_of_classes1,1)
+		a4 = check_wrong_coteaching(to_file,begin,end,a,number_of_classes,1)
+
+		print("\nSoft constraints\n")
+
+		a5 = check_teachers_dispersion(to_file,begin,end,a,number_of_teachers1,ITDW1,2)
+		a6 = check_classes_dispersion(to_file,begin,end,a,number_of_classes1,ICDW1,2)
+		a7 = check_teachers_empty_periods(to_file,mode,begin,end,a,number_of_teachers1,TEPW1,2)
+		return
+
+	if to_file == 33:
+		fp3.print("RESULTS ANALYSIS\n----------------\n")
+
+	print("\n\nRESULTS BEFORE OPTIMIZATION\n----------------\nHard constraints")
+	a1 = check_teacher_unavailability(to_file,mode,begin,end,a,number_of_classes1,1)
+	a2 = check_parallel_teaching(to_file,mode,begin,end,a,number_of_teachers1,number_of_classes1,1)
+	a3 = check_class_empty_periods(to_file,begin,end,a,number_of_classes1,1)
+	a4 = check_wrong_coteaching(to_file,begin,end,a,number_of_classes1,1)
+
+	print("\nSoft constraints\n")
+
+	a5 = check_teachers_dispersion(to_file,begin,end,a,number_of_teachers1,ITDW1,2)
+	a6 = check_classes_dispersion(to_file,begin,end,a,number_of_classes1,ICDW1,2)
+	a7 = check_teachers_empty_periods(to_file,mode,begin,end,a,number_of_teachers1,TEPW1,2)
+
+	if to_file == 3:
+		print(f"\nCOST SUMMARY (as calculated for TEPW={TEPW1}, ICDW={ICDW1}, ITDW={ITDW1})")
+		print("-------------------------------------------------------------------")
+		print(f"Cost of unavailability : {a1}")
+		print(f"Cost of parallel teaching : {a2}")
+		print(f"Cost of class empty periods : {a3}")
+		print(f"Cost of wrong co-teaching : {a4}")
+		print(f"Cost of teachers dispersion : {a5}")
+		print(f"Cost of class dispersion : {a6}")
+		print(f"Cost of teachers empty periods : {a7}")
+		print(f"T o t a l   c o s t   i s   {a1+a2+a3+a4+a5+a6+a7}")
+	elif to_file == 3:
+		fp3.write(f"\nCOST SUMMARY (as calculated for TEPW={TEPW1}, ICDW={ICDW1}, ITDW={ITDW1})")
+		fp3.write("-------------------------------------------------------------------")
+		fp3.write(f"Cost of unavailability : {a1}")
+		fp3.write(f"Cost of parallel teaching : {a2}")
+		fp3.write(f"Cost of class empty periods : {a3}")
+		fp3.write(f"Cost of wrong co-teaching : {a4}")
+		fp3.write(f"Cost of teachers dispersion : {a5}")
+		fp3.write(f"Cost of class dispersion : {a6}")
+		fp3.write(f"Cost of teachers empty periods : {a7}")
+		fp3.write(f"T o t a l   c o s t   i s   {a1+a2+a3+a4+a5+a6+a7}")
+	return

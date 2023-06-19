@@ -325,7 +325,7 @@ def check_teachers_empty_periods(to_file: int,
 def calculate_ideal_teacher_dispersion(teacher11: int, total_hours1: int):
 	return 7 * total_hours1 / float(teachers[teacher11].availability_hours)
 
-def calculate_floor_ceil_number(floor_no: int, ceil_no: int, teacher11: int, total_hours1: int) -> int
+def calculate_floor_ceil_number(floor_no: int, ceil_no: int, teacher11: int, total_hours1: int) -> int:
 	ideal = calculate_ideal_teacher_dispersion(teacher11, total_hours1)
 	floor1 = math.floor(ideal)
 	ceil_no = total_hours1 % teachers[teacher11].availability_days

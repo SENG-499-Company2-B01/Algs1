@@ -910,4 +910,3 @@ def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass:
 						return
 					continue
 
-				

@@ -700,6 +700,104 @@ def check_teacher_unavailability(to_file: int,
 
 	return cost
 
+def check_validity(mode: int,
+			begin: int,
+			end: int,
+			a: list,
+			class1: int,
+			number_of_teachers: int,
+			number_of_classes: int,
+			timeslot1: int,
+			timeslot2: int,
+			TEPW1: float): # checks if there are hard constraint violations in a swap made during the optimization phase
+	if a[class1][timeslot1] == -1 and a[class1][timeslot2] == -1:
+		return 1
+
+	if teachers[a[class1][timeslot1]].unavailable_timeslots[timeslot2] == 1 or teachers[a[class1][timeslot2]].unavailable_timeslots[timeslot1] == 1:
+		return -1
+
+	if mode == 1:
+		class2 = co_class[class1][a[class1][timeslot1]]
+		second_teacher = co_teacher[a[class1][timeslot1]][class1]
+
+		if second_teacher < 0 and teachers[-second_teacher].unavailable_timeslots[timeslot2] == 1:
+			return -1
+
+		if second_teacher != 2015 and teachers[second_teacher].unavailable_timeslots[timeslot2] == 1:
+			return -1
+
+		class2 = co_class[class1][a[class1][timeslot2]]
+		second_Teacher = co_Teacher[a[class1][timeslot2]][class1]
+
+		if second_teacher < 0 and teachers[-second_teacher].unavailable_timeslots[timeslot2] == 1:
+			return -1
+
+		if second_teacher != 2015 and teachers[second_teacher].unavailable_timeslots[timeslot2] == 1:
+			return -1
+
+	ok3 = check_parallel_teaching(0,mode,begin,end,a,number_of_teachers,number_of_classes,0)
+	swap(a,class1,timeslot1,timeslot2)
+
+	ok4 = check_parallel_teaching(0,mode,begin,end,a,number_of_Teachers,numberof_classes,0)
+
+	if ok4 > ok3:
+		swap(a,class1,timeslot1,timeslot2)
+		return -1
+	else:
+		swap(a,class1,timeslot1,timeslot2)
+
+	ok3 = check_class_empty_periods(0,begin,end,a,number_of_classes,0)
+	swap(a,class1,timeslot1,timeslot2)
+	ok4 = check_class_empty_periods(0,begin,end,a,number_of_classes,0)
+
+	if ok4 > ok3:
+		swap(a,class1,timeslot1,timeslot2)
+		return -1
+	else:
+		swap(a,class1,timeslot1,timeslot2)
+
+	swap_done = 0
+
+	ok3 = check_wrong_coteaching(0,begin,end,a,number_of_classes,0)
+
+	if teachers[a[class1][timeslot1]].kind == 1:
+		swap(a,class1,timeslot1,timeslot2)
+		class2 = co_class[class1][a[class1][timeslot1]]
+		second_teacher = co_Teacher[a[class1][timeslot1]][class1]
+
+		if (class2 != -1 and a[class2][timeslot1] == second_teacher) or (second_teacher < 0 and a[class2][timeslot1] == -second_teacher):
+			swap(a, class2, timeslot1, timeslot2)
+			swap_done = 1
+	else:
+		swap(a,class1,timeslot1,timeslot2)
+
+	ok4 = check_wrong_coteaching(0,begin,end,a,number_of_classes,0)
+
+	if ok4 > ok3:
+		swap(a, class1, timeslot1, timeslot2)
+		if teachers[a[class1][timeslot1]].kind == 1:
+			if swap_done == 1:
+				swap(a,class2,timeslot1,timeslot2)
+		return -1
+	else:
+		swap(a,class1,timeslot1,timeslot2)
+		if teachers[a[class1][timeslot1]].kind == 1:
+			if swap_done == 1:
+				swap(a,class2,timeslot1,timeslot2)
+	f1 = check_teachers_empty_periods(0,mode,begin,end,a,number_of_teachers,TEPW1,0)
+
+	swap(a,class1,timeslot1,timeslot2)
+
+	f2 = check_teachers_empty_periods(0,mode,begin,end,a,number_of_teachers,TEPW1, 0)
+
+	if f2 > f1:
+		swap(a, class1,timeslot1,timeslot2)
+		return -2
+	else:
+		swap(a,class1,timeslot1,timeslot2)
+	return 1
+
+
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):

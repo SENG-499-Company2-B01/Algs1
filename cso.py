@@ -896,7 +896,7 @@ def display_results(to_file: int,
 		a1 = check_teacher_unavailability(to_file,mode,begin,end,a,number_of_classes1,1)
 		a2 = check_parallel_teaching(to_file,mode,begin,end,a,number_of_teachers1,number_of_classes1,1)
 		a3 = check_class_empty_periods(to_file,begin,end,a,number_of_classes1,1)
-		a4 = check_wrong_coteaching(to_file,begin,end,a,number_of_classes,1)
+		a4 = check_wrong_coteaching(to_file,begin,end,a,number_of_classes1,1)
 
 		print("\nSoft constraints\n")
 

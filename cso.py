@@ -975,4 +975,201 @@ def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass:
 						return
 					continue
 
+# -------------------- CSO FUNCTIONS --------------------
+# -------- for more information consult the paper -------
+# swaps two timeslots under certain conditions
+def single_swap(a: list,timeslot1: int,timeslot2: int,class_num: int,classes_no: int):
+	i, co_class1, co_teacher1=0,0,0
+ 
+	if (timeslot1 == timeslot2):
+		return -1
+	if (a[class_num][timeslot1] == a[class_num][timeslot2]):
+		return -1
+	if (a[class_num][timeslot1] == -1 or a[class_num][timeslot2] == -1):
+		return -1
+    
+	for i in range(classes_no):
+		if (a[i][timeslot1] == a[class_num][timeslot2]):
+			return -1
+		if (a[i][timeslot2] == a[class_num][timeslot1]):
+			return -1
 
+	swap(a, class_num, timeslot1, timeslot2)
+ 
+	if (teachers[a[class_num][timeslot1]].kind == 1):
+		co_class1 = co_class[class_num][a[class_num][timeslot1]]
+		co_teacher1 = co_teacher[a[class_num][timeslot1]][class_num]
+		if (co_class1 != -1 and ((co_teacher1 < 0 and a[co_class1][timeslot1] == -co_teacher1) or (co_teacher1 > 0 and a[co_class1][timeslot1] == co_teacher1))):
+			swap(a, co_class1, timeslot1, timeslot2)
+	return 1
+
+#replaces all the lessons in a timeslot of a cat with the ones in the same timeslot of another cat
+def insert_column(mode: int,begin: int,end: int,source: list,destination: list,column: int ,class_no1: int,teachers_no :int,TEPW: float,ITDW: float,ICDW: float):
+	i, j, jj, temp= 0,0,0,0
+	aux=[0 for i in range(21)]
+	store_positions_and_fitness=[[0 for k in range(21)] for i in range(2)]
+	ff, smaller_fitness=0,0
+	index, z, skip= 0,0,0
+ 
+	for i in range(class_no1):
+		if ((column == 6 or column == 13 or column == 20 or column == 27 or column == 34) and destination[i][column] == -1):
+			continue
+		if (destination[i][column] == source[i][column]):
+			continue
+		jj = 0
+		j=begin
+  
+		while (j < end):
+			if (destination[i][j] == source[i][column] and j != column):
+				aux[jj] = j
+				jj=jj+1
+			j=j+1
+		skip = 0
+  
+		for z in range(jj):
+      
+			if (aux[z] == column):
+				skip = 1
+				continue
+
+			SwapInt(destination[i][aux[z]], destination[i][column], temp)
+			ff = calculate_fitness(mode, 0, 35, destination, teachers_no, class_no1, TEPW, ITDW, ICDW)
+   
+			if (skip == 0):
+				store_positions_and_fitness[0][z] = aux[z]
+				store_positions_and_fitness[1][z] = ff
+			else:
+				store_positions_and_fitness[0][z - 1] = aux[z]
+				store_positions_and_fitness[1][z - 1] = ff
+    
+			SwapInt(destination[i][aux[z]], destination[i][column],temp)
+   
+		smaller_fitness = inf
+		index = 0
+  
+		for z in range(jj):
+			if (store_positions_and_fitness[1][z] < smaller_fitness):
+				smaller_fitness = store_positions_and_fitness[1][z]
+				index = z
+		SwapInt(destination[i][aux[index]], destination[i][column], temp)
+  
+#initializes the population of cats
+def initialize_cats(classes_number: int,cat_number: int):
+	i, j, k, p, class1, timeslot=0,0,0,0,0,0
+ 
+	for p in range(cat_number):
+		for j in range(classes_number):
+			for i in range(classes[j].number_of_teachers):
+				for k in range(3):
+					classes[j].teachers_of_class_and_hours_remaining[i][k] = classes[j].teachers_of_class_and_hours[i][k]
+
+		for class1 in range(classes_number):
+			for timeslot in range(35):
+				x[p][class1][timeslot] = -1
+
+			for i in range(classes[class1].number_of_teachers):
+				while (classes[class1].teachers_of_class_and_hours_remaining[i][1] > 0):
+					timeslot = randint(0, 34)
+					if (x[p][class1][timeslot] == -1):
+						x[p][class1][timeslot] = classes[class1].teachers_of_class_and_hours[i][0]
+						classes[class1].teachers_of_class_and_hours_remaining[i][1]=classes[class1].teachers_of_class_and_hours_remaining[i][1]-1
+      
+		for j in range(classes_number):
+			for i in range(classes[j].number_of_teachers):
+				for k in range(3):
+					classes[j].teachers_of_class_and_hours_remaining[i][k] = classes[j].teachers_of_class_and_hours[i][k]
+     
+#cat seek procedure
+def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,ICDW: float):
+	j, aa, bb, consider, cp, swaps_to_make, timeslots_to_change=0,0,0,0,0,0,0
+	hd = []
+	cn, tt1, tt2=0,0,0
+	fs = []
+	cfs = []
+	tfs, fsmax, fsmin=0.0,0.0,0.0
+	sl = []
+	cat_copy = []
+	temp_cat = []
+	temp_cat1 = []
+	all_equal = 0
+	selected_copy = 0
+	ll, best_fs, tmp1 = 0.0, 0.0, 0.0
+	sel_prob = []
+ 
+	best_fs = calculate_fitness(there_is_coteaching, 0, 35, x, teachers_no, classes_no, TEPW, ITDW, ICDW)
+ 
+	if (SPC == 1):
+		consider = 1
+	else:
+		consider = 0
+  
+	for cp in range(SMP):
+		copy_matrices(0, 35, cat_copy[cp], x, classes_no)
+  
+	timeslots_to_change = int((CDC / 100.0) * 35.0)
+ 
+	if (timeslots_to_change == 0):
+		timeslots_to_change = 1
+  
+	swaps_to_make = int((SRD / 100.0) * classes_no * 35)
+ 
+	for cp in range(SMP):
+		copy_matrices(0, 35, temp_cat, cat_copy[cp], classes_no)
+
+		if ((consider == 0) or ((consider == 1) and (cp != SMP - 1))):
+			unique_randint(hd, 0, 34, timeslots_to_change)
+   
+			for aa in range(timeslots_to_change):
+				insert_column(there_is_coteaching, 0, 35, global_best, temp_cat, hd[aa], classes_no, teachers_no, TEPW, ITDW, ICDW)
+    
+			copy_matrices(0, 35, temp_cat1, temp_cat, classes_no)
+			unique_randint(sl, 0, (classes_no * 35) - 1, swaps_to_make)
+   
+			for bb in range(swaps_to_make):
+				cn = int(sl[bb] / 35)
+				tt1 = sl[bb] % 35
+				tt2 = randint(0, 34)
+    
+				if (single_swap(temp_cat, tt1, tt2, cn, classes_no) != -1):
+					tfs = calculate_fitness(there_is_coteaching, 0, 35, temp_cat, teachers_no, classes_no, TEPW, ITDW, ICDW)
+     
+					if (tfs <= best_fs):
+						best_fs = tfs
+						fs[cp] = tfs
+						cfs[cp] = tfs
+						copy_matrices(0, 35, cat_copy[cp], temp_cat, classes_no)
+      
+					copy_matrices(0, 35, temp_cat, temp_cat1, classes_no)
+     
+		else:
+			fs[cp] = calculate_fitness(there_is_coteaching, 0, 35, cat_copy[cp], teachers_no, classes_no, TEPW, ITDW, ICDW)
+			cfs[cp] = fs [cp]
+
+	for i in range(SMP):
+		j=1
+		while (j < SMP):
+			if (cfs[j] < cfs[j - 1]):
+				ll = cfs[j - 1]
+				cfs[j - 1] = cfs[j]
+				cfs[j] = ll
+			j=j+1
+   
+	fsmax = cfs[SMP - 1]
+	fsmin = cfs[0]
+ 
+	if (fsmax == fsmin):
+		all_equal = 1
+  
+	if (all_equal == 1):
+		selected_copy = randint(0, SMP - 1)
+		copy_matrices(0, 35, x, cat_copy[selected_copy], classes_no)
+  
+	else:
+		for i in range(SMP):
+			sel_prob[i] = abs(fs[i] - fsmax) / (fsmax - fsmin)
+   
+		tmp1 = randd(0.0, 1.0)
+  
+		for i in range(SMP):
+			if (tmp1 <= sel_prob[i]):
+				copy_matrices(0, 35, x, cat_copy[i], classes_no)

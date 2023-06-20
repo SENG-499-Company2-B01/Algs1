@@ -104,7 +104,7 @@ class class_record:
 
 classes = [class_record() for i in range(classes_no1)]
 
-def initiliaze_randomness(seed: int = -1): # initializes the seed, if seed is -1 then it uses system time as seed
+def initialize_randomness(seed: int = -1): # initializes the seed, if seed is -1 then it uses system time as seed
 	if seed == -1:
 		seed = datetime.datetime.now().timestamp()
 	random.seed(seed)
@@ -1175,10 +1175,33 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 			if (tmp1 <= sel_prob[i]):
 				copy_matrices(0, 35, x, cat_copy[i], classes_no)
 
+def cat_trace(x: list, classes_no: int): #cat trace procedure
+	similarity = 0
+	distance = 0
+	sl = [0 for i in range(classes_no * 35)]
+
+	for k in range(classes_no):
+		for j in range(35):
+			if x[k][j] == global_best[k][j]:
+				similarity += 1
+
+	distance = (classes_no * 35) - similarity
+
+	#cells_to_swap = round_num((randd(0.0, 1.0)*float(distance))
+
+	unique_randint(s1,0,classes_no*35,cells_to_swap)
+
+	for k in range(cells_to_swap):
+		cn = math.floor(sl[k]/35)
+		tt1 = sl[k] % 35
+		tt2 = randint(0,34)
+
+		single_swap(x, tt1, tt2, cn ,classes_no)
+
 def main():
 	start, t, subtract_day = int, int, int
 	name_of_data_file = [] #char name_of_data_file[30]
-	input = [] #char input[5]
+	input1 = [] #char input[5]
 	i, j, k, h, aaa, p, b, lessons, jj = int, int, int, int, int, int, int, int, int
 	number_of_classes1 = [] #char number_of_classes1[3];
 	classes_no, teachers_no = int, int #int classes_no, teachers_no;
@@ -1195,6 +1218,231 @@ def main():
 	repetition = int
 
 	TEPW, ITDW, ICDW = float, float, float
+
+	print("\nPlease enter the name of txt file, containing the data to be used: ") # enter the name of the txt file with the school's data
+	input1 = input("enter file name:")
+	input1 += ".txt"
+	name_of_data_file = input1
+ 
+	fp = open(input1, "r")
+	if fp == None:
+		print("\nCannot open file %s. \n", input1)
+		print("\nProgram terminated.\n")
+		exit(0)
+  
+#this block will be not needed I think, checks an input file for errors, assigns some variables from input file
+	""" while (data_entry_ok == 0): # reads and checks the integrity of the input file
+		input(fp, " %d %s", &there_is_coteaching, number_of_classes1)
+		classes_no = atoi(number_of_classes1)
+
+		if (classes_no <= 0 || classes_no > classes_no1) {
+			printf("\nInvalid number of classes. Program terminated.");
+			exit(1);
+		}
+
+		fscanf(fp, "%s", number_of_teachers);
+		teachers_no = atoi(number_of_teachers);
+
+		if (teachers_no < 2 || teachers_no > teachers_no1) {
+			printf("\nInvalid number of teachers. Program terminated.");
+			exit(1);
+		}
+
+		for (i = 0; i < teachers_no; i++) {
+			teachers[i].availability_hours = 35;
+		}
+
+		for (i = 0; i < classes_no; i++) {
+			class[i].number_of_teachers = 0;
+		}
+
+		for (i = 0; i < classes_no; i++) {
+			fscanf(fp, "%s     %d", class_name, &class[i].hours_per_week);
+			strcpy(class[i].class_name, class_name);
+			class[i].class_number = i;
+		}
+
+		for (i = 0; i < teachers_no; i++) {
+			fscanf(fp, " %s  %d", teacher_name, &teachers[i].kind);
+
+			k = 0;
+			teachers[i].num_of_classes = 0;
+			teachers[i].total_hours = 0;
+			strcpy(teachers[i].surname, teacher_name);
+			fscanf(fp, "%d", &b);
+
+			while (b != -1) {
+				fscanf(fp, "%d %d ", &h, &lessons);
+				teachers[i].total_hours = teachers[i].total_hours + h;
+				teachers[i].classes_he_teaches[k][0] = b;
+				class[b].teachers_of_class_and_hours[class[b].number_of_teachers][0] = i;
+				class[b].teachers_of_class_and_hours[class[b].number_of_teachers][1] = h;
+				class[b].teachers_of_class_and_hours[class[b].number_of_teachers][2] = lessons;
+				class[b].number_of_teachers++;
+				teachers[i].classes_he_teaches[k][1] = h;
+				teachers[i].classes_he_teaches[k][2] = lessons;
+				k++;
+				teachers[i].num_of_classes = k;
+				fscanf(fp, "%d", &b);
+			}
+
+			for (j = 0; j < 35; j++)
+				teachers[i].unavailable_timeslots[j] = -1;
+
+			for (k = 0; k < 5; k++)
+				teachers[i].is_available_at_day[k] = 1;
+
+			fscanf(fp, "%d", &h);
+			while (h != -1) {
+				teachers[i].unavailable_timeslots[h] = 1;
+				teachers[i].availability_hours--;
+				fscanf(fp, "%d", &h);
+			}
+
+			teachers[i].available_days = 5;
+			for (start = 0; start < 29; start = start + 7) {
+				subtract_day = 0;
+				for (t = start; t < start + 7; t++) {
+					if (teachers[i].unavailable_timeslots[t] == 1)
+						subtract_day++;
+
+					if (subtract_day == 7) {
+						teachers[i].available_days--;
+						teachers[i].is_available_at_day[start / 7] = -1;
+					}
+				}
+			}
+		}
+
+		for (i = 0; i < teachers_no; i++)
+			for (j = 0; j < classes_no; j++) {
+				co_class[j][i] = -1;
+				co_teacher[i][j] = 2015;
+			}
+
+		if (there_is_coteaching == 1) {
+			int n, ii, le, c1, c2;
+
+			for (i = 0; i < teachers_no; i++) {
+				for (j = 0; j < 10; j++) {
+					for (n = 0; n < 5; n++) {
+						teachers[i].coteachings[j][n] = -1;
+					}
+				}
+				teachers[i].count_of_coteachers = 0;
+			}
+
+			fscanf(fp, "%d", &i);
+
+			while (i != -1) {
+				fscanf(fp, "  %d  %d  %d  %d %d", &ii, &h, &le, &c1, &c2);
+
+				if (ii != -1 && h != -1 && le != -1 && c1 != -1) {
+					teachers[i].coteachings[teachers[i].count_of_coteachers][0] = ii;
+					teachers[i].coteachings[teachers[i].count_of_coteachers][2] = le;
+					teachers[i].coteachings[teachers[i].count_of_coteachers][3] = c1;
+					teachers[i].coteachings[teachers[i].count_of_coteachers][4] = c2;
+					teachers[ii].coteachings[teachers[ii].count_of_coteachers][0] = i;
+					teachers[ii].coteachings[teachers[ii].count_of_coteachers][1] = h;
+					teachers[ii].coteachings[teachers[ii].count_of_coteachers][2] = le;
+					teachers[ii].coteachings[teachers[ii].count_of_coteachers][3] = c2;
+					teachers[ii].coteachings[teachers[ii].count_of_coteachers][4] = c1;
+					teachers[i].coteachings[teachers[i].count_of_coteachers][1] = h;
+					teachers[ii].coteachings[teachers[ii].count_of_coteachers][1] = h;
+
+					if (c2 == c1) {
+						co_class[c1][i] = c1;
+						co_class[c1][ii] = c1;
+						co_teacher[i][c1] = -ii;
+						co_teacher[ii][c1] = i;
+					} else if (c1 != c2) {
+						co_class[c1][i] = c2;
+						co_teacher[i][c2] = ii;
+					}
+
+					teachers[i].count_of_coteachers++;
+					teachers[ii].count_of_coteachers++;
+
+					if (teachers[i].count_of_coteachers > 10) {
+						printf("\nMaximum number of co-teachers for teacher %s exceeded.\n", teachers[i].surname);
+						printf("\nProgram terminated due to invalid input...\n");
+						exit(1974);
+					}
+				}
+				fscanf(fp, "%d", &i);
+			}
+		}
+		data_entry_ok = 1;
+	} // end of input file checks """
+ 
+	print("\nData input completed from file %s \n", input1)
+	print("\nPlease enter your own seed or -1 for system seed: ") # enter the seed
+	seed = input("seed: ")
+
+	seed = initialize_randomness(seed)
+	print("The seed is : %d ", seed)
+ 
+	initialize_cats(classes_no, cats) # initialize the population of cats
+
+	if (there_is_coteaching == 1):
+		for i in teachers_no:
+			teachers[i].total_hours = find_implied_and_actual_hours_of_teacher(i, teachers_no)
+
+	fitness_evolution_file = "fitness_evolution.txt"
+	fp4 = open(fitness_evolution_file, "w")
+
+	fp4.write("Fitness evolution for input file %s\n", input1)
+
+	print("\nInitialization of cats completed.\n")
+	print("\nProgram is running. Please wait...\n\n")
+
+	global_best_fitness = inf
+# -------------------- CORE CSO ALGORITHM (start) --------------------
+
+	TEPW = 0.06
+	ITDW = 1.0
+	ICDW = 0.95
+
+	times = iterations
+	begin_time = time.process_time()
+
+	for iter in (times + 1):
+		if (iter == 0 or iter % 100 == 0):
+			elTime = (time.process_time() - begin_time) #/ (CLOCKS_PER_SEC) / 60
+			print("(%d : %.1f) ", math.floor(elTime), (elTime - math.floor(elTime)))
+			print("Iterations %d, best fitness %f\n", iter, global_best_fitness)
+		
+
+		if (iter % 20 == 0):
+			if (global_best_fitness == 0.0):
+				fp4.write("%d\t%f \n", iter, math.log10(global_best_fitness + 0.00000000000001))
+			else:
+				fp4.write("%d\t%f \n", iter, math.log10(global_best_fitness))
+
+		for p in cats:
+			fitness = calculate_fitness(there_is_coteaching, 0, 35, x[p], teachers_no, classes_no, TEPW, ITDW, ICDW)
+
+			if (fitness <= global_best_fitness):
+				last_updating_time = time.process_time()
+				global_best_fitness = fitness
+
+				for k in classes_no:
+					for j in range(0,35):
+						global_best[k][j] = x[p][k][j]
+
+			tmp = random.randint(0, 32767) % 100
+
+			if (tmp > MR):
+				cat_seek(x[p], classes_no, teachers_no, TEPW, ITDW, ICDW)
+
+			else:
+				cat_trace(x[p], classes_no)
+	
+
+	main_algo_time = (time.process_time() - begin_time) #/ ((double) CLOCKS_PER_SEC) / 60;
+	display_results(4, there_is_coteaching, 0, 35, global_best, teachers_no, classes_no, TEPW, ITDW, ICDW)
+
+# -------------------- CORE CSO ALGORITHM (end) --------------------
 
 # -------------------- OPTIMIZATION PHASE (start) ------------------ 
 
@@ -1236,3 +1484,196 @@ def main():
 
 # -------------------- OPTIMIZATION PHASE (end) ------------------
 
+	optimization_time = (time.process_time() - begin_time) #/ ((double) CLOCKS_PER_SEC) / 60;
+
+	TEPW = 0.06 # restoring the initial values of the cost parameters in order to be able to evaluate the optimization
+	ITDW = 1.0
+	ICDW = 0.95
+
+	display_results(3, there_is_coteaching, 0, 35, global_best, teachers_no, classes_no, TEPW, ITDW, ICDW) # display the results and other options
+
+	print("\n\nTime of main algorithm is %d mins and %.1f secs.\n", math.floor(main_algo_time), (main_algo_time - math.floor(main_algo_time)))
+	print("Time of optimization phase is %d mins and %.1f secs.\n", math.floor(optimization_time), (optimization_time - math.floor(optimization_time)))
+	print("Total time is %d mins and %.1f secs.\n", math.floor(main_algo_time + optimization_time), (main_algo_time + optimization_time - math.floor(main_algo_time + optimization_time)))
+
+	print("\nIn order to see the timetable by class, just enter '1'.\n")
+	print("In order to see the timetable by teacher, just enter '2'.\n")
+	print("In order to see analysis of timetable, just enter '3'.\n")
+	print("In order to print the timetable by class to the txt file, just enter '11'.\n")
+	print("In order to print the timetable by teacher to the txt file, just enter '22'.\n")
+	print("In order to print analysis of timetable to the txt file, just enter '33'.\n")
+	print("In order to terminate , just hit any other key: ")
+	aaa = input("input: ")
+
+
+	co_teacher1 = int
+	co_class1 = int
+	teacher1 = int
+	class1 = int
+
+	results_by_class_file = "results_by_class_"
+	results_by_class_file += name_of_data_file
+	results_by_teacher_file = "results_by_teacher_"
+	results_by_teacher_file += name_of_data_file
+	results_analysis = "CSO_GLOBAL_results_analysis_"
+	results_analysis +=  "__"
+	results_analysis += name_of_data_file
+
+	fp1 = open(results_by_class_file, "w")
+	fp2 = open(results_by_teacher_file, "w")
+	fp3 = open(results_analysis, "w")
+
+	fp3.write("\nResults Analysis for input file %s\n", name_of_data_file)
+	fp3.write("\nWithout refinement, fitness is %f .\n", global_best_fitness)
+	fp3.write("\nTime of main algorithm is %d mins and %.1f secs.\n", math.floor(main_algo_time), (main_algo_time - math.floor(main_algo_time)))
+	fp3.write("The seed is %d\n", seed)
+
+	while (aaa == 1 or aaa == 2 or aaa == 3 or aaa == 11 or aaa == 22 or aaa == 33):
+		if (aaa == 1 or aaa == 11):
+      
+			if aaa == 1:
+				print("\nTHE BEST TIMETABLE, BY CLASS, IS : \n")
+    
+			else:
+				fp1 = open(results_by_class_file, "w")
+				fp1.write("\nRESULTS FOR INPUT FILE %s\n", name_of_data_file)
+				fp1.write("---------------------------------------------------")
+				fp1.write("\nTHE BEST TIMETABLE, BY CLASS, IS : \n")
+			
+
+			count_displayed_hours = int
+			for k in classes_no:
+				count_displayed_hours = 0
+				if (aaa == 1):
+					print("\n<--------- %s------------->\n", classes[k].class_name)
+				else
+					fp1.write("\n<--------- %s------------->\n", classes[k].class_name)
+				for jj in range(0,35):
+					teacher1 = global_best[k][jj]
+					if (teacher1 == -1):
+						if (aaa == 1):
+							print("H: (%d)---> empty", jj)
+							count_displayed_hours += 1
+						else:
+							fp1.write("H: (%d)---> empty", jj)
+							count_displayed_hours += 1
+						
+					if (teacher1 != -1):
+						if (aaa == 1):
+							print("H: (%d)--> %s", jj, teachers[teacher1].surname)
+							count_displayed_hours += 1
+						else:
+							fp1.write("H: (%d)--> %s", jj, teachers[teacher1].surname)
+							count_displayed_hours += 1
+		
+					if (teacher1 != -1 and teachers[teacher1].kind == 1):
+						co_class1 = co_class[k][teacher1]
+						if (co_class1 == k):
+							co_teacher1 = co_teacher[teacher1][co_class1]
+							if (co_teacher1 < 0):
+								if (aaa == 1)
+									print(" + %s ", teachers[-co_teacher1].surname)
+								else:
+									fp1.write(" + %s ", teachers[-co_teacher1].surname)
+
+					if (aaa == 1):
+						print("\n")
+
+					else:
+						fp1.write("\n")
+					if (count_displayed_hours % 7 == 0):
+						if (aaa == 1):
+							print("\n\n");
+						else:
+							fp1.write("\n\n")
+
+		elif (aaa == 2 or aaa == 22):
+			if (aaa == 2):
+				print("\nTHE BEST TIMETABLE, BY TEACHER,  IS : \n")
+			else:
+				fp2 = open(results_by_teacher_file, "w")
+				fp2.write("\nRESULTS FOR INPUT FILE %s\n", name_of_data_file)
+				fp2.write("-----------------------------------------------------\n")
+				fp2.write("\nTHE BEST TIMETABLE, BY TEACHER,  IS : \n")
+			
+			for i in teachers_no:
+				if (aaa == 2):
+					print("\nTeacher %s \n", teachers[i].surname)
+					print("______________________________________\n")
+				else:
+					fp2.write("\nTeacher %s \n", teachers[i].surname)
+					fp2.write("______________________________________\n")
+
+				for jj in range(0,35):
+					for k in teachers[i].num_of_classes:
+						class1 = teachers[i].classes_he_teaches[k][0]
+						if (teachers[i].kind == 0):
+							if (global_best[class1][jj] == i):
+								if (aaa == 2):
+									printf("H (%d) --> %s \n", jj, classes[class1].class_name)
+								else:
+									fprintf(fp2, "H (%d) --> %s \n", jj, classes[class1].class_name)	
+							continue
+						
+						else:
+							if (global_best[class1][jj] == i):
+								if (aaa == 2):
+									print("\nH (%d) --> %s ", jj, classes[class1].class_name)
+								else:
+									fp2.write("\nH (%d) --> %s ", jj, classes[class1].class_name)
+
+								zz = 0
+								for zz in teachers[i].count_of_coteachers:
+									if (teachers[i].coteachings[zz][3] == class1):
+										coclass2 = teachers[i].coteachings[zz][4]
+										coteacher = teachers[i].coteachings[zz][0]
+										if (aaa == 2):
+											print("\n # coteaches with %s at %s\n", teachers[coteacher].surname, class[coclass2].class_name)
+										else:
+											fp2.write("\n # coteaches with %s at %s\n", teachers[coteacher].surname, class[coclass2].class_name)
+
+							coteacher = -1
+							coclass = -1
+							locate_coteacher = -1
+							display_implied_teacher(i, class1, &coteacher, &coclass, &locate_coteacher, teachers_no)
+							if (locate_coteacher == 1):
+								if (global_best[class1][jj] == coteacher):
+									if (aaa == 2):
+										print("\nH (%d) --> %s  # coteaches with %s at %s \n", jj, classes[class1].class_name,
+										       teachers[coteacher].surname, classes[coclass].class_name)
+									else:
+										fp2.write("\nH (%d) --> %s  # coteaches with %s at %s \n", jj, classes[class1].class_name,
+										        teachers[coteacher].surname, classes[coclass].class_name)
+								continue
+						
+		elif (aaa == 3 or aaa == 33):
+			display_results(aaa, there_is_coteaching, 0, 35, global_best, teachers_no, classes_no, TEPW, ITDW, ICDW)
+			if (aaa == 3):
+				print("\nBefore refinement, fitness was %f .\n", global_best_fitness)
+
+			else:
+				fp3.write("\nBefore refinement, fitness was %f .\n", global_best_fitness)
+
+		print("\nIn order to see the timetable by class, just enter '1'.\n")
+		print("In order to see the timetable by teacher, just enter '2'.\n")
+		print("In order to see analysis of timetable, just enter '3'.\n")
+		print("\nIn order to print the timetable by class to the txt file, just enter '11'.\n")
+		print("\nIn order to print the timetable by teacher to the txt file, just enter '22'.\n")
+		print("In order to print analysis of timetable to the txt file, just enter '33'.\n")
+		print("In order to terminate , just hit any other key.\n")
+		aaa = input("input: ")
+		
+	print("\nData input file  %s . The seed was %d\n", name_of_data_file, seed)
+	print("ITDW = %f ICDW = %f  TEPW = %f\n", ITDW, ICDW, TEPW)
+	print("SMP=%d, SRD=%d, CDC=%d, SPC=%d, MR=%d\n", SMP, SRD, CDC, SPC, MR)
+	print("Number of cats used : %d\n", cats)
+	print("Iterations=%d", iterations)
+	print("\nProgram terminated.\n")
+	print("\a")
+	fp.close()
+	fp1.close()
+	fp2.close()
+	fp3.close()
+	fp4.close()
+
+	return 0

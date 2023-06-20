@@ -1174,3 +1174,65 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 		for i in range(SMP):
 			if (tmp1 <= sel_prob[i]):
 				copy_matrices(0, 35, x, cat_copy[i], classes_no)
+
+def main():
+	start, t, subtract_day = int, int, int
+	name_of_data_file = [] #char name_of_data_file[30]
+	input = [] #char input[5]
+	i, j, k, h, aaa, p, b, lessons, jj = int, int, int, int, int, int, int, int, int
+	number_of_classes1 = [] #char number_of_classes1[3];
+	classes_no, teachers_no = int, int #int classes_no, teachers_no;
+	number_of_teachers = [] #char number_of_teachers[3];
+	data_entry_ok = 0
+	main_algo_time, optimization_time = float, float
+	seed = int
+	iter, tmp, times = int, int , int
+	fitness_evolution_file = [] #char fitness_evolution_file[150]
+	refinement_steps = 500000
+	ts = [] #int ts[2]
+	f1, f2, ff = float, float, float
+	loop_count2 = 9999
+	repetition = int
+
+	TEPW, ITDW, ICDW = float, float, float
+
+# -------------------- OPTIMIZATION PHASE (start) ------------------ 
+
+	TEPW = 1.35 # changing the cost parameters
+	ITDW = 0.06
+	ICDW = 0.06
+
+	print("\n\nOptimizing timetables ...\n")
+	begin_time = time.process_time()
+
+	start = 0
+	for start in range(0,35,start+7):
+		f1 = calculate_partial_fitness(there_is_coteaching, start, start + 7, global_best, teachers_no, classes_no, TEPW)
+
+		copy_matrices(start, start + 7, v, global_best, classes_no)
+
+		repetition = 0
+		for repetition in range(0, refinement_steps, repetition+1):
+			loop_count2 += 1
+
+			unique_randint(ts, start, start + 6, 2)
+			perform_swap(there_is_coteaching, start, start + 7, v, ts[0], ts[1], classes_no, teachers_no, TEPW)
+			f2 = calculate_partial_fitness(there_is_coteaching, start, start + 7, v, teachers_no, classes_no, TEPW)
+
+			if (check_hard_constraints(there_is_coteaching, start, start + 7, v, teachers_no, classes_no) > 0.0):
+				continue
+			
+			if (f2 <= f1):
+				if (f2 < f1):
+					last_updating_time = time.process_time()
+				f1 = f2
+				copy_matrices(start, start + 7, global_best, v, classes_no)
+				if (f2 == 0.0):
+					break
+
+		ff = calculate_fitness(there_is_coteaching, 0, 35, global_best, teachers_no, classes_no, TEPW, ITDW, ICDW)
+		if ff == 0.0:
+			break
+
+# -------------------- OPTIMIZATION PHASE (end) ------------------
+

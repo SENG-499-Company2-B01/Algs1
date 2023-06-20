@@ -1178,7 +1178,7 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 def cat_trace(x: list, classes_no: int): #cat trace procedure
 	similarity = 0
 	distance = 0
-	sl = [0 for i in range(classes_no * 35)]
+	s1 = [0 for i in range(classes_no * 35)]
 
 	for k in range(classes_no):
 		for j in range(35):
@@ -1187,13 +1187,13 @@ def cat_trace(x: list, classes_no: int): #cat trace procedure
 
 	distance = (classes_no * 35) - similarity
 
-	#cells_to_swap = round_num((randd(0.0, 1.0)*float(distance))
+	cells_to_swap = round((random()*distance))
 
 	unique_randint(s1,0,classes_no*35,cells_to_swap)
 
 	for k in range(cells_to_swap):
-		cn = math.floor(sl[k]/35)
-		tt1 = sl[k] % 35
+		cn = math.floor(s1[k]/35)
+		tt1 = s1[k] % 35
 		tt2 = randint(0,34)
 
 		single_swap(x, tt1, tt2, cn ,classes_no)
@@ -1546,7 +1546,7 @@ def main():
 				count_displayed_hours = 0
 				if (aaa == 1):
 					print("\n<--------- %s------------->\n", classes[k].class_name)
-				else
+				else:
 					fp1.write("\n<--------- %s------------->\n", classes[k].class_name)
 				for jj in range(0,35):
 					teacher1 = global_best[k][jj]
@@ -1571,7 +1571,7 @@ def main():
 						if (co_class1 == k):
 							co_teacher1 = co_teacher[teacher1][co_class1]
 							if (co_teacher1 < 0):
-								if (aaa == 1)
+								if (aaa == 1):
 									print(" + %s ", teachers[-co_teacher1].surname)
 								else:
 									fp1.write(" + %s ", teachers[-co_teacher1].surname)
@@ -1583,7 +1583,7 @@ def main():
 						fp1.write("\n")
 					if (count_displayed_hours % 7 == 0):
 						if (aaa == 1):
-							print("\n\n");
+							print("\n\n")
 						else:
 							fp1.write("\n\n")
 
@@ -1610,9 +1610,9 @@ def main():
 						if (teachers[i].kind == 0):
 							if (global_best[class1][jj] == i):
 								if (aaa == 2):
-									printf("H (%d) --> %s \n", jj, classes[class1].class_name)
+									print("H (%d) --> %s \n", jj, classes[class1].class_name)
 								else:
-									fprintf(fp2, "H (%d) --> %s \n", jj, classes[class1].class_name)	
+									fp2.write("H (%d) --> %s \n", jj, classes[class1].class_name)	
 							continue
 						
 						else:
@@ -1628,14 +1628,14 @@ def main():
 										coclass2 = teachers[i].coteachings[zz][4]
 										coteacher = teachers[i].coteachings[zz][0]
 										if (aaa == 2):
-											print("\n # coteaches with %s at %s\n", teachers[coteacher].surname, class[coclass2].class_name)
+											print("\n # coteaches with %s at %s\n", teachers[coteacher].surname, classes[coclass2].class_name)
 										else:
-											fp2.write("\n # coteaches with %s at %s\n", teachers[coteacher].surname, class[coclass2].class_name)
+											fp2.write("\n # coteaches with %s at %s\n", teachers[coteacher].surname, classes[coclass2].class_name)
 
 							coteacher = -1
 							coclass = -1
 							locate_coteacher = -1
-							display_implied_teacher(i, class1, &coteacher, &coclass, &locate_coteacher, teachers_no)
+							display_implied_teacher(i, class1, coteacher, coclass, locate_coteacher, teachers_no)
 							if (locate_coteacher == 1):
 								if (global_best[class1][jj] == coteacher):
 									if (aaa == 2):

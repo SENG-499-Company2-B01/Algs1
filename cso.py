@@ -1419,7 +1419,7 @@ def main():
 			else:
 				fp4.write("%d\t%f \n" % (iter, math.log10(global_best_fitness)))
 
-		for p in cats:
+		for p in range(0, cats):
 			fitness = calculate_fitness(there_is_coteaching, 0, 35, x[p], teachers_no, classes_no, TEPW, ITDW, ICDW)
 
 			if (fitness <= global_best_fitness):
@@ -1555,7 +1555,7 @@ def main():
 							print("H: (%d)---> empty", jj)
 							count_displayed_hours += 1
 						else:
-							fp1.write("H: (%d)---> empty", jj)
+							fp1.write("H: (%d)---> empty" %  jj)
 							count_displayed_hours += 1
 						
 					if (teacher1 != -1):
@@ -1596,7 +1596,7 @@ def main():
 				fp2.write("-----------------------------------------------------\n")
 				fp2.write("\nTHE BEST TIMETABLE, BY TEACHER,  IS : \n")
 			
-			for i in teachers_no:
+			for i in range(0, teachers_no):
 				if (aaa == 2):
 					print("\nTeacher %s \n", teachers[i].surname)
 					print("______________________________________\n")

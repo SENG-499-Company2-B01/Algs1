@@ -5,11 +5,11 @@ import math
 import time
 
 #declarations of file names
-fp = None
-fp1 = None
-fp2 = None
-fp3 = None
-fp4 = None
+# fp = None
+# fp1 = None
+# fp2 = None
+# fp3 = None
+# fp4 = None
 
 # definitions of variables and constants
 class_name_length = 15 # maximum length of a class's name
@@ -40,7 +40,7 @@ def SwapInt(x,y,tmp):
 numSlots = 35
 x = [[[0 for i in range(numSlots)] for j in range(classes_no1)] for k in range(cats)] # matrix for storing a cat's data
 global_best = [[0 for i in range(numSlots)] for j in range (classes_no1)] # matrix for storing the global best cat
-v = [[0 for i in range(numSlots)] for j in range[classes_no1]] # helper array
+v = [[0 for i in range(numSlots)] for j in range(classes_no1)] # helper array
 
 inf = 10e13 # worst (maximum) value of the fitness function
 
@@ -104,7 +104,7 @@ class class_record:
 
 classes = [class_record() for i in range(classes_no1)]
 
-def initialize_randomness(seed: int = -1): # initializes the seed, if seed is -1 then it uses system time as seed
+def initialize_randomness(seed: int|float = -1): # initializes the seed, if seed is -1 then it uses system time as seed
 	if seed == -1:
 		seed = datetime.datetime.now().timestamp()
 	random.seed(seed)
@@ -947,7 +947,7 @@ def display_results(to_file: int,
 
 # locates the data of a co-teaching
 def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass: int, locate_coteacher: int, number_of_teachers1: int):
-	t, z, class1, class2: int
+	t, z, class1, class2 = int, int, int ,int
 	locate_coteacher = -2
 
 	for t in range(0, number_of_teachers1):
@@ -981,7 +981,7 @@ def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass:
 # swaps two timeslots under certain conditions
 def single_swap(a: list,timeslot1: int,timeslot2: int,class_num: int,classes_no: int):
 	i, co_class1, co_teacher1=0,0,0
- 
+
 	if (timeslot1 == timeslot2):
 		return -1
 	if (a[class_num][timeslot1] == a[class_num][timeslot2]):
@@ -996,7 +996,7 @@ def single_swap(a: list,timeslot1: int,timeslot2: int,class_num: int,classes_no:
 			return -1
 
 	swap(a, class_num, timeslot1, timeslot2)
- 
+
 	if (teachers[a[class_num][timeslot1]].kind == 1):
 		co_class1 = co_class[class_num][a[class_num][timeslot1]]
 		co_teacher1 = co_teacher[a[class_num][timeslot1]][class_num]
@@ -1011,7 +1011,7 @@ def insert_column(mode: int,begin: int,end: int,source: list,destination: list,c
 	store_positions_and_fitness=[[0 for k in range(21)] for i in range(2)]
 	ff, smaller_fitness=0,0
 	index, z, skip= 0,0,0
- 
+
 	for i in range(class_no1):
 		if ((column == 6 or column == 13 or column == 20 or column == 27 or column == 34) and destination[i][column] == -1):
 			continue
@@ -1019,23 +1019,23 @@ def insert_column(mode: int,begin: int,end: int,source: list,destination: list,c
 			continue
 		jj = 0
 		j=begin
-  
+
 		while (j < end):
 			if (destination[i][j] == source[i][column] and j != column):
 				aux[jj] = j
 				jj=jj+1
 			j=j+1
 		skip = 0
-  
+
 		for z in range(jj):
-      
+
 			if (aux[z] == column):
 				skip = 1
 				continue
 
 			SwapInt(destination[i][aux[z]], destination[i][column], temp)
 			ff = calculate_fitness(mode, 0, 35, destination, teachers_no, class_no1, TEPW, ITDW, ICDW)
-   
+
 			if (skip == 0):
 				store_positions_and_fitness[0][z] = aux[z]
 				store_positions_and_fitness[1][z] = ff
@@ -1044,20 +1044,20 @@ def insert_column(mode: int,begin: int,end: int,source: list,destination: list,c
 				store_positions_and_fitness[1][z - 1] = ff
     
 			SwapInt(destination[i][aux[z]], destination[i][column],temp)
-   
+
 		smaller_fitness = inf
 		index = 0
-  
+
 		for z in range(jj):
 			if (store_positions_and_fitness[1][z] < smaller_fitness):
 				smaller_fitness = store_positions_and_fitness[1][z]
 				index = z
 		SwapInt(destination[i][aux[index]], destination[i][column], temp)
-  
+
 #initializes the population of cats
 def initialize_cats(classes_number: int,cat_number: int):
 	i, j, k, p, class1, timeslot=0,0,0,0,0,0
- 
+
 	for p in range(cat_number):
 		for j in range(classes_number):
 			for i in range(classes[j].number_of_teachers):
@@ -1074,12 +1074,12 @@ def initialize_cats(classes_number: int,cat_number: int):
 					if (x[p][class1][timeslot] == -1):
 						x[p][class1][timeslot] = classes[class1].teachers_of_class_and_hours[i][0]
 						classes[class1].teachers_of_class_and_hours_remaining[i][1]=classes[class1].teachers_of_class_and_hours_remaining[i][1]-1
-      
+
 		for j in range(classes_number):
 			for i in range(classes[j].number_of_teachers):
 				for k in range(3):
 					classes[j].teachers_of_class_and_hours_remaining[i][k] = classes[j].teachers_of_class_and_hours[i][k]
-     
+
 #cat seek procedure
 def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,ICDW: float):
 	j, aa, bb, consider, cp, swaps_to_make, timeslots_to_change=0,0,0,0,0,0,0
@@ -1096,36 +1096,36 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 	selected_copy = 0
 	ll, best_fs, tmp1 = 0.0, 0.0, 0.0
 	sel_prob = []
- 
+
 	best_fs = calculate_fitness(there_is_coteaching, 0, 35, x, teachers_no, classes_no, TEPW, ITDW, ICDW)
- 
+
 	if (SPC == 1):
 		consider = 1
 	else:
 		consider = 0
-  
+
 	for cp in range(SMP):
 		copy_matrices(0, 35, cat_copy[cp], x, classes_no)
-  
+
 	timeslots_to_change = int((CDC / 100.0) * 35.0)
- 
+
 	if (timeslots_to_change == 0):
 		timeslots_to_change = 1
-  
+
 	swaps_to_make = int((SRD / 100.0) * classes_no * 35)
- 
+
 	for cp in range(SMP):
 		copy_matrices(0, 35, temp_cat, cat_copy[cp], classes_no)
 
 		if ((consider == 0) or ((consider == 1) and (cp != SMP - 1))):
 			unique_randint(hd, 0, 34, timeslots_to_change)
-   
+
 			for aa in range(timeslots_to_change):
 				insert_column(there_is_coteaching, 0, 35, global_best, temp_cat, hd[aa], classes_no, teachers_no, TEPW, ITDW, ICDW)
     
 			copy_matrices(0, 35, temp_cat1, temp_cat, classes_no)
 			unique_randint(sl, 0, (classes_no * 35) - 1, swaps_to_make)
-   
+
 			for bb in range(swaps_to_make):
 				cn = int(sl[bb] / 35)
 				tt1 = sl[bb] % 35
@@ -1133,15 +1133,15 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
     
 				if (single_swap(temp_cat, tt1, tt2, cn, classes_no) != -1):
 					tfs = calculate_fitness(there_is_coteaching, 0, 35, temp_cat, teachers_no, classes_no, TEPW, ITDW, ICDW)
-     
+
 					if (tfs <= best_fs):
 						best_fs = tfs
 						fs[cp] = tfs
 						cfs[cp] = tfs
 						copy_matrices(0, 35, cat_copy[cp], temp_cat, classes_no)
-      
+
 					copy_matrices(0, 35, temp_cat, temp_cat1, classes_no)
-     
+
 		else:
 			fs[cp] = calculate_fitness(there_is_coteaching, 0, 35, cat_copy[cp], teachers_no, classes_no, TEPW, ITDW, ICDW)
 			cfs[cp] = fs [cp]
@@ -1154,23 +1154,23 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 				cfs[j - 1] = cfs[j]
 				cfs[j] = ll
 			j=j+1
-   
+
 	fsmax = cfs[SMP - 1]
 	fsmin = cfs[0]
- 
+
 	if (fsmax == fsmin):
 		all_equal = 1
-  
+
 	if (all_equal == 1):
 		selected_copy = randint(0, SMP - 1)
 		copy_matrices(0, 35, x, cat_copy[selected_copy], classes_no)
-  
+
 	else:
 		for i in range(SMP):
 			sel_prob[i] = abs(fs[i] - fsmax) / (fsmax - fsmin)
-   
+
 		tmp1 = randd(0.0, 1.0)
-  
+
 		for i in range(SMP):
 			if (tmp1 <= sel_prob[i]):
 				copy_matrices(0, 35, x, cat_copy[i], classes_no)
@@ -1187,7 +1187,7 @@ def cat_trace(x: list, classes_no: int): #cat trace procedure
 
 	distance = (classes_no * 35) - similarity
 
-	cells_to_swap = round((random()*distance))
+	cells_to_swap = round((random.random()*distance))
 
 	unique_randint(s1,0,classes_no*35,cells_to_swap)
 
@@ -1223,13 +1223,13 @@ def main():
 	input1 = input("enter file name:")
 	input1 += ".txt"
 	name_of_data_file = input1
- 
+
 	fp = open(input1, "r")
 	if fp == None:
 		print("\nCannot open file %s. \n", input1)
 		print("\nProgram terminated.\n")
 		exit(0)
-  
+
 #this block will be not needed I think, checks an input file for errors, assigns some variables from input file
 	""" while (data_entry_ok == 0): # reads and checks the integrity of the input file
 		input(fp, " %d %s", &there_is_coteaching, number_of_classes1)
@@ -1374,24 +1374,24 @@ def main():
 		}
 		data_entry_ok = 1;
 	} // end of input file checks """
- 
+
 	print("\nData input completed from file %s \n", input1)
 	print("\nPlease enter your own seed or -1 for system seed: ") # enter the seed
-	seed = input("seed: ")
+	seed = int(input("seed: "))
 
 	seed = initialize_randomness(seed)
 	print("The seed is : %d ", seed)
- 
+
 	initialize_cats(classes_no, cats) # initialize the population of cats
 
 	if (there_is_coteaching == 1):
-		for i in teachers_no:
+		for i in range(0, teachers_no):
 			teachers[i].total_hours = find_implied_and_actual_hours_of_teacher(i, teachers_no)
 
 	fitness_evolution_file = "fitness_evolution.txt"
 	fp4 = open(fitness_evolution_file, "w")
 
-	fp4.write("Fitness evolution for input file %s\n", input1)
+	fp4.write("Fitness evolution for input file %s\n" % input1)
 
 	print("\nInitialization of cats completed.\n")
 	print("\nProgram is running. Please wait...\n\n")
@@ -1406,7 +1406,7 @@ def main():
 	times = iterations
 	begin_time = time.process_time()
 
-	for iter in (times + 1):
+	for iter in range(0, times + 1):
 		if (iter == 0 or iter % 100 == 0):
 			elTime = (time.process_time() - begin_time) #/ (CLOCKS_PER_SEC) / 60
 			print("(%d : %.1f) ", math.floor(elTime), (elTime - math.floor(elTime)))
@@ -1415,18 +1415,18 @@ def main():
 
 		if (iter % 20 == 0):
 			if (global_best_fitness == 0.0):
-				fp4.write("%d\t%f \n", iter, math.log10(global_best_fitness + 0.00000000000001))
+				fp4.write("%d\t%f \n" % (iter, math.log10(global_best_fitness + 0.00000000000001)))
 			else:
-				fp4.write("%d\t%f \n", iter, math.log10(global_best_fitness))
+				fp4.write("%d\t%f \n" % (iter, math.log10(global_best_fitness)))
 
-		for p in cats:
+		for p in range(0, cats):
 			fitness = calculate_fitness(there_is_coteaching, 0, 35, x[p], teachers_no, classes_no, TEPW, ITDW, ICDW)
 
 			if (fitness <= global_best_fitness):
 				last_updating_time = time.process_time()
 				global_best_fitness = fitness
 
-				for k in classes_no:
+				for k in range(0, classes_no):
 					for j in range(0,35):
 						global_best[k][j] = x[p][k][j]
 
@@ -1503,7 +1503,7 @@ def main():
 	print("In order to print the timetable by teacher to the txt file, just enter '22'.\n")
 	print("In order to print analysis of timetable to the txt file, just enter '33'.\n")
 	print("In order to terminate , just hit any other key: ")
-	aaa = input("input: ")
+	aaa = int(input("input: "))
 
 
 	co_teacher1 = int
@@ -1523,31 +1523,31 @@ def main():
 	fp2 = open(results_by_teacher_file, "w")
 	fp3 = open(results_analysis, "w")
 
-	fp3.write("\nResults Analysis for input file %s\n", name_of_data_file)
-	fp3.write("\nWithout refinement, fitness is %f .\n", global_best_fitness)
-	fp3.write("\nTime of main algorithm is %d mins and %.1f secs.\n", math.floor(main_algo_time), (main_algo_time - math.floor(main_algo_time)))
-	fp3.write("The seed is %d\n", seed)
+	fp3.write("\nResults Analysis for input file %s\n" % name_of_data_file)
+	fp3.write("\nWithout refinement, fitness is %f .\n" % global_best_fitness)
+	fp3.write("\nTime of main algorithm is %d mins and %.1f secs.\n" % (math.floor(main_algo_time), (main_algo_time - math.floor(main_algo_time))))
+	fp3.write("The seed is %d\n" % seed)
 
 	while (aaa == 1 or aaa == 2 or aaa == 3 or aaa == 11 or aaa == 22 or aaa == 33):
 		if (aaa == 1 or aaa == 11):
-      
+
 			if aaa == 1:
 				print("\nTHE BEST TIMETABLE, BY CLASS, IS : \n")
     
 			else:
 				fp1 = open(results_by_class_file, "w")
-				fp1.write("\nRESULTS FOR INPUT FILE %s\n", name_of_data_file)
+				fp1.write("\nRESULTS FOR INPUT FILE %s\n" % name_of_data_file)
 				fp1.write("---------------------------------------------------")
 				fp1.write("\nTHE BEST TIMETABLE, BY CLASS, IS : \n")
 			
 
 			count_displayed_hours = int
-			for k in classes_no:
+			for k in range(0, classes_no):
 				count_displayed_hours = 0
 				if (aaa == 1):
 					print("\n<--------- %s------------->\n", classes[k].class_name)
 				else:
-					fp1.write("\n<--------- %s------------->\n", classes[k].class_name)
+					fp1.write("\n<--------- %s------------->\n" % classes[k].class_name)
 				for jj in range(0,35):
 					teacher1 = global_best[k][jj]
 					if (teacher1 == -1):
@@ -1555,7 +1555,7 @@ def main():
 							print("H: (%d)---> empty", jj)
 							count_displayed_hours += 1
 						else:
-							fp1.write("H: (%d)---> empty", jj)
+							fp1.write("H: (%d)---> empty" %  jj)
 							count_displayed_hours += 1
 						
 					if (teacher1 != -1):
@@ -1563,7 +1563,7 @@ def main():
 							print("H: (%d)--> %s", jj, teachers[teacher1].surname)
 							count_displayed_hours += 1
 						else:
-							fp1.write("H: (%d)--> %s", jj, teachers[teacher1].surname)
+							fp1.write("H: (%d)--> %s" % (jj, teachers[teacher1].surname))
 							count_displayed_hours += 1
 		
 					if (teacher1 != -1 and teachers[teacher1].kind == 1):
@@ -1574,7 +1574,7 @@ def main():
 								if (aaa == 1):
 									print(" + %s ", teachers[-co_teacher1].surname)
 								else:
-									fp1.write(" + %s ", teachers[-co_teacher1].surname)
+									fp1.write(" + %s " % teachers[-co_teacher1].surname)
 
 					if (aaa == 1):
 						print("\n")
@@ -1592,16 +1592,16 @@ def main():
 				print("\nTHE BEST TIMETABLE, BY TEACHER,  IS : \n")
 			else:
 				fp2 = open(results_by_teacher_file, "w")
-				fp2.write("\nRESULTS FOR INPUT FILE %s\n", name_of_data_file)
+				fp2.write("\nRESULTS FOR INPUT FILE %s\n" % name_of_data_file)
 				fp2.write("-----------------------------------------------------\n")
 				fp2.write("\nTHE BEST TIMETABLE, BY TEACHER,  IS : \n")
 			
-			for i in teachers_no:
+			for i in range(0, teachers_no):
 				if (aaa == 2):
 					print("\nTeacher %s \n", teachers[i].surname)
 					print("______________________________________\n")
 				else:
-					fp2.write("\nTeacher %s \n", teachers[i].surname)
+					fp2.write("\nTeacher %s \n" % teachers[i].surname)
 					fp2.write("______________________________________\n")
 
 				for jj in range(0,35):
@@ -1612,7 +1612,7 @@ def main():
 								if (aaa == 2):
 									print("H (%d) --> %s \n", jj, classes[class1].class_name)
 								else:
-									fp2.write("H (%d) --> %s \n", jj, classes[class1].class_name)	
+									fp2.write("H (%d) --> %s \n" % (jj, classes[class1].class_name))	
 							continue
 						
 						else:
@@ -1620,7 +1620,7 @@ def main():
 								if (aaa == 2):
 									print("\nH (%d) --> %s ", jj, classes[class1].class_name)
 								else:
-									fp2.write("\nH (%d) --> %s ", jj, classes[class1].class_name)
+									fp2.write("\nH (%d) --> %s " % (jj, classes[class1].class_name))
 
 								zz = 0
 								for zz in teachers[i].count_of_coteachers:
@@ -1630,7 +1630,7 @@ def main():
 										if (aaa == 2):
 											print("\n # coteaches with %s at %s\n", teachers[coteacher].surname, classes[coclass2].class_name)
 										else:
-											fp2.write("\n # coteaches with %s at %s\n", teachers[coteacher].surname, classes[coclass2].class_name)
+											fp2.write("\n # coteaches with %s at %s\n" % (teachers[coteacher].surname, classes[coclass2].class_name))
 
 							coteacher = -1
 							coclass = -1
@@ -1642,8 +1642,8 @@ def main():
 										print("\nH (%d) --> %s  # coteaches with %s at %s \n", jj, classes[class1].class_name,
 										       teachers[coteacher].surname, classes[coclass].class_name)
 									else:
-										fp2.write("\nH (%d) --> %s  # coteaches with %s at %s \n", jj, classes[class1].class_name,
-										        teachers[coteacher].surname, classes[coclass].class_name)
+										fp2.write("\nH (%d) --> %s  # coteaches with %s at %s \n" % (jj, classes[class1].class_name,
+										        teachers[coteacher].surname, classes[coclass].class_name))
 								continue
 						
 		elif (aaa == 3 or aaa == 33):
@@ -1652,7 +1652,7 @@ def main():
 				print("\nBefore refinement, fitness was %f .\n", global_best_fitness)
 
 			else:
-				fp3.write("\nBefore refinement, fitness was %f .\n", global_best_fitness)
+				fp3.write("\nBefore refinement, fitness was %f .\n" % global_best_fitness)
 
 		print("\nIn order to see the timetable by class, just enter '1'.\n")
 		print("In order to see the timetable by teacher, just enter '2'.\n")
@@ -1661,7 +1661,7 @@ def main():
 		print("\nIn order to print the timetable by teacher to the txt file, just enter '22'.\n")
 		print("In order to print analysis of timetable to the txt file, just enter '33'.\n")
 		print("In order to terminate , just hit any other key.\n")
-		aaa = input("input: ")
+		aaa = int(input("input: "))
 		
 	print("\nData input file  %s . The seed was %d\n", name_of_data_file, seed)
 	print("ITDW = %f ICDW = %f  TEPW = %f\n", ITDW, ICDW, TEPW)

@@ -8,3 +8,6 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 8017:8017
+    environment:
+      HOST_NAME: ${HOST_NAME}
+      DJANGO_MODE: ${DJANGO_MODE}

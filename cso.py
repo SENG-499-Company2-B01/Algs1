@@ -18,7 +18,7 @@ teacher_name_length = 50 # maximum length of a teacher's name
 teacher_name = ['' for x in range (teacher_name_length)]
 classes_no1 = 50 # maximum number of classes
 teachers_no1 = 100 # maximum number of teachers
-
+classroom_number=100 #  number of classroom
 # basic parameters of the fitness function
 BASE = 1.3
 HCW = 10
@@ -37,11 +37,11 @@ def SwapInt(x,y,tmp):
 	x = y
 	y = tmp
 
-numSlots = 35
-x = [[[0 for i in range(numSlots)] for j in range(classes_no1)] for k in range(cats)] # matrix for storing a cat's data
-global_best = [[0 for i in range(numSlots)] for j in range (classes_no1)] # matrix for storing the global best cat
-v = [[0 for i in range(numSlots)] for j in range(classes_no1)] # helper array
-
+numSlots = 26
+x = [[[[0 for i in range(numSlots)] for ii in range(classroom_number)] for j in range(classes_no1)] for k in range(cats)] # matrix for storing a cat's data
+global_best = [[[0 for i in range(numSlots)] for ii in range(classroom_number)] for j in range(classes_no1)] # matrix for storing the global best cat
+v = [[[0 for i in range(numSlots)] for ii in range(classroom_number)] for j in range(classes_no1)] # helper array
+# x[cats][course_id][classroom_id][timeslot]=assigned professors
 inf = 10e13 # worst (maximum) value of the fitness function
 
 global_best_fitness = inf # best (minimum) value of the fitness function
@@ -103,7 +103,18 @@ class class_record:
 		self.teachers_of_class_and_hours_remaining = teachers_of_class_and_hours_remaining
 
 classes = [class_record() for i in range(classes_no1)]
+class classroom_data:
+	def __init__(self,
+			classroom_id: str = '',
+			classroom_timeslots: list = [-1 for j in range(numSlots)],
+            classroom_size: int = 0,
+			classroom_faculty: str = '',):
+		self.classroom_id = classroom_id
+		self.classroom_timeslots = classroom_timeslots
+		self.classroom_size = classroom_size
+		self.classroom_faculty = classroom_faculty
 
+classroomlist = [classroom_data() for i in range(classes_no1)]
 def initialize_randomness(seed: int|float = -1): # initializes the seed, if seed is -1 then it uses system time as seed
 	if seed == -1:
 		seed = datetime.datetime.now().timestamp()
@@ -979,6 +990,7 @@ def display_implied_teacher(teacher3: int, class3: int, coteacher: int, coclass:
 # -------------------- CSO FUNCTIONS --------------------
 # -------- for more information consult the paper -------
 # swaps two timeslots under certain conditions
+# x[cats][course_id][classroom_id][timeslot]=assigned professors
 def single_swap(a: list,timeslot1: int,timeslot2: int,class_num: int,classes_no: int):
 	i, co_class1, co_teacher1=0,0,0
 
@@ -1004,55 +1016,63 @@ def single_swap(a: list,timeslot1: int,timeslot2: int,class_num: int,classes_no:
 			swap(a, co_class1, timeslot1, timeslot2)
 	return 1
 
-#replaces all the lessons in a timeslot of a cat with the ones in the same timeslot of another cat
-def insert_column(mode: int,begin: int,end: int,source: list,destination: list,column: int ,class_no1: int,teachers_no :int,TEPW: float,ITDW: float,ICDW: float):
+#replaces all the lessons in a timeslot of a classroom of cat with the ones in the same timeslot, the same classroom of another cat
+# the above description is shit, the function actually finds the course that is in classroom_i, timeslot_to_change, in destination cat and find the same course
+# within the source cat (which is located at timeslot t, classroom c) and switch all the course happening at timeslot t, classroom c in source cat
+# with all the course happening at timeslot timeslot_to_change, classroom classroom_i in source cat
+def insert_column(mode: int,begin: int,end: int,source: list,destination: list,classroom_i :int,timeslot_to_change: int ,class_no1: int,teachers_no :int,TEPW: float,ITDW: float,ICDW: float):
 	i, j, jj, temp= 0,0,0,0
-	aux=[0 for i in range(21)]
-	store_positions_and_fitness=[[0 for k in range(21)] for i in range(2)]
+	aux=[0 for i in range((end-begin)*classroom_number)]
+    bux=[0 for i in range((end-begin)*classroom_number)]
+	store_positions_and_fitness=[[0 for k in range(end-begin)] for i in range(3)]
 	ff, smaller_fitness=0,0
 	index, z, skip= 0,0,0
-
+    # the rest of the code is designed to handle classes that beyond size 120 and are treated as multiple classes, the bel-
+    #-ow code calculates the best fitness for moving the same class to the desinated location and chose the best one to move
 	for i in range(class_no1):
-		if ((column == 6 or column == 13 or column == 20 or column == 27 or column == 34) and destination[i][column] == -1):
-			continue
-		if (destination[i][column] == source[i][column]):
-			continue
+        if (destination[i][classroom_i][timeslot_to_change] == source[i][classroom_i][timeslot_to_change]):
+            continue
 		jj = 0
+        jjj=0
+        jjjj=0
 		j=begin
-
 		while (j < end):
-			if (destination[i][j] == source[i][column] and j != column):
-				aux[jj] = j
-				jj=jj+1
+            jjj=0
+            while(jjj<classroom_number):
+                if (destination[i][jjj][j] == source[i][classroom_i][timeslot_to_change] and j != timeslot_to_change and jjj!=classroom_i):
+                    aux[jj] = j
+                    bux[jjjj]=jjj
+                    jjjj=jjjj+1
+                    jj=jj+1
+                jjj=jjj+1
 			j=j+1
 		skip = 0
-
 		for z in range(jj):
-
-			if (aux[z] == column):
+            if (aux[z] == timeslot_to_change and bux[z]==classroom_i):
 				skip = 1
 				continue
-
-			SwapInt(destination[i][aux[z]], destination[i][column], temp)
-			ff = calculate_fitness(mode, 0, 35, destination, teachers_no, class_no1, TEPW, ITDW, ICDW)
-
-			if (skip == 0):
-				store_positions_and_fitness[0][z] = aux[z]
-				store_positions_and_fitness[1][z] = ff
-			else:
-				store_positions_and_fitness[0][z - 1] = aux[z]
-				store_positions_and_fitness[1][z - 1] = ff
+            SwapInt(destination[i][bux[z]][aux[z]], destination[i][classroom_i][timeslot_to_change], temp)
+            ff = calculate_fitness(mode, 0, 35, destination, teachers_no, class_no1, TEPW, ITDW, ICDW)
+            if (skip == 0):
+                store_positions_and_fitness[0][z] = aux[z]
+                store_positions_and_fitness[1][z] = bux[z]
+                store_positions_and_fitness[2][z] = ff
+            else:
+                store_positions_and_fitness[0][z - 1] = aux[z]
+                store_positions_and_fitness[1][z - 1] = bux[z]
+                store_positions_and_fitness[2][z - 1] = ff
     
-			SwapInt(destination[i][aux[z]], destination[i][column],temp)
-
+			SwapInt(destination[i][aux[z]], destination[i][timeslot_to_change],temp)
 		smaller_fitness = inf
 		index = 0
-
 		for z in range(jj):
-			if (store_positions_and_fitness[1][z] < smaller_fitness):
-				smaller_fitness = store_positions_and_fitness[1][z]
+			if (store_positions_and_fitness[2][z] < smaller_fitness):
+				smaller_fitness = store_positions_and_fitness[2][z]
 				index = z
-		SwapInt(destination[i][aux[index]], destination[i][column], temp)
+        #after the above calculation, the program to choose to move classes i within bux[index] aux[index] to classroom_i timeslot_to_change
+		# there is a problem with switching that is the professor may be within the same time slot
+        # I did not find how the original code sloves this issue, so that I assume that the code uses penalty function to deal with this case
+        SwapInt(destination[i][bux[index]][aux[index]], destination[i][classroom_i][timeslot_to_change], temp)
 
 #initializes the population of cats
 def initialize_cats(classes_number: int,cat_number: int):
@@ -1081,17 +1101,19 @@ def initialize_cats(classes_number: int,cat_number: int):
 					classes[j].teachers_of_class_and_hours_remaining[i][k] = classes[j].teachers_of_class_and_hours[i][k]
 
 #cat seek procedure
+# x[cats][course_id][classroom_id][timeslot]=assigned professors
 def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,ICDW: float):
 	j, aa, bb, consider, cp, swaps_to_make, timeslots_to_change=0,0,0,0,0,0,0
 	hd = []
+    hd2=[]
 	cn, tt1, tt2=0,0,0
 	fs = []
 	cfs = []
 	tfs, fsmax, fsmin=0.0,0.0,0.0
-	sl = []
-	cat_copy = []
-	temp_cat = []
-	temp_cat1 = []
+	sl = [[0  for i in range(classes_no * 26* classroom_number)] for ii in range(2)]
+	cat_copy = [[[[0 for i in range(numSlots)] for ii in range(classroom_number)] for j in range(classes_no1)] for ne in range(SMP)]
+	temp_cat = [[[0 for i in range(numSlots)] for ii in range(classroom_number)] for j in range(classes_no1)]
+	temp_cat1 = [[[0 for i in range(numSlots)] for ii in range(classroom_number)] for j in range(classes_no1)]
 	all_equal = 0
 	selected_copy = 0
 	ll, best_fs, tmp1 = 0.0, 0.0, 0.0
@@ -1107,31 +1129,32 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 	for cp in range(SMP):
 		copy_matrices(0, 35, cat_copy[cp], x, classes_no)
 
-	timeslots_to_change = int((CDC / 100.0) * 35.0)
+	timeslots_to_change = int((CDC / 100.0) * 35.0 * classroom_number)
 
 	if (timeslots_to_change == 0):
 		timeslots_to_change = 1
 
-	swaps_to_make = int((SRD / 100.0) * classes_no * 35)
+	swaps_to_make = int((SRD / 100.0) * classes_no * 26* classroom_number)
 
 	for cp in range(SMP):
 		copy_matrices(0, 35, temp_cat, cat_copy[cp], classes_no)
 
 		if ((consider == 0) or ((consider == 1) and (cp != SMP - 1))):
-			unique_randint(hd, 0, 34, timeslots_to_change)
-
+			unique_randint(hd, 0, 26-1, timeslots_to_change)
+            unique_randint(hd2, 0,classroom_number-1, timeslots_to_change)
 			for aa in range(timeslots_to_change):
-				insert_column(there_is_coteaching, 0, 35, global_best, temp_cat, hd[aa], classes_no, teachers_no, TEPW, ITDW, ICDW)
-    
+				insert_column(there_is_coteaching, 0, 35, global_best, temp_cat,hd2[aa], hd[aa], classes_no, teachers_no, TEPW, ITDW, ICDW)
 			copy_matrices(0, 35, temp_cat1, temp_cat, classes_no)
-			unique_randint(sl, 0, (classes_no * 35) - 1, swaps_to_make)
-
+			unique_randint(sl[0], 0, (classes_no * 26) - 1, swaps_to_make)
+            unique_randint(sl[1], 0, (classroom_number * 26) - 1, swaps_to_make)
 			for bb in range(swaps_to_make):
-				cn = int(sl[bb] / 35)
-				tt1 = sl[bb] % 35
-				tt2 = randint(0, 34)
-    
-				if (single_swap(temp_cat, tt1, tt2, cn, classes_no) != -1):
+				cn = int(sl[0][bb] / 26)
+                cs = int(sl[1][bb] / 26)
+				tt1 = sl[0][bb] % 26
+				tt2 = randint(0, 25)
+                classro1=sl[1][bb] % 26
+                classro2=randint(0, classroom_number)
+				if (single_swap(temp_cat, tt1, tt2,classro1,classro2, cn, classes_no) != -1):
 					tfs = calculate_fitness(there_is_coteaching, 0, 35, temp_cat, teachers_no, classes_no, TEPW, ITDW, ICDW)
 
 					if (tfs <= best_fs):
@@ -1139,25 +1162,14 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 						fs[cp] = tfs
 						cfs[cp] = tfs
 						copy_matrices(0, 35, cat_copy[cp], temp_cat, classes_no)
-
 					copy_matrices(0, 35, temp_cat, temp_cat1, classes_no)
-
 		else:
 			fs[cp] = calculate_fitness(there_is_coteaching, 0, 35, cat_copy[cp], teachers_no, classes_no, TEPW, ITDW, ICDW)
 			cfs[cp] = fs [cp]
-
-	for i in range(SMP):
-		j=1
-		while (j < SMP):
-			if (cfs[j] < cfs[j - 1]):
-				ll = cfs[j - 1]
-				cfs[j - 1] = cfs[j]
-				cfs[j] = ll
-			j=j+1
-
+    cfs.sort()
 	fsmax = cfs[SMP - 1]
 	fsmin = cfs[0]
-
+    # the final decision of which cat is to be returned
 	if (fsmax == fsmin):
 		all_equal = 1
 

@@ -28,10 +28,14 @@ load_dotenv(find_dotenv())
 SECRET_KEY = os.environ['DJANGO_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ["DJANGO_MODE"] == 'dev':
+    DEBUG = True
+else:
+    DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [os.environ['HOST_NAME']]
+if os.environ["DJANGO_MODE"] == 'dev':
+    ALLOWED_HOSTS.append('localhost')
 
 # Application definition
 

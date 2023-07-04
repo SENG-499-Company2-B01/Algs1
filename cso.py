@@ -3,6 +3,7 @@ import random
 import datetime
 import math
 import time
+import json
 
 #declarations of file names
 # fp = None
@@ -59,7 +60,7 @@ co_teacher = [[0 for i in range(classes_no1)] for j in range(teachers_no1)] # co
 class teacher_record:
 	def __init__(self,
 			surname: str = '',
-			kind: int = 0,
+			kind: int = 0, #if a teacher is coteaching 0 = no , 1 = yes
 			total_hours: int = 0,
 			remaining_hours: int = 0,
 			availability_hours: int = 0,
@@ -1230,95 +1231,91 @@ def main():
 		print("\nProgram terminated.\n")
 		exit(0)
 
-#this block will be not needed I think, checks an input file for errors, assigns some variables from input file
-	""" while (data_entry_ok == 0): # reads and checks the integrity of the input file
-		input(fp, " %d %s", &there_is_coteaching, number_of_classes1)
-		classes_no = atoi(number_of_classes1)
 
-		if (classes_no <= 0 || classes_no > classes_no1) {
-			printf("\nInvalid number of classes. Program terminated.");
-			exit(1);
-		}
+# read json files// this should be removed later and
+# objects passed through main function call
 
-		fscanf(fp, "%s", number_of_teachers);
-		teachers_no = atoi(number_of_teachers);
+	print("Started Reading JSON file which contains multiple JSON document")
+	with open('testing_profs.json') as f:
+		data = f.read()
+		input_profs = json.loads(data)
 
-		if (teachers_no < 2 || teachers_no > teachers_no1) {
-			printf("\nInvalid number of teachers. Program terminated.");
-			exit(1);
-		}
+	with open('testing_courses.json') as f:
+		data = f.read()
+		input_courses = json.loads(data)
 
-		for (i = 0; i < teachers_no; i++) {
-			teachers[i].availability_hours = 35;
-		}
+	with open('testing_classrooms.json') as f:
+		data = f.read()
+		input_classrooms = json.loads(data)
 
-		for (i = 0; i < classes_no; i++) {
-			class[i].number_of_teachers = 0;
-		}
+	classes_no = len(input_courses)
+	teachers_no = len(input_profs)
 
-		for (i = 0; i < classes_no; i++) {
-			fscanf(fp, "%s     %d", class_name, &class[i].hours_per_week);
-			strcpy(class[i].class_name, class_name);
-			class[i].class_number = i;
-		}
+	#not useful for us. Change this to courses to teach, and read from input_profs
+	for i in range(0, teachers_no):
+		teachers[i].availability_hours = 35
 
-		for (i = 0; i < teachers_no; i++) {
-			fscanf(fp, " %s  %d", teacher_name, &teachers[i].kind);
+	for i in range(0, classes_no):
+		classes[i].number_of_teachers = 0
+		classes[i].class_name = input_courses[i]["name"]
+		classes[i].class_number = i
 
-			k = 0;
-			teachers[i].num_of_classes = 0;
-			teachers[i].total_hours = 0;
-			strcpy(teachers[i].surname, teacher_name);
-			fscanf(fp, "%d", &b);
+	for i in range(0, teachers_no):
+		k = 0
+		teachers[i].num_of_classes = 0
+		teachers[i].surname = input_profs[i]["name"]
+		teachers[i].total_hours = 0
+		teachers[i].kind = 0 #this is for coteaching
 
-			while (b != -1) {
-				fscanf(fp, "%d %d ", &h, &lessons);
-				teachers[i].total_hours = teachers[i].total_hours + h;
-				teachers[i].classes_he_teaches[k][0] = b;
-				class[b].teachers_of_class_and_hours[class[b].number_of_teachers][0] = i;
-				class[b].teachers_of_class_and_hours[class[b].number_of_teachers][1] = h;
-				class[b].teachers_of_class_and_hours[class[b].number_of_teachers][2] = lessons;
-				class[b].number_of_teachers++;
-				teachers[i].classes_he_teaches[k][1] = h;
-				teachers[i].classes_he_teaches[k][2] = lessons;
-				k++;
-				teachers[i].num_of_classes = k;
-				fscanf(fp, "%d", &b);
-			}
+		h = 1 #this is hours for a class. Not needed, but adaptable?
+		for j in range(0, len(input_profs[i]["courses"])):
+			teachers[i].total_hours += h
+			teachers[i].classes_he_teaches[k][0] = input_profs[i]["courses"][j]
+			classes[i].teachers_of_class_and_hours[k][0] = i #input_profs[i]["courses"][j] #prof associated with class
+			classes[i].teachers_of_class_and_hours[k][1] = 1 #["hours"]
+			classes[i].teachers_of_class_and_hours[k][2] = 1 #["lessons"]
+			classes[i].number_of_teachers += 1
+			teachers[i].num_of_classes += 1
+			teachers[i].classes_he_teaches[k][1] = h #hours
+			teachers[i].classes_he_teaches[k][2] = 1 #lessons
+			k += 1
+		
+		# represents an hour. [0, 34]. 
+		# Hence, number 14 would stand for the first hour of Wednesday , 
+		# while number 20 would stands for the last (seventh) hour of Wednesday
+		for j in range(0,35):
+			teachers[i].unavailable_timeslots[j] = -1
+   
+		#days of week available
+		for h in range(0,5):
+			teachers[i].is_available_at_day[h] = 1
+   
+   
+   
+		for y in input_profs[i]['unavailable']:
+			teachers[i].unavailable_timeslots[y] = 1
+			teachers[i].availability_hours -= 1
+   
+   
+		teachers[i].available_days = 5
+		for start in range(0, 29, 7):
+			subtract_day = 0
+			for t in range(start, start + 7):
+				if teachers[i].unavailable_timeslots[t] == 1:
+					subtract_day += 1
 
-			for (j = 0; j < 35; j++)
-				teachers[i].unavailable_timeslots[j] = -1;
+				if subtract_day == 7:
+					teachers[i].available_days -= 1
+					teachers[i].is_available_at_day[math.floor(start / 7)] = -1
 
-			for (k = 0; k < 5; k++)
-				teachers[i].is_available_at_day[k] = 1;
+	# probs not needed, co-teaching stuff
+	for i in range(0, teachers_no):
+		for j in range(0, classes_no):
+			co_class[j][i] = -1
+			co_teacher[i][j] = 2015
 
-			fscanf(fp, "%d", &h);
-			while (h != -1) {
-				teachers[i].unavailable_timeslots[h] = 1;
-				teachers[i].availability_hours--;
-				fscanf(fp, "%d", &h);
-			}
-
-			teachers[i].available_days = 5;
-			for (start = 0; start < 29; start = start + 7) {
-				subtract_day = 0;
-				for (t = start; t < start + 7; t++) {
-					if (teachers[i].unavailable_timeslots[t] == 1)
-						subtract_day++;
-
-					if (subtract_day == 7) {
-						teachers[i].available_days--;
-						teachers[i].is_available_at_day[start / 7] = -1;
-					}
-				}
-			}
-		}
-
-		for (i = 0; i < teachers_no; i++)
-			for (j = 0; j < classes_no; j++) {
-				co_class[j][i] = -1;
-				co_teacher[i][j] = 2015;
-			}
+	# probs not needed, co-teaching stuff, but left in incase we need later
+	"""
 
 		if (there_is_coteaching == 1) {
 			int n, ii, le, c1, c2;
@@ -1605,7 +1602,7 @@ def main():
 					fp2.write("______________________________________\n")
 
 				for jj in range(0,35):
-					for k in teachers[i].num_of_classes:
+					for k in range(0, teachers[i].num_of_classes):
 						class1 = teachers[i].classes_he_teaches[k][0]
 						if (teachers[i].kind == 0):
 							if (global_best[class1][jj] == i):
@@ -1623,7 +1620,7 @@ def main():
 									fp2.write("\nH (%d) --> %s " % (jj, classes[class1].class_name))
 
 								zz = 0
-								for zz in teachers[i].count_of_coteachers:
+								for zz in range(0, teachers[i].count_of_coteachers):
 									if (teachers[i].coteachings[zz][3] == class1):
 										coclass2 = teachers[i].coteachings[zz][4]
 										coteacher = teachers[i].coteachings[zz][0]

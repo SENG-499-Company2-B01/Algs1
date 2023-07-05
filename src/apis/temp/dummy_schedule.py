@@ -34,20 +34,18 @@ def get_dummy_schedule():
                 "sections": [
                     {
                         "num": "A01",
-                        "building": "ECS",
-                        "room": "125",
+                        "building": "ECS 125",
                         "num_seats": 120,
-                        "professor": "Rich Little",
+                        "professor": "Rich.Little",
                         "days": ["T", "W", "F"],
                         "start_time": "11:30",
                         "end_time": "12:20"
                     },
                     {
                         "num": "A02",
-                        "building": "ECS",
-                        "room": "125",
+                        "building": "ECS 125",
                         "num_seats": 120,
-                        "professor": "Rich Little",
+                        "professor": "Rich.Little",
                         "days": ["M", "R"],
                         "start_time": "10:00",
                         "end_time": "11:20"
@@ -60,10 +58,9 @@ def get_dummy_schedule():
                 "sections": [
                     {
                         "num": "A01",
-                        "building": "ECS",
-                        "room": "125",
+                        "building": "ECS 125",
                         "num_seats": 120,
-                        "professor": "Rich Little",
+                        "professor": "Rich.Little",
                         "days": ["M", "R"],
                         "start_time": "13:30",
                         "end_time": "14:50"
@@ -76,10 +73,9 @@ def get_dummy_schedule():
                 "sections": [
                     {
                         "num": "A01",
-                        "building": "CLE",
-                        "room": "D132",
+                        "building": "CLE D132",
                         "num_seats": 30,
-                        "professor": "Bill Bird",
+                        "professor": "Bill.Bird",
                         "days": ["M", "R"],
                         "start_time": "10:00",
                         "end_time": "11:20"
@@ -92,10 +88,9 @@ def get_dummy_schedule():
                 "sections": [
                     {
                         "num": "A01",
-                        "building": "COR",
-                        "room": "B112",
+                        "building": "COR B112",
                         "num_seats": 60,
-                        "professor": "Hausi Muller",
+                        "professor": "Hausi.Muller",
                         "days": ["T", "W", "F"],
                         "start_time": "10:00",
                         "end_time": "11:20"
@@ -108,10 +103,9 @@ def get_dummy_schedule():
                 "sections": [
                     {
                         "num": "A01",
-                        "building": "COR",
-                        "room": "B112",
+                        "building": "COR B112",
                         "num_seats": 60,
-                        "professor": "Hausi Muller",
+                        "professor": "Hausi.Muller",
                         "days": ["M", "R"],
                         "start_time": "10:00",
                         "end_time": "11:20"
@@ -124,10 +118,9 @@ def get_dummy_schedule():
                 "sections": [
                     {
                         "num": "A01",
-                        "building": "COR",
-                        "room": "B112",
+                        "building": "COR B112",
                         "num_seats": 60,
-                        "professor": "Hausi Muller",
+                        "professor": "Hausi.Muller",
                         "days": ["M", "R"],
                         "start_time": "13:00",
                         "end_time": "14:20"

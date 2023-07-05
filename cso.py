@@ -1244,7 +1244,7 @@ def main():
 	iter, tmp, times = int, int , int
 	fitness_evolution_file = [] #char fitness_evolution_file[150]
 	refinement_steps = 500000
-	ts = [] #int ts[2]
+	ts = [0 for i in range(2)] #int ts[2]
 	f1, f2, ff = float, float, float
 	loop_count2 = 9999
 	repetition = int
@@ -1489,6 +1489,7 @@ def main():
 
 	start = 0
 	for start in range(0,35,start+7):
+		print(start)
 		f1 = calculate_partial_fitness(there_is_coteaching, start, start + 7, global_best, teachers_no, classes_no, TEPW)
 
 		copy_matrices(start, start + 7, v, global_best, classes_no)
@@ -1704,7 +1705,7 @@ def main():
 	print("Iterations=%d", iterations)
 	print("\nProgram terminated.\n")
 	print("\a")
-	fp.close()
+	#fp.close()
 	fp1.close()
 	fp2.close()
 	fp3.close()

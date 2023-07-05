@@ -40,7 +40,7 @@ def SwapInt(x,y,tmp):
 
 numSlots = 35
 x = [[[0 for i in range(numSlots)] for j in range(classes_no1)] for k in range(cats)] # matrix for storing a cat's data
-global_best = [[1000000 for i in range(numSlots)] for j in range (classes_no1)] # matrix for storing the global best cat
+global_best = [[0 for i in range(numSlots)] for j in range (classes_no1)] # matrix for storing the global best cat
 v = [[0 for i in range(numSlots)] for j in range(classes_no1)] # helper array
 
 inf = 10e13 # worst (maximum) value of the fitness function
@@ -1021,9 +1021,20 @@ def single_swap(a: list,timeslot1: int,timeslot2: int,class_num: int,classes_no:
 	return 1
 
 #replaces all the lessons in a timeslot of a cat with the ones in the same timeslot of another cat
-def insert_column(mode: int,begin: int,end: int,source: list,destination: list,column: int ,class_no1: int,teachers_no :int,TEPW: float,ITDW: float,ICDW: float):
-	aux =[0 for i in range(21)]
-	store_positions_and_fitness =[[0 for k in range(21)] for i in range(2)]
+def insert_column(mode: int,
+		begin: int,
+		end: int,
+		source: list,
+		destination: list,
+		column: int,
+		class_no1: int,
+		teachers_no :int,
+		TEPW: float,
+		ITDW: float,
+		ICDW: float):
+	aux =[0 for i in range(35)]
+	temp = 0
+	store_positions_and_fitness =[[0 for k in range(35)] for i in range(2)]
 	ff, smaller_fitness=0,0
 	index, z, skip= 0,0,0
 
@@ -1428,6 +1439,7 @@ def main():
 	begin_time = time.process_time()
 
 	for iter in range(0, times + 1):
+		print(iter)
 		if (iter == 0 or iter % 100 == 0):
 			elTime = (time.process_time() - begin_time) #/ (CLOCKS_PER_SEC) / 60
 			print("(%d : %.1f) ", math.floor(elTime), (elTime - math.floor(elTime)))
@@ -1441,6 +1453,7 @@ def main():
 				fp4.write("%d\t%f \n" % (iter, math.log10(global_best_fitness)))
 
 		for p in range(0, cats):
+			#print(p)
 			fitness = calculate_fitness(there_is_coteaching, 0, 35, x[p], teachers_no, classes_no, TEPW, ITDW, ICDW)
 
 			if (fitness <= global_best_fitness):

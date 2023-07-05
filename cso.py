@@ -40,7 +40,7 @@ def SwapInt(x,y,tmp):
 
 numSlots = 35
 x = [[[0 for i in range(numSlots)] for j in range(classes_no1)] for k in range(cats)] # matrix for storing a cat's data
-global_best = [[0 for i in range(numSlots)] for j in range (classes_no1)] # matrix for storing the global best cat
+global_best = [[1000000 for i in range(numSlots)] for j in range (classes_no1)] # matrix for storing the global best cat
 v = [[0 for i in range(numSlots)] for j in range(classes_no1)] # helper array
 
 inf = 10e13 # worst (maximum) value of the fitness function
@@ -55,6 +55,16 @@ last_updating_time = 0.0
 there_is_coteaching = 0 # this is 1 if there is co-teaching, else it is 0
 co_class = [[0 for i in range(teachers_no1)] for j in range(classes_no1)] # contains the class with which there is co-teaching
 co_teacher = [[0 for i in range(classes_no1)] for j in range(teachers_no1)] # contains the teacher that participates in a co-teaching
+
+
+def classNameToIndex(coursename):
+	#finding the corresponding class
+	classname = coursename.replace(" ", "")
+	for classind in range(len(input_courses)):
+		if (input_courses[classind]["shorthand"] == classname):
+			return classind
+	return -1
+
 
 # definition of the teacher's record
 class teacher_record:
@@ -112,24 +122,24 @@ def initialize_randomness(seed: int|float = -1): # initializes the seed, if seed
 	return seed
 
 def randint(lower: int, upper: int): # returns a random integer between lower and upper
-	return lower + random.randint() % (upper-lower+1)
+	return random.randint(lower,upper)
 
 def randd(x0: float, x1: float): # returns a random double/float between x0 and x1
 	return random.uniform(x0,x1)
 
 def unique_randint(a: list, lower: int, upper: int, number: int): # returns an array with all the integers between lower and upper in random order
 	for x in range(number):
-		a[x] = lower + random.randint() % (upper - lower + 1)
+		a[x] = random.randint(lower,upper)
 		if x == 0:
 			continue
 		
 		for y in range(x):
 			if a[x] == a[y]:
 				y = 0
-				a[x] = lower + random.randint() % (upper - lower + 1)
+				a[x] = random.randint(lower,upper)
 
 				while a[x] == a[y]:
-					a[x] = lower + random.randint() % (upper - lower + 1)
+					a[x] = random.randint(lower,upper)
 			else:
 				continue
 
@@ -214,7 +224,8 @@ def check_teachers_empty_periods(to_file: int,
 
 				for t in range(start,start+7):
 					for j in range(teachers[i].num_of_classes):
-						if (a[teachers[i].classes_he_teaches[j][0]][t] == i):
+						classind = classNameToIndex(teachers[i].classes_he_teaches[j][0])
+						if (a[classind][t] == i):
 							has_lesson = 1
 							if flag == 1:
 								first_lesson = t
@@ -371,8 +382,8 @@ def check_teachers_dispersion(to_file: int, begin: int, end: int, a: list, numbe
 	total_cost = 0.0
 	totalNumberOfWrongTeachers = 0
 	total_fault_days = 0
-	actualDistTable = []
-	idealDistrTable = []
+	actualDistTable = [0 for i in range(5)]
+	idealDistrTable = [0 for i in range(5)]
 
 	for i in range(0, number_of_teachers1):
 		absolute_error = 0.0
@@ -385,29 +396,31 @@ def check_teachers_dispersion(to_file: int, begin: int, end: int, a: list, numbe
 			for j in range(0, teachers[i].num_of_classes):
 				hours_per_day_of_class = 0
 				class1 = teachers[i].classes_he_teaches[j][0]
-				co_class1 = co_class[class1][i]
 
-				if co_class1 == class1:
+				c1ind = classNameToIndex(class1)
+				co_class1 = co_class[c1ind][i]
+
+				if co_class1 == c1ind:
 					co_teacher1 = co_teacher[i][co_class1]
 				else:
 					co_teacher1 = 2015
 
 				for t in range(start, start + 7):
 					if teachers[i].kind == 0:
-						if a[class1][t] == i:
+						if a[c1ind][t] == i:
 							hours_per_day_of_class = hours_per_day_of_class + 1
 					else:
 						if co_teacher1 < 0:
-							if a[class1][t] == i:
+							if a[c1ind][t] == i:
 								hours_per_day_of_class = hours_per_day_of_class + 1
 
 						else:
-							if a[class1][t] == co_teacher1 or a[class1][t] == i:
+							if a[c1ind][t] == co_teacher1 or a[class1][t] == i:
 								hours_per_day_of_class = hours_per_day_of_class + 1
 
 				hours_per_day = hours_per_day + hours_per_day_of_class
 
-			actualDistTable[start / 7] = hours_per_day	
+			actualDistTable[int(start / 7)] = hours_per_day	
 
 		for j in range(0, 5):
 			if teachers[i].is_available_at_day[j] == -1:
@@ -487,9 +500,10 @@ def check_teachers_dispersion(to_file: int, begin: int, end: int, a: list, numbe
 # checks the dispersion of lessons of each class and returns the relevant cost
 
 def check_classes_dispersion(to_file: int, begin: int, end: int, a: list, number_of_classes1: int, ICDW1: float, show_results: int) -> float:
-	i, k, start, t, hours_per_day_of_teacher, problem_days, violation_cases: int
-	hours, total_hours_per_class, total_problem_days, co_class1, co_teacher1, teacher1, jj: int
-	cost, total_cost:float = 0.0
+	#i, k, start, t, hours_per_day_of_teacher, problem_days, violation_cases: int
+	#hours, total_hours_per_class, total_problem_days, co_class1, co_teacher1, teacher1, jj: int
+	cost = 0.0
+	total_cost = 0.0
 	index1 = 0
 	violation_cases = 0
 	total_problem_days = 0
@@ -657,7 +671,7 @@ def check_teacher_unavailability(to_file: int,
 				for t in range(start,end):
 					if a[i][t] == classes[i].teachers_of_class_and_hours[j][0] and teachers[classes[i].teachers_of_class_and_hours[j][0]].unavailable_timeslots[t] == 1:
 						number_of_cases += 1
-		cost = number_of_cases * HCW * pow(BASE< 4.75)
+		cost = number_of_cases * HCW * pow(BASE, 4.75)
 		if show_results == 1:
 			print(f"Total cases of teacher unavailability are {number_of_cases}")
 		if to_file == 33:
@@ -849,7 +863,8 @@ def perform_swap(mode: int,
 
 # copies the contents of a matrix
 def copy_matrices(begin: int, end: int, destination: list, source: list, dim: int):
-	i, j: int
+	i: int 
+	j: int
 	for i in range(0, dim):
 		for j in range(begin, end):
 			destination[i][j] = source[i][j]
@@ -1007,9 +1022,8 @@ def single_swap(a: list,timeslot1: int,timeslot2: int,class_num: int,classes_no:
 
 #replaces all the lessons in a timeslot of a cat with the ones in the same timeslot of another cat
 def insert_column(mode: int,begin: int,end: int,source: list,destination: list,column: int ,class_no1: int,teachers_no :int,TEPW: float,ITDW: float,ICDW: float):
-	i, j, jj, temp= 0,0,0,0
-	aux=[0 for i in range(21)]
-	store_positions_and_fitness=[[0 for k in range(21)] for i in range(2)]
+	aux =[0 for i in range(21)]
+	store_positions_and_fitness =[[0 for k in range(21)] for i in range(2)]
 	ff, smaller_fitness=0,0
 	index, z, skip= 0,0,0
 
@@ -1018,14 +1032,20 @@ def insert_column(mode: int,begin: int,end: int,source: list,destination: list,c
 			continue
 		if (destination[i][column] == source[i][column]):
 			continue
+		
 		jj = 0
-		j=begin
-
-		while (j < end):
+		for j in range(begin,end):
 			if (destination[i][j] == source[i][column] and j != column):
+				'''
+				print(destination[i][j])
+				print(source[i][column])
+				print(j)
+				print(column)
+				print(jj)
+				print()
+				'''
 				aux[jj] = j
-				jj=jj+1
-			j=j+1
+				jj += 1
 		skip = 0
 
 		for z in range(jj):
@@ -1084,19 +1104,19 @@ def initialize_cats(classes_number: int,cat_number: int):
 #cat seek procedure
 def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,ICDW: float):
 	j, aa, bb, consider, cp, swaps_to_make, timeslots_to_change=0,0,0,0,0,0,0
-	hd = []
+	hd = [0 for i in range(35)]
 	cn, tt1, tt2=0,0,0
-	fs = []
-	cfs = []
+	fs = [0.0 for i in range(SMP)]
+	cfs = [0.0 for i in range(SMP)]
 	tfs, fsmax, fsmin=0.0,0.0,0.0
-	sl = []
-	cat_copy = []
-	temp_cat = []
-	temp_cat1 = []
+	sl = [0 for i in range(35*classes_no)]
+	cat_copy = [[[0 for i in range(35)] for j in range(classes_no1)] for k in range(SMP)]
+	temp_cat = [[0 for i in range(35)] for j in range(classes_no1)]
+	temp_cat1 = [[0 for i in range(35)] for j in range(classes_no1)]
 	all_equal = 0
 	selected_copy = 0
 	ll, best_fs, tmp1 = 0.0, 0.0, 0.0
-	sel_prob = []
+	sel_prob = [0.0 for i in range(SMP)]
 
 	best_fs = calculate_fitness(there_is_coteaching, 0, 35, x, teachers_no, classes_no, TEPW, ITDW, ICDW)
 
@@ -1220,6 +1240,7 @@ def main():
 
 	TEPW, ITDW, ICDW = float, float, float
 
+	'''
 	print("\nPlease enter the name of txt file, containing the data to be used: ") # enter the name of the txt file with the school's data
 	input1 = input("enter file name:")
 	input1 += ".txt"
@@ -1230,11 +1251,11 @@ def main():
 		print("\nCannot open file %s. \n", input1)
 		print("\nProgram terminated.\n")
 		exit(0)
-
+	'''
 
 # read json files// this should be removed later and
 # objects passed through main function call
-
+	global input_courses
 	print("Started Reading JSON file which contains multiple JSON document")
 	with open('testing_profs.json') as f:
 		data = f.read()
@@ -1268,13 +1289,16 @@ def main():
 		teachers[i].kind = 0 #this is for coteaching
 
 		h = 1 #this is hours for a class. Not needed, but adaptable?
-		for j in range(0, len(input_profs[i]["courses"])):
+		for j in range(0, len(input_profs[i]["course_pref"])):
 			teachers[i].total_hours += h
-			teachers[i].classes_he_teaches[k][0] = input_profs[i]["courses"][j]
-			classes[i].teachers_of_class_and_hours[k][0] = i #input_profs[i]["courses"][j] #prof associated with class
-			classes[i].teachers_of_class_and_hours[k][1] = 1 #["hours"]
-			classes[i].teachers_of_class_and_hours[k][2] = 1 #["lessons"]
-			classes[i].number_of_teachers += 1
+			teachers[i].classes_he_teaches[k][0] = input_profs[i]["course_pref"][j]
+
+			courseindex = classNameToIndex(input_profs[i]["course_pref"][j])
+
+			classes[courseindex].teachers_of_class_and_hours[k][0] = i #input_profs[i]["courses"][j] #prof associated with class
+			classes[courseindex].teachers_of_class_and_hours[k][1] = 1 #["hours"]
+			classes[courseindex].teachers_of_class_and_hours[k][2] = 1 #["lessons"]
+			classes[courseindex].number_of_teachers += 1
 			teachers[i].num_of_classes += 1
 			teachers[i].classes_he_teaches[k][1] = h #hours
 			teachers[i].classes_he_teaches[k][2] = 1 #lessons
@@ -1674,3 +1698,6 @@ def main():
 	fp4.close()
 
 	return 0
+
+if __name__ == '__main__':
+	main()

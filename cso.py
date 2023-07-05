@@ -1232,8 +1232,8 @@ def cat_trace(x: list, classes_no: int): #cat trace procedure
 
 def main():
 	start, t, subtract_day = int, int, int
-	name_of_data_file = [] #char name_of_data_file[30]
-	input1 = [] #char input[5]
+	name_of_data_file = "" #char name_of_data_file[30]
+	input1 = "" #char input[5]
 	i, j, k, h, aaa, p, b, lessons, jj = int, int, int, int, int, int, int, int, int
 	number_of_classes1 = [] #char number_of_classes1[3];
 	classes_no, teachers_no = int, int #int classes_no, teachers_no;
@@ -1242,7 +1242,7 @@ def main():
 	main_algo_time, optimization_time = float, float
 	seed = int
 	iter, tmp, times = int, int , int
-	fitness_evolution_file = [] #char fitness_evolution_file[150]
+	fitness_evolution_file = "" #char fitness_evolution_file[150]
 	refinement_steps = 500000
 	ts = [0 for i in range(2)] #int ts[2]
 	f1, f2, ff = float, float, float
@@ -1496,6 +1496,7 @@ def main():
 
 		repetition = 0
 		for repetition in range(0, refinement_steps, repetition+1):
+			print(repetition)
 			loop_count2 += 1
 
 			unique_randint(ts, start, start + 6, 2)
@@ -1643,19 +1644,19 @@ def main():
 					for k in range(0, teachers[i].num_of_classes):
 						class1 = teachers[i].classes_he_teaches[k][0]
 						if (teachers[i].kind == 0):
-							if (global_best[class1][jj] == i):
+							if (global_best[classNameToIndex(class1)][jj] == i):
 								if (aaa == 2):
-									print("H (%d) --> %s \n", jj, classes[class1].class_name)
+									print("H (%d) --> %s \n", jj, class1)
 								else:
-									fp2.write("H (%d) --> %s \n" % (jj, classes[class1].class_name))	
+									fp2.write("H (%d) --> %s \n" % (jj, class1))	
 							continue
 						
 						else:
-							if (global_best[class1][jj] == i):
+							if (global_best[classNameToIndex(class1)][jj] == i):
 								if (aaa == 2):
-									print("\nH (%d) --> %s ", jj, classes[class1].class_name)
+									print("\nH (%d) --> %s ", jj, class1)
 								else:
-									fp2.write("\nH (%d) --> %s " % (jj, classes[class1].class_name))
+									fp2.write("\nH (%d) --> %s " % (jj, class1))
 
 								zz = 0
 								for zz in range(0, teachers[i].count_of_coteachers):
@@ -1672,9 +1673,9 @@ def main():
 							locate_coteacher = -1
 							display_implied_teacher(i, class1, coteacher, coclass, locate_coteacher, teachers_no)
 							if (locate_coteacher == 1):
-								if (global_best[class1][jj] == coteacher):
+								if (global_best[classNameToIndex(class1)][jj] == coteacher):
 									if (aaa == 2):
-										print("\nH (%d) --> %s  # coteaches with %s at %s \n", jj, classes[class1].class_name,
+										print("\nH (%d) --> %s  # coteaches with %s at %s \n", jj, class1,
 										       teachers[coteacher].surname, classes[coclass].class_name)
 									else:
 										fp2.write("\nH (%d) --> %s  # coteaches with %s at %s \n" % (jj, classes[class1].class_name,
@@ -1696,7 +1697,10 @@ def main():
 		print("\nIn order to print the timetable by teacher to the txt file, just enter '22'.\n")
 		print("In order to print analysis of timetable to the txt file, just enter '33'.\n")
 		print("In order to terminate , just hit any other key.\n")
-		aaa = int(input("input: "))
+		try:
+			aaa = int(input("input: "))
+		except ValueError as e:
+			break
 		
 	print("\nData input file  %s . The seed was %d\n", name_of_data_file, seed)
 	print("ITDW = %f ICDW = %f  TEPW = %f\n", ITDW, ICDW, TEPW)

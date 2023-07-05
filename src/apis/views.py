@@ -12,7 +12,9 @@ from .temp.dummy_schedule import get_dummy_schedule
 @api_view(['POST'])
 def generate(request):
     # TODO: Do stuff to generate schedules here
-    schedule = get_dummy_schedule()
+    courses = get_dummy_schedule()
+    data = request.data
+
     return Response(schedule)
 
 

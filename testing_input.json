@@ -1,0 +1,2067 @@
+{"year": 2023, "term": "fall", "courses": [
+    {
+        "name": "Fundamentals of Programming with Engineering Applications",
+        "shorthand": "CSC111",
+        "terms_offered": [
+            "F",
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Design and Communication I",
+        "shorthand": "ENGR110",
+        "terms_offered": [
+            "F"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introduction to Professional Practice",
+        "shorthand": "ENGR130",
+        "terms_offered": [
+            "F",
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Calculus I",
+        "shorthand": "MATH100",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introduction to Calculus",
+        "shorthand": "MATH109",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Matrix Algebra for Engineers",
+        "shorthand": "MATH110",
+        "terms_offered": [
+            "F"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introductory Physics I",
+        "shorthand": "PHYS110",
+        "terms_offered": [
+            "F",
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Fundamentals of Programming II",
+        "shorthand": "CSC115",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Design and Communication II",
+        "shorthand": "ENGR120",
+        "terms_offered": [
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Engineering Mechanics",
+        "shorthand": "ENGR141",
+        "terms_offered": [
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Calculus II",
+        "shorthand": "MATH101",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introductory Physics II",
+        "shorthand": "PHYS111",
+        "terms_offered": [
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introduction to Computer Architecture",
+        "shorthand": "ECE255",
+        "terms_offered": [
+            "F"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introduction to Computer Architecture",
+        "shorthand": "CSC230",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Fundamentals of Chemistry from Atoms to Materials",
+        "shorthand": "CHEM101",
+        "terms_offered": [
+            "F",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Continuous-Time Signals and Systems",
+        "shorthand": "ECE260",
+        "terms_offered": [
+            "F",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Logic and Foundations",
+        "shorthand": "MATH122",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Software Development Methods",
+        "shorthand": "SENG265",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introduction to Probability and Statistics I",
+        "shorthand": "STAT260",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Algorithms and Data Structures I",
+        "shorthand": "CSC225",
+        "terms_offered": [
+            "F. Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Digital Signal Processing I",
+        "shorthand": "ECE310",
+        "terms_offered": [
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Introduction to Economics and Financial Project Evaluation",
+        "shorthand": "ECON180",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Software Testing",
+        "shorthand": "SENG275",
+        "terms_offered": [
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Human Computer Interaction",
+        "shorthand": "SENG310",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Communication Networks",
+        "shorthand": "ECE363",
+        "terms_offered": [
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Computer Communications and Networks",
+        "shorthand": "CSC361",
+        "terms_offered": [
+            "F",
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Algorithms and Data Structures II",
+        "shorthand": "CSC226",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Control Theory and Systems I",
+        "shorthand": "ECE360",
+        "terms_offered": [
+            "F",
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Requirements Engineering",
+        "shorthand": "SENG321",
+        "terms_offered": [
+            "F",
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Software Evolution",
+        "shorthand": "SENG371",
+        "terms_offered": [
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Microprocessor-Based Systems",
+        "shorthand": "ECE355",
+        "terms_offered": [
+            "F"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Digital Logic and Computer Organization",
+        "shorthand": "CSC355",
+        "terms_offered": [
+            "F"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Foundations of Computer Science",
+        "shorthand": "CSC320",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Operating Systems",
+        "shorthand": "CSC360",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Database Systems",
+        "shorthand": "CSC370",
+        "terms_offered": [
+            "F",
+            "Sp",
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Software Architecture and Design",
+        "shorthand": "SENG350",
+        "terms_offered": [
+            "F"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Security Engineering",
+        "shorthand": "SENG360",
+        "terms_offered": [
+            "F"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Software Quality Engineering",
+        "shorthand": "SENG426",
+        "terms_offered": [
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Embedded Systems",
+        "shorthand": "SENG440",
+        "terms_offered": [
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Design Project II",
+        "shorthand": "SENG499",
+        "terms_offered": [
+            "Su"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Real Time Computer Systems Design Project",
+        "shorthand": "ECE455",
+        "terms_offered": [
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Design and Analysis of Real-Time Systems",
+        "shorthand": "CSC460",
+        "terms_offered": [
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    },
+    {
+        "name": "Social and Professional Issues",
+        "shorthand": "SENG401",
+        "terms_offered": [
+            "Sp"
+        ],
+        "prerequisites": [
+            []
+        ],
+        "corequisites": []
+    }
+], "classrooms": [
+    {
+        "capacity": 140,
+        "building": "BOB WRIGHT CENTRE",
+        "room": "A104",
+        "shorthand": "BWC"
+    },
+    {
+        "capacity": 358,
+        "building": "BOB WRIGHT CENTRE",
+        "room": "B150",
+        "shorthand": "BWC"
+    },
+    {
+        "capacity": 30,
+        "building": "BUSINESS AND ECONOMICS",
+        "room": 363.0,
+        "shorthand": "B&E"
+    },
+    {
+        "capacity": 24,
+        "building": "CLEARIHUE",
+        "room": "A118",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 105,
+        "building": "CLEARIHUE",
+        "room": "A127",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 59,
+        "building": "CLEARIHUE",
+        "room": "A207",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 43,
+        "building": "CLEARIHUE",
+        "room": "A208",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 32,
+        "building": "CLEARIHUE",
+        "room": "A216",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 31,
+        "building": "CLEARIHUE",
+        "room": "A217",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 22,
+        "building": "CLEARIHUE",
+        "room": "A221",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 86,
+        "building": "CLEARIHUE",
+        "room": "A224",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 35,
+        "building": "CLEARIHUE",
+        "room": "A225",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 12,
+        "building": "CLEARIHUE",
+        "room": "A308",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 30,
+        "building": "CLEARIHUE",
+        "room": "A312",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 46,
+        "building": "CLEARIHUE",
+        "room": "A313",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 47,
+        "building": "CLEARIHUE",
+        "room": "A317",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 45,
+        "building": "CLEARIHUE",
+        "room": "A320",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 21,
+        "building": "CLEARIHUE",
+        "room": "A325",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 23,
+        "building": "CLEARIHUE",
+        "room": "A326",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 30,
+        "building": "CLEARIHUE",
+        "room": "A329",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 22,
+        "building": "CLEARIHUE",
+        "room": "A330",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 20,
+        "building": "CLEARIHUE",
+        "room": "B215",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 20,
+        "building": "CLEARIHUE",
+        "room": "B315",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 20,
+        "building": "CLEARIHUE",
+        "room": "B415",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 32,
+        "building": "CLEARIHUE",
+        "room": "C108",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 35,
+        "building": "CLEARIHUE",
+        "room": "C109",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 42,
+        "building": "CLEARIHUE",
+        "room": "C110",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 28,
+        "building": "CLEARIHUE",
+        "room": "C111",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 69,
+        "building": "CLEARIHUE",
+        "room": "C112",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 28,
+        "building": "CLEARIHUE",
+        "room": "C113",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 30,
+        "building": "CLEARIHUE",
+        "room": "C115",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 12,
+        "building": "CLEARIHUE",
+        "room": "C116",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 12,
+        "building": "CLEARIHUE",
+        "room": "C118",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 22,
+        "building": "CLEARIHUE",
+        "room": "C214",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 20,
+        "building": "CLEARIHUE",
+        "room": "C316",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 27,
+        "building": "CLEARIHUE",
+        "room": "D125",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 30,
+        "building": "CLEARIHUE",
+        "room": "D126",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 21,
+        "building": "CLEARIHUE",
+        "room": "D130",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 27,
+        "building": "CLEARIHUE",
+        "room": "D131",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 36,
+        "building": "CLEARIHUE",
+        "room": "D132",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 21,
+        "building": "CLEARIHUE",
+        "room": "D134",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 14,
+        "building": "CLEARIHUE",
+        "room": "D285",
+        "shorthand": "CLE"
+    },
+    {
+        "capacity": 20,
+        "building": "CONTINUING STUDIES",
+        "room": 20.0,
+        "shorthand": "CON"
+    },
+    {
+        "capacity": 81,
+        "building": "CORNETT",
+        "room": "A120",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 71,
+        "building": "CORNETT",
+        "room": "A121",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 65,
+        "building": "CORNETT",
+        "room": "A125",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 32,
+        "building": "CORNETT",
+        "room": "A128",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 61,
+        "building": "CORNETT",
+        "room": "A129",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 14,
+        "building": "CORNETT",
+        "room": "A132",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 93,
+        "building": "CORNETT",
+        "room": "A221",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 64,
+        "building": "CORNETT",
+        "room": "S225",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 62,
+        "building": "CORNETT",
+        "room": "A229",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 60,
+        "building": "CORNETT",
+        "room": "B107",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 71,
+        "building": "CORNETT",
+        "room": "B108",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 50,
+        "building": "CORNETT",
+        "room": "B111",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 71,
+        "building": "CORNETT",
+        "room": "B112",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 67,
+        "building": "CORNETT",
+        "room": "B129",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 80,
+        "building": "CORNETT",
+        "room": "B135",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 77,
+        "building": "CORNETT",
+        "room": "B143",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 36,
+        "building": "CORNETT",
+        "room": "B145",
+        "shorthand": "COR"
+    },
+    {
+        "capacity": 58,
+        "building": "CUNNINGHAM",
+        "room": 146.0,
+        "shorthand": "CUN"
+    },
+    {
+        "capacity": 45,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C108",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 20,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C114",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 64,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C116",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 74,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C118",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 64,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C122",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 20,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C124",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 35,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C126",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 35,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C128",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 35,
+        "building": "DAVID F. STRONG BUILDING",
+        "room": "C130",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 110,
+        "building": "DAVID TURPIN BUILDING",
+        "room": "A102",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 110,
+        "building": "DAVID TURPIN BUILDING",
+        "room": "A104",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 140,
+        "building": "DAVID TURPIN BUILDING",
+        "room": "A110",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 250,
+        "building": "DAVID TURPIN BUILDING",
+        "room": "A120",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 186,
+        "building": "DSB MATTHEWS/MCQUEEN THEATRE",
+        "room": "C103",
+        "shorthand": "DSB"
+    },
+    {
+        "capacity": 68,
+        "building": "ELLIOTT",
+        "room": 60.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 68,
+        "building": "ELLIOTT",
+        "room": 61.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 80,
+        "building": "ELLIOTT",
+        "room": 62.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 48,
+        "building": "ELLIOTT",
+        "room": 160.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 24,
+        "building": "ELLIOTT",
+        "room": 161.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 54,
+        "building": "ELLIOTT",
+        "room": 162.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 148,
+        "building": "ELLIOTT",
+        "room": 167.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 180,
+        "building": "ELLIOTT",
+        "room": 168.0,
+        "shorthand": "ELL"
+    },
+    {
+        "capacity": 60,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 104.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 60,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 108.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 117,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 116.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 299,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 123.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 78,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 124.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 151,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 125.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 18,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 128.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 34,
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "room": 130.0,
+        "shorthand": "ECS"
+    },
+    {
+        "capacity": 50,
+        "building": "FINE ARTS BUILDING",
+        "room": 103.0,
+        "shorthand": "FIN"
+    },
+    {
+        "capacity": 28,
+        "building": "FINE ARTS BUILDING",
+        "room": 104.0,
+        "shorthand": "FIN"
+    },
+    {
+        "capacity": 20,
+        "building": "FINE ARTS BUILDING",
+        "room": 209.0,
+        "shorthand": "FIN"
+    },
+    {
+        "capacity": 284,
+        "building": "FRASER",
+        "room": 159.0,
+        "shorthand": "FRA"
+    },
+    {
+        "capacity": 215,
+        "building": "HICKMAN",
+        "room": 105.0,
+        "shorthand": "HCK"
+    },
+    {
+        "capacity": 46,
+        "building": "HICKMAN",
+        "room": 110.0,
+        "shorthand": "HCK"
+    },
+    {
+        "capacity": 40,
+        "building": "HICKMAN",
+        "room": 116.0,
+        "shorthand": "HCK"
+    },
+    {
+        "capacity": 154,
+        "building": "HUMAN&SOCIAL DEVLPMNT",
+        "room": "A240",
+        "shorthand": "HSD"
+    },
+    {
+        "capacity": 24,
+        "building": "HUMAN&SOCIAL DEVLPMNT",
+        "room": "A250",
+        "shorthand": "HSD"
+    },
+    {
+        "capacity": 30,
+        "building": "HUMAN&SOCIAL DEVLPMNT",
+        "room": "A264",
+        "shorthand": "HSD"
+    },
+    {
+        "capacity": 30,
+        "building": "HUMAN&SOCIAL DEVLPMNT",
+        "room": "A270",
+        "shorthand": "HSD"
+    },
+    {
+        "capacity": 317,
+        "building": "MACLAURIN",
+        "room": "A144",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 16,
+        "building": "MACLAURIN",
+        "room": "A326",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 45,
+        "building": "MACLAURIN",
+        "room": "D010",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 40,
+        "building": "MACLAURIN",
+        "room": "D016",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 36,
+        "building": "MACLAURIN",
+        "room": "D101",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 36,
+        "building": "MACLAURIN",
+        "room": "D103",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 17,
+        "building": "MACLAURIN",
+        "room": "D105",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 15,
+        "building": "MACLAURIN",
+        "room": "D107",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 20,
+        "building": "MACLAURIN",
+        "room": "D109",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 47,
+        "building": "MACLAURIN",
+        "room": "D110",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 29,
+        "building": "MACLAURIN",
+        "room": "D111",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 37,
+        "building": "MACLAURIN",
+        "room": "D114",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 60,
+        "building": "MACLAURIN",
+        "room": "D115",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 59,
+        "building": "MACLAURIN",
+        "room": "D116",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 34,
+        "building": "MACLAURIN",
+        "room": "D203",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 79,
+        "building": "MACLAURIN",
+        "room": "D207",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 55,
+        "building": "MACLAURIN",
+        "room": "D283",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 40,
+        "building": "MACLAURIN",
+        "room": "D287",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 79,
+        "building": "MACLAURIN",
+        "room": "D288",
+        "shorthand": "MAC"
+    },
+    {
+        "capacity": 107,
+        "building": "MCKINNON",
+        "room": 150.0,
+        "shorthand": "MCK"
+    },
+    {
+        "capacity": 38,
+        "building": "MCKINNON",
+        "room": 155.0,
+        "shorthand": "MCK"
+    }
+], "users": [
+    {
+        "name": "Celina Berg",
+        "username": "Celina.Berg",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "SENG 310",
+            "SENG 435"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Bill Bird",
+        "username": "Bill.Bird",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 355",
+            "SENG 310",
+            "SENG 435",
+            "SENG 466"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Sean Chester",
+        "username": "Sean.Chester",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "SENG 275",
+            "CSC 361",
+            "CSC 460"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Jason Corless",
+        "username": "Jason.Corless",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 225",
+            "CSC 226",
+            "CSC 230",
+            "CSC 355",
+            "CSC 361",
+            "CSC 460"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Daniela Damian",
+        "username": "Daniela.Damian",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 225",
+            "CSC 230",
+            "CSC 355",
+            "CSC 360",
+            "CSC 370",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Neil Ernst",
+        "username": "Neil.Ernst",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 225",
+            "CSC 230",
+            "CSC 355",
+            "CSC 360",
+            "SENG 310",
+            "SENG 401",
+            "SENG 411",
+            "SENG 421",
+            "SENG 435",
+            "SENG 466",
+            "SENG 474"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Anthony Estey",
+        "username": "Anthony.Estey",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 115",
+            "CSC 226",
+            "SENG 275"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Sudhakar Ganti",
+        "username": "Sudhakar.Ganti",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 355"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Daniel German",
+        "username": "Daniel.German",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 230",
+            "SENG 265",
+            "CSC 361",
+            "SENG 321",
+            "SENG 350",
+            "CSC 460",
+            "SENG 401",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Brandon Haworth",
+        "username": "Brandon.Haworth",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 226",
+            "CSC 355",
+            "CSC 360"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Hosna Jabbari",
+        "username": "Hosna.Jabbari",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "LillAnne Jackson",
+        "username": "LillAnne.Jackson",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 225",
+            "CSC 226",
+            "SENG 371"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Bruce Kapron",
+        "username": "Bruce.Kapron",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 225",
+            "CSC 355",
+            "CSC 361",
+            "CSC 370"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Valerie King",
+        "username": "Valerie.King",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 230",
+            "SENG 265",
+            "CSC 370",
+            "SENG 321",
+            "SENG 350",
+            "SENG 360",
+            "SENG 401",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Sajin Koroth",
+        "username": "Sajin.Koroth",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 355",
+            "SENG 310",
+            "SENG 435",
+            "SENG 466"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Rich Little",
+        "username": "Rich.Little",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "SENG 265",
+            "SENG 310",
+            "CSC 460",
+            "SENG 421",
+            "SENG 435",
+            "SENG 466"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Nishant Mehta",
+        "username": "Nishant.Mehta",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 115",
+            "CSC 226",
+            "SENG 275"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Hausi Muller",
+        "username": "Hausi.Muller",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 225",
+            "CSC 226",
+            "CSC 230",
+            "SENG 265",
+            "SENG 275",
+            "CSC 320",
+            "CSC 355",
+            "CSC 360"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Miguel Nacenta",
+        "username": "Miguel.Nacenta",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 230",
+            "SENG 310",
+            "SENG 321",
+            "SENG 421",
+            "SENG 435",
+            "SENG 466"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Ibrahim Numanagi\u0107",
+        "username": "Ibrahim.Numanagi\u0107",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "SENG 310",
+            "SENG 435",
+            "SENG 474",
+            "CSC 330"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Jianping Pan",
+        "username": "Jianping.Pan",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 226",
+            "SENG 371",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Charles Perin",
+        "username": "Charles.Perin",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 225",
+            "CSC 226",
+            "SENG 275",
+            "CSC 355",
+            "CSC 370",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Teseo Schneider",
+        "username": "Teseo.Schneider",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 115",
+            "CSC 226",
+            "CSC 230",
+            "CSC 355",
+            "CSC 361",
+            "SENG 321",
+            "SENG 401",
+            "SENG 411"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Sowmya Somanath",
+        "username": "Sowmya.Somanath",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 225",
+            "CSC 230",
+            "CSC 320",
+            "CSC 355",
+            "CSC 360",
+            "CSC 361",
+            "SENG 350"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Venkatesh Srinivasan",
+        "username": "Venkatesh.Srinivasan",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 225",
+            "CSC 320",
+            "CSC 355",
+            "CSC 360",
+            "SENG 350"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Ulrike Stege",
+        "username": "Ulrike.Stege",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 115"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Margaret-Anne Storey",
+        "username": "Margaret-Anne.Storey",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 226",
+            "SENG 371",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Cecilia Summers",
+        "username": "Cecilia.Summers",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 226",
+            "SENG 275",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Alex Thomo",
+        "username": "Alex.Thomo",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 226",
+            "CSC 370",
+            "SENG 371"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "George Tzanetakis",
+        "username": "George.Tzanetakis",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 115",
+            "CSC 355",
+            "CSC 370",
+            "SENG 371"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Jens Weber",
+        "username": "Jens.Weber",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 230",
+            "SENG 321"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Kui Wu",
+        "username": "Kui.Wu",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 225",
+            "CSC 230",
+            "CSC 355",
+            "CSC 360",
+            "SENG 360",
+            "SENG 411",
+            "SENG 421"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Michael Zastre",
+        "username": "Michael.Zastre",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "CSC 111",
+            "CSC 115",
+            "CSC 225",
+            "CSC 226",
+            "CSC 230",
+            "SENG 275",
+            "CSC 355",
+            "CSC 360",
+            "SENG 310"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Michael Adams",
+        "username": "Michael.Adams",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "ECE 260",
+            "SENG 475"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Panajotis Agathoklis",
+        "username": "Panajotis.Agathoklis",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "ECE 310",
+            "ECE 360"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Riham AlTawy",
+        "username": "Riham.AlTawy",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Amirali Baniasadi",
+        "username": "Amirali.Baniasadi",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Jens Bornemann",
+        "username": "Jens.Bornemann",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Alexandra Branzan Albu",
+        "username": "Alexandra.Branzan Albu",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Lin Cai",
+        "username": "Lin.Cai",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "David Capson",
+        "username": "David.Capson",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "ECE 355"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Thomas Darcie",
+        "username": "Thomas.Darcie",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Nikitas Dimopoulos",
+        "username": "Nikitas.Dimopoulos",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Xiaodai Dong",
+        "username": "Xiaodai.Dong",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Peter Driessen",
+        "username": "Peter.Driessen",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Fayez Gebali",
+        "username": "Fayez.Gebali",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "ECE 360"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Reuven Gordon",
+        "username": "Reuven.Gordon",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Aaron Gulliver",
+        "username": "Aaron.Gulliver",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Kin Fun Li",
+        "username": "Kin Fun.Li",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Tao Lu",
+        "username": "Tao.Lu",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Michael McGuire",
+        "username": "Michael.McGuire",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "ECE 310",
+            "ECE 360",
+            "ECE 485"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Stephen Neville",
+        "username": "Stephen.Neville",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "ECE 485",
+            "SENG 468",
+            "SENG 499"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Christo Papadopoulos",
+        "username": "Christo.Papadopoulos",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Navneet Popli",
+        "username": "Navneet.Popli",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "SENG 499",
+            "SENG 468",
+            "ECE 458",
+            "SENG 275"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Daler Rakhmatov",
+        "username": "Daler.Rakhmatov",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Makhsud Saidaminov",
+        "username": "Makhsud.Saidaminov",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Sana Shuja",
+        "username": "Sana.Shuja",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [
+            "ECE 310",
+            "ECE 360",
+            "ECE 355"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Mihai Sima",
+        "username": "Mihai.Sima",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+            "SENG 440"
+        ],
+        "unavailable": {}
+    },
+    {
+        "name": "Levi Smith",
+        "username": "Levi.Smith",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Poman So",
+        "username": "Poman.So",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Ilamparithi Thirumarai Chelvan",
+        "username": "Ilamparithi.Thirumarai Chelvan",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Issa Traore",
+        "username": "Issa.Traore",
+        "peng": true,
+        "pref_approved": true,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    },
+    {
+        "name": "Hong-Chuan Yang",
+        "username": "Hong-Chuan.Yang",
+        "peng": true,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [],
+        "unavailable": {}
+    }
+], "capacity": []}

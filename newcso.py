@@ -108,43 +108,6 @@ def update_cat_position(cat, population, best_solution, c1, c2, w):
             
 
 def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_size, max_iterations):
-    """
-    # Initialize the population
-    # population = []
-    # for _ in range(population_size):
-    #     solution = {
-    #         'professor_assignments': {},
-    #         'room_assignments': {},
-    #         'class_timeslots': {}
-    #     }
-    #     for professor in professors:
-    #         solution['professor_assignments'][professor['username']] = random.choice(list(range(len(classes))))
-    #     for class_id, assigned_class in enumerate(classes):
-    #         solution['room_assignments'][class_id] = random.choice(list(range(len(rooms))))
-    #         solution['class_timeslots'][class_id] = random.choice(assigned_class['terms_offered'])
-    #     population.append(solution)
-    
-    # # Main optimization loop
-    # for iteration in range(max_iterations):
-    #     # Evaluate fitness for each solution
-    #     fitness_scores = []
-    #     for solution in population:
-    #         fitness_scores.append(evaluate_fitness(solution, professors, classes, rooms))
-        
-    #     # Select the best solution
-    #     best_solution_index = fitness_scores.index(max(fitness_scores))
-    #     best_solution = population[best_solution_index]
-        
-    #     # Update population using Cat Swarm Optimization algorithm
-        
-    #     # TODO: Add Cat Swarm Optimization logic here
-        
-    #     # Print the best fitness score for the current iteration
-    #     print(f'Iteration {iteration + 1}: Best Fitness = {max(fitness_scores)}')
-    
-    # # Return the best solution found
-    # return best_solution
-    """
     population = []
     for _ in range(population_size):
         solution = {

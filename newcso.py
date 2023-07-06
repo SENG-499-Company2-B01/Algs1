@@ -3,6 +3,8 @@ import copy
 import json
 import math
 
+VERY_LOW_VALUE = -50000
+
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
     professor_assignments = solution['professor_assignments']
@@ -79,10 +81,10 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         
         # If the list of timeblocks taught by prof_id contains duplicates, 
         # it means the prof_id was assigned to teach more courses at same timeblock
-        if(timeblock_for_courses_taught_by_prof != list(set(timeblock_for_courses_taught_by_prof))):
-            fitness += -math.inf
+        if(len(timeblock_for_courses_taught_by_prof) != len(list(set(timeblock_for_courses_taught_by_prof)))):
+            fitness += VERY_LOW_VALUE
             break
-                
+        
         
     fitness += random.randint(-10,10)
     return fitness

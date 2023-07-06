@@ -1,9 +1,6 @@
 import random
 import copy
 import json
-import math
-
-VERY_LOW_VALUE = -50000
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
@@ -63,28 +60,6 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     #Evaluate time_block Assignments
     #todo
     #for class_id, time_block in class_timeslots.items():
-
-    # Evaluate prof's clash fitness
-    # list(set()) just returns the unique values in a list.
-    assigned_profs = list(set(professor_assignments.values()))
-    for prof in assigned_profs:
-        courses_taught_by_prof = []
-
-        # Assemble all courses taught by prof == prof_id
-        for course_id, prof_id in professor_assignments.items():
-            if prof_id == prof:
-                courses_taught_by_prof.append(course_id)
-        
-        # Create list of timeblocks taught by prof == prof_id
-        for course_id in courses_taught_by_prof:
-            timeblock_for_courses_taught_by_prof = class_timeslots[course_id]
-        
-        # If the list of timeblocks taught by prof_id contains duplicates, 
-        # it means the prof_id was assigned to teach more courses at same timeblock
-        if(len(timeblock_for_courses_taught_by_prof) != len(list(set(timeblock_for_courses_taught_by_prof)))):
-            fitness += VERY_LOW_VALUE
-            break
-        
         
     fitness += random.randint(-10,10)
     return fitness
@@ -108,6 +83,7 @@ def update_cat_position(cat, population, best_solution, c1, c2, w):
             
 
 def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_size, max_iterations):
+    # Initialize the population
     population = []
     for _ in range(population_size):
         solution = {
@@ -211,111 +187,53 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
     # Return the best solution found
     return best_solution
 
+def main(input_profs, input_courses, input_classrooms):
 
-# Example usage
-professors = [
-    {
-        "name": "Celina Berg",
-        "username": "Celina.Berg",
-        "peng": True,
-        "pref_approved": False,
-        "max_courses": 6,
-        "course_pref": [
-            "CSC111",
-            "SENG310",
-            "SENG435"
-        ],
-        "unavailable": {}
-    }
-]
+    population_size = 50
+    max_iterations = 500
 
-classes = [
-    {
-        "name": "Fundamentals of Programming with Engineering Applications",
-        "shorthand": "CSC111",
-        "terms_offered": [
-            "F",
-            "Sp"
-        ],
-        "prerequisites": [
-            []
-        ],
-        "corequisites": [],
-        "capacity": 140
-    }
-]
+    with open('/app/time_blocks.json') as f:
+        data = f.read()
+        input_timeblocks = json.loads(data)
 
-rooms = [
-    {
-        "capacity": 140,
-        "building": "BOB WRIGHT CENTRE",
-        "room": "A104",
-        "shorthand": "BWC"
-    }
-]
+    best_solution = cat_swarm_optimization(input_profs, input_courses, input_classrooms, input_timeblocks, population_size, max_iterations)
+    timetable_list = []
 
-population_size = 50
-max_iterations = 500
-
-with open('testing_profs.json') as f:
-    data = f.read()
-    input_profs = json.loads(data)
-
-with open('testing_courses.json') as f:
-    data = f.read()
-    input_courses = json.loads(data)
-
-with open('testing_classrooms.json') as f:
-    data = f.read()
-    input_classrooms = json.loads(data)
+    i = 0
+    for course in input_courses:
+        timetable_dict = {}
+        sections = ["A01"] #I dont account for splitting yet
+        sections_list = []
+        for section in sections:
+            days = []
+            section_dict = {}
+            #prof_num = list(best_solution['professor_assignments'].keys())[list(best_solution['professor_assignments'].values()).index(i)]
+            prof_num = best_solution['professor_assignments'][i]
+            prof = input_profs[prof_num]["name"]
+            
+            room_num = best_solution['room_assignments'][i]
+            room = f'{input_classrooms[room_num]["shorthand"]} {input_classrooms[room_num]["room"]}'
+            num_seats = course['num_seats']
+            
+            time_letter = best_solution['class_timeslots'][i]
+            for key in input_timeblocks[time_letter].keys():
+                days.append(key)
+            start_time = input_timeblocks[time_letter][days[0]]["start"]
+            end_time = input_timeblocks[time_letter][days[0]]["end"]
+            
+            section_dict['num'] = section
+            section_dict['building'] = room
+            section_dict['num_seats'] = num_seats
+            section_dict['professor'] = prof
+            section_dict['days'] = days
+            section_dict['start_time'] = start_time
+            section_dict['end_time'] = end_time
+            
+            sections_list.append(section_dict)
+        
+        timetable_dict['course'] = course['shorthand']
+        timetable_dict['sections'] = sections_list
+        timetable_list.append(timetable_dict)
+        i += 1
     
-with open('time_blocks.json') as f:
-    data = f.read()
-    input_timeblocks = json.loads(data)
-
-best_solution = cat_swarm_optimization(input_profs, input_courses, input_classrooms, input_timeblocks, population_size, max_iterations)
-timetable_list = []
-print(best_solution)
-i = 0
-for course in input_courses:
-    timetable_dict = {}
-    sections = ["A01"] #I dont account for splitting yet
-    sections_list = []
-    for section in sections:
-        days = []
-        section_dict = {}
-        #prof_num = list(best_solution['professor_assignments'].keys())[list(best_solution['professor_assignments'].values()).index(i)]
-        prof_num = best_solution['professor_assignments'][i]
-        prof = input_profs[prof_num]["name"]
-        
-        room_num = best_solution['room_assignments'][i]
-        room = str(input_classrooms[room_num]['shorthand']) + " " + str(input_classrooms[room_num]['room'])
-        num_seats = input_classrooms[room_num]['capacity']
-        
-        time_letter = best_solution['class_timeslots'][i]
-        for key in input_timeblocks[time_letter].keys():
-            days.append(key)
-        start_time = input_timeblocks[time_letter][days[0]]["start"]
-        end_time = input_timeblocks[time_letter][days[0]]["end"]
-        
-        section_dict['num'] = section
-        section_dict['building'] = room
-        section_dict['num_seats'] = num_seats
-        section_dict['professor'] = prof
-        section_dict['days'] = days
-        section_dict['start_time'] = start_time
-        section_dict['end_time'] = end_time
-        
-        sections_list.append(section_dict)
-    
-    timetable_dict['course'] = course['shorthand']
-    timetable_dict['sections'] = sections_list
-    timetable_list.append(timetable_dict)
-    i += 1
-    
-json_timetable = json.dumps(timetable_list)
-
-# Print the best solution
-#print(best_solution)
-
-print(json_timetable)
+    return timetable_list

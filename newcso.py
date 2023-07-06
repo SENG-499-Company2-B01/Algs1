@@ -61,6 +61,28 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     #Evaluate time_block Assignments
     #todo
     #for class_id, time_block in class_timeslots.items():
+
+    # Evaluate prof's clash fitness
+    # list(set()) just returns the unique values in a list.
+    assigned_profs = list(set(professor_assignments.values()))
+    for prof in assigned_profs:
+        courses_taught_by_prof = []
+
+        # Assemble all courses taught by prof == prof_id
+        for course_id, prof_id in professor_assignments.items():
+            if prof_id == prof:
+                courses_taught_by_prof.append(course_id)
+        
+        # Create list of timeblocks taught by prof == prof_id
+        for course_id in courses_taught_by_prof:
+            timeblock_for_courses_taught_by_prof = class_timeslots[course_id]
+        
+        # If the list of timeblocks taught by prof_id contains duplicates, 
+        # it means the prof_id was assigned to teach more courses at same timeblock
+        if(timeblock_for_courses_taught_by_prof != list(set(timeblock_for_courses_taught_by_prof))):
+            fitness += -math.inf
+            break
+                
         
     fitness += random.randint(-10,10)
     return fitness
@@ -84,6 +106,7 @@ def update_cat_position(cat, population, best_solution, c1, c2, w):
             
 
 def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_size, max_iterations):
+    """
     # Initialize the population
     # population = []
     # for _ in range(population_size):
@@ -119,7 +142,7 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
     
     # # Return the best solution found
     # return best_solution
-
+    """
     population = []
     for _ in range(population_size):
         solution = {
@@ -222,6 +245,7 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
     
     # Return the best solution found
     return best_solution
+
 
 # Example usage
 professors = [
@@ -329,4 +353,4 @@ json_timetable = json.dumps(timetable_list)
 # Print the best solution
 #print(best_solution)
 
-#print(json_timetable)
+print(json_timetable)

@@ -186,10 +186,10 @@ def check_wrong_coteaching(to_file,
 		fp3.write(f"Cost wrong co-teaching is {cost}")
 	return cost
 
-def swap(a:list, class1: int, timeslot1: int, timeslot2: int):
-	temp = a[class1][timeslot1]
-	a[class1][timeslot1] = a[class1][timeslot2]
-	a[class1][timeslot2] = temp
+def swap(a:list, class1: int, timeslot1: int, timeslot2: int,classroom1: int,classroom2: int):
+	temp = a[class1][classroom1][timeslot1]
+	a[class1][classroom1][timeslot1] = a[class1][classroom2][timeslot2]
+	a[class1][classroom2][timeslot2] = temp
 	return 1
 
 def check_teachers_empty_periods(to_file: int, 
@@ -858,11 +858,19 @@ def perform_swap(mode: int,
 	return 1
 
 # copies the contents of a matrix
-def copy_matrices(begin: int, end: int, destination: list, source: list, dim: int):
-	i, j: int
-	for i in range(0, dim):
-		for j in range(begin, end):
-			destination[i][j] = source[i][j]
+# x[cats][course_id][classroom_id][timeslot]=assigned professors
+def copy_matrices(course_id_start: int, course_id_end: int,classroom_start: int,classroom_end: int,,timeslots: int,timeslote: int destination: list, source: list, dim: int):
+	if dim==2:
+		for i in range(classroom_start, classroom_end):
+			for j in range(timeslots, timeslote):
+				destination[i][j] = source[i][j]
+		return
+	if dim==3:
+		for i in range(course_id_start, course_id_end):
+			for j in range(classroom_start, classroom_end):
+				for k in range(timeslots,timeslote):
+					destination[i][j][k] = source[i][j][k]
+		return
 
 # Calculates the fitness value
 def calculate_fitness(mode, start, end, a, number_of_teachers, number_of_classes, TEPW, ITDW, ICDW):
@@ -1081,30 +1089,38 @@ def insert_column(mode: int,begin: int,end: int,source: list,destination: list,c
 		SwapInt(destination[i][bux[index]][aux[index]], destination[i][classroom_i][timeslot_to_change], temp)
 
 #initializes the population of cats
+#x[cats][course_id][classroom_id][timeslot]=assigned professors
 def initialize_cats(classes_number: int,cat_number: int):
-	i, j, k, p, class1, timeslot=0,0,0,0,0,0
+	# for this initialization, I am assuming that the teacher and classroom list are comming in the least avaialablity order
+	for class1 in range(classes_number):
+		flag=0
+		for prof in range(teachers_no1):
+			if(check_professor_qualification(prof,classes[class1]) and teachers[prof].num_of_classes!=0):
+				itera=0
+				for pt in teachers[prof].available_slots:
+					if(teachers[prof].unavailable_slots[pt]!=1):
+						for i in range(classroomlist):
+							if(check_classroom_qualification(classroomlist[i],classes[class1]) and classroomlist[i].classroom_timeslots[pt]==0):
+								x[0][class1][i][pt]=prof
+								classroomlist[i].classroom_timeslots[pt]=1
+								teachers[prof].unavailable_slots[pt]=1
+								teachers[prof].num_of_classes=teachers[prof].num_of_classes-1
+								itera=1
+								flag=1
+								break
+						if(teachers[prof].unavailable_slots[pt]==1):
+							break
+				if(itera==1):
+					break
+		if(flag==0):
+			print("error, there are classes that can not be assigned to any professors at any classroom")
+			return -1
+	# I have read the original code and come with a conclusion that the initialization of all the cats 
+	# in the original code is equvalent to just copying the initialization of the first cat to the rest of them 
+	for p in range(cat_number-1):
+		copy_matrices(0, classes_no,0,classroom_number,0,26, x[p], x[0],3)
+	return 1
 
-	for p in range(cat_number):
-		for j in range(classes_number):
-			for i in range(classes[j].number_of_teachers):
-				for k in range(3):
-					classes[j].teachers_of_class_and_hours_remaining[i][k] = classes[j].teachers_of_class_and_hours[i][k]
-
-		for class1 in range(classes_number):
-			for timeslot in range(35):
-				x[p][class1][timeslot] = -1
-
-			for i in range(classes[class1].number_of_teachers):
-				while (classes[class1].teachers_of_class_and_hours_remaining[i][1] > 0):
-					timeslot = randint(0, 34)
-					if (x[p][class1][timeslot] == -1):
-						x[p][class1][timeslot] = classes[class1].teachers_of_class_and_hours[i][0]
-						classes[class1].teachers_of_class_and_hours_remaining[i][1]=classes[class1].teachers_of_class_and_hours_remaining[i][1]-1
-
-		for j in range(classes_number):
-			for i in range(classes[j].number_of_teachers):
-				for k in range(3):
-					classes[j].teachers_of_class_and_hours_remaining[i][k] = classes[j].teachers_of_class_and_hours[i][k]
 
 #cat seek procedure
 # x[cats][course_id][classroom_id][timeslot]=assigned professors
@@ -1133,7 +1149,7 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 		consider = 0
 
 	for cp in range(SMP):
-		copy_matrices(0, 35, cat_copy[cp], x, classes_no)
+		copy_matrices(0, classes_no,0,classroom_number,0,26, cat_copy[cp], x,3)
 
 	timeslots_to_change = int((CDC / 100.0) * 35.0 * classroom_number)
 
@@ -1143,14 +1159,14 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 	swaps_to_make = int((SRD / 100.0) * classes_no * 26* classroom_number)
 
 	for cp in range(SMP):
-		copy_matrices(0, 35, temp_cat, cat_copy[cp], classes_no)
+		copy_matrices(0, classes_no,0,classroom_number,0,26, temp_cat,cat_copy[cp],3)
 
 		if ((consider == 0) or ((consider == 1) and (cp != SMP - 1))):
 			unique_randint(hd, 0, 26-1, timeslots_to_change)
 			unique_randint(hd2, 0,classroom_number-1, timeslots_to_change)
 			for aa in range(timeslots_to_change):
 				insert_column(there_is_coteaching, 0, 35, global_best, temp_cat,hd2[aa], hd[aa], classes_no, teachers_no, TEPW, ITDW, ICDW)
-			copy_matrices(0, 35, temp_cat1, temp_cat, classes_no)
+			copy_matrices(0, classes_no,0,classroom_number,0,26, temp_cat1,temp_cat,3)
 			unique_randint(sl[0], 0, (classes_no * 26) - 1, swaps_to_make)
 			unique_randint(sl[1], 0, (classroom_number * 26) - 1, swaps_to_make)
 			for bb in range(swaps_to_make):
@@ -1167,8 +1183,8 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 						best_fs = tfs
 						fs[cp] = tfs
 						cfs[cp] = tfs
-						copy_matrices(0, 35, cat_copy[cp], temp_cat, classes_no)
-					copy_matrices(0, 35, temp_cat, temp_cat1, classes_no)
+						copy_matrices(0, classes_no,0,classroom_number,0,26, cat_copy[cp],temp_cat,3)
+					copy_matrices(0, classes_no,0,classroom_number,0,26, temp_cat,temp_cat1,3)
 		else:
 			fs[cp] = calculate_fitness(there_is_coteaching, 0, 35, cat_copy[cp], teachers_no, classes_no, TEPW, ITDW, ICDW)
 			cfs[cp] = fs [cp]
@@ -1181,6 +1197,7 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 
 	if (all_equal == 1):
 		selected_copy = randint(0, SMP - 1)
+		copy_matrices(0, classes_no,0,classroom_number,0,26, x,cat_copy[selected_copy],3)
 		copy_matrices(0, 26, x, cat_copy[selected_copy], classes_no)
 
 	else:
@@ -1191,7 +1208,8 @@ def cat_seek(x: list,classes_no: int,teachers_no: int,TEPW: float,ITDW: float,IC
 
 		for i in range(SMP):
 			if (tmp1 <= sel_prob[i]):
-				copy_matrices(0, 26, x, cat_copy[i], classes_no)
+				copy_matrices(0, classes_no,0,classroom_number,0,26, x,cat_copy[i],3)
+
 
 def cat_trace(x: list, classes_no: int): #cat trace procedure
 	similarity = 0
@@ -1595,7 +1613,6 @@ def main():
 									print(" + %s ", teachers[-co_teacher1].surname)
 								else:
 									fp1.write(" + %s " % teachers[-co_teacher1].surname)
-
 					if (aaa == 1):
 						print("\n")
 

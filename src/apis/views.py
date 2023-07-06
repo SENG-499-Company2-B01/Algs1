@@ -1,6 +1,7 @@
 #from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import status
 
 import random
 
@@ -46,13 +47,13 @@ def generate(request):
                 "courses": scheduled_courses
             }]
         }    
-        return Response(schedule, status=200)
+        return Response(schedule, status=status.HTTP_200_OK)
     except Exception:
-        return Response(status=400)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 # SRS_CMP2 page 19
 @api_view(['POST'])
 def verify(request):
     # Do stuff to verify schedules here
-    return Response({"message": "200 OK"})
+    return Response({"message": "200 OK"}, status=status.HTTP_200_OK)

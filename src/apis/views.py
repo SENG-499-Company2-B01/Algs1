@@ -23,11 +23,11 @@ def generate(request):
         def in_term(course):
             match term:
                 case "fall":
-                    return "f" in [x.lower() for x in course["terms_offered"]]
+                    return "fall" in [x.lower() for x in course["terms_offered"]]
                 case "summer":
-                    return "su" in [x.lower() for x in course["terms_offered"]]
+                    return "summer" in [x.lower() for x in course["terms_offered"]]
                 case "spring":
-                    return "sp" in [x.lower() for x in course["terms_offered"]]
+                    return "spring" in [x.lower() for x in course["terms_offered"]]
                 
         term_courses = list(filter(in_term, courses))
 

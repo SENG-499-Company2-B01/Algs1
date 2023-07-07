@@ -233,7 +233,7 @@ def main(input_profs, input_courses, input_classrooms):
             section_dict = {}
             #prof_num = list(best_solution['professor_assignments'].keys())[list(best_solution['professor_assignments'].values()).index(i)]
             prof_num = best_solution['professor_assignments'][i]
-            prof = input_profs[prof_num]["name"]
+            prof = input_profs[prof_num]["username"]
             
             room_num = best_solution['room_assignments'][i]
             room = f'{input_classrooms[room_num]["shorthand"]} {input_classrooms[room_num]["room"]}'

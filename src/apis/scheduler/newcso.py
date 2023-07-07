@@ -63,12 +63,13 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     #todo
     #for class_id, time_block in class_timeslots.items():
 
-     # Evaluate prof's clash fitness
+    # Evaluate prof's clash fitness
     # list(set()) just returns the unique values in a list.
     assigned_profs = list(set(professor_assignments.values()))
     for prof in assigned_profs:
         courses_taught_by_prof = []
-
+        timeblock_for_courses_taught_by_prof = []
+        
         # Assemble all courses taught by prof == prof_id
         for course_id, prof_id in professor_assignments.items():
             if prof_id == prof:

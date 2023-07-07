@@ -20,8 +20,8 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         assigned_class = classes[class_id]
         
         # Check if the professor is available
-        if professor['unavailable'].get(class_timeslots[class_id]):
-            fitness -= 1
+        if professor['available'].get(class_timeslots[class_id]):
+            fitness += 1
         
         # # Check if the professor has preferences
         # if professor['course_pref'] and assigned_class['shorthand'] not in professor['course_pref']:

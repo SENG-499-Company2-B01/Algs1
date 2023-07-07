@@ -21,7 +21,7 @@ def generate(request):
         capacity = algs1_request["capacity"]
 
         def in_term(course):
-            match term:
+            match term.lower():
                 case "fall":
                     return "fall" in [x.lower() for x in course["terms_offered"]]
                 case "summer":

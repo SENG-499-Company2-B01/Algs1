@@ -213,7 +213,7 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
 def main(input_profs, input_courses, input_classrooms):
 
     population_size = 50
-    max_iterations = 500
+    max_iterations = 100
 
     with open('/app/time_blocks.json') as f:
         data = f.read()

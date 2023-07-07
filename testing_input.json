@@ -3,8 +3,8 @@
         "name": "Fundamentals of Programming with Engineering Applications",
         "shorthand": "CSC111",
         "terms_offered": [
-            "F",
-            "Sp"
+            "fall",
+            "spring"
         ],
         "prerequisites": [
             []
@@ -15,7 +15,7 @@
         "name": "Design and Communication I",
         "shorthand": "ENGR110",
         "terms_offered": [
-            "F"
+            "fall"
         ],
         "prerequisites": [
             []
@@ -26,8 +26,8 @@
         "name": "Introduction to Professional Practice",
         "shorthand": "ENGR130",
         "terms_offered": [
-            "F",
-            "Sp"
+            "fall",
+            "spring"
         ],
         "prerequisites": [
             []
@@ -38,9 +38,9 @@
         "name": "Calculus I",
         "shorthand": "MATH100",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -51,9 +51,9 @@
         "name": "Introduction to Calculus",
         "shorthand": "MATH109",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -64,7 +64,7 @@
         "name": "Matrix Algebra for Engineers",
         "shorthand": "MATH110",
         "terms_offered": [
-            "F"
+            "fall"
         ],
         "prerequisites": [
             []
@@ -75,8 +75,8 @@
         "name": "Introductory Physics I",
         "shorthand": "PHYS110",
         "terms_offered": [
-            "F",
-            "Sp"
+            "fall",
+            "spring"
         ],
         "prerequisites": [
             []
@@ -87,9 +87,9 @@
         "name": "Fundamentals of Programming II",
         "shorthand": "CSC115",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -100,7 +100,7 @@
         "name": "Design and Communication II",
         "shorthand": "ENGR120",
         "terms_offered": [
-            "Sp"
+            "spring"
         ],
         "prerequisites": [
             []
@@ -111,8 +111,8 @@
         "name": "Engineering Mechanics",
         "shorthand": "ENGR141",
         "terms_offered": [
-            "Sp",
-            "Su"
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -123,9 +123,9 @@
         "name": "Calculus II",
         "shorthand": "MATH101",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -136,8 +136,8 @@
         "name": "Introductory Physics II",
         "shorthand": "PHYS111",
         "terms_offered": [
-            "Sp",
-            "Su"
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -148,7 +148,7 @@
         "name": "Introduction to Computer Architecture",
         "shorthand": "ECE255",
         "terms_offered": [
-            "F"
+            "fall"
         ],
         "prerequisites": [
             []
@@ -159,9 +159,9 @@
         "name": "Introduction to Computer Architecture",
         "shorthand": "CSC230",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -172,8 +172,8 @@
         "name": "Fundamentals of Chemistry from Atoms to Materials",
         "shorthand": "CHEM101",
         "terms_offered": [
-            "F",
-            "Su"
+            "fall",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -184,8 +184,8 @@
         "name": "Continuous-Time Signals and Systems",
         "shorthand": "ECE260",
         "terms_offered": [
-            "F",
-            "Su"
+            "fall",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -196,9 +196,9 @@
         "name": "Logic and Foundations",
         "shorthand": "MATH122",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -209,9 +209,9 @@
         "name": "Software Development Methods",
         "shorthand": "SENG265",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -222,9 +222,9 @@
         "name": "Introduction to Probability and Statistics I",
         "shorthand": "STAT260",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -236,7 +236,7 @@
         "shorthand": "CSC225",
         "terms_offered": [
             "F. Sp",
-            "Su"
+            "summer"
         ],
         "prerequisites": [
             []
@@ -247,8 +247,8 @@
         "name": "Digital Signal Processing I",
         "shorthand": "ECE310",
         "terms_offered": [
-            "Sp",
-            "Su"
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -259,9 +259,9 @@
         "name": "Introduction to Economics and Financial Project Evaluation",
         "shorthand": "ECON180",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -272,8 +272,8 @@
         "name": "Software Testing",
         "shorthand": "SENG275",
         "terms_offered": [
-            "Sp",
-            "Su"
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -284,9 +284,9 @@
         "name": "Human Computer Interaction",
         "shorthand": "SENG310",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -297,7 +297,7 @@
         "name": "Communication Networks",
         "shorthand": "ECE363",
         "terms_offered": [
-            "Sp"
+            "spring"
         ],
         "prerequisites": [
             []
@@ -308,8 +308,8 @@
         "name": "Computer Communications and Networks",
         "shorthand": "CSC361",
         "terms_offered": [
-            "F",
-            "Sp"
+            "fall",
+            "spring"
         ],
         "prerequisites": [
             []
@@ -320,9 +320,9 @@
         "name": "Algorithms and Data Structures II",
         "shorthand": "CSC226",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -333,8 +333,8 @@
         "name": "Control Theory and Systems I",
         "shorthand": "ECE360",
         "terms_offered": [
-            "F",
-            "Sp"
+            "fall",
+            "spring"
         ],
         "prerequisites": [
             []
@@ -345,8 +345,8 @@
         "name": "Requirements Engineering",
         "shorthand": "SENG321",
         "terms_offered": [
-            "F",
-            "Sp"
+            "fall",
+            "spring"
         ],
         "prerequisites": [
             []
@@ -357,7 +357,7 @@
         "name": "Software Evolution",
         "shorthand": "SENG371",
         "terms_offered": [
-            "Sp"
+            "spring"
         ],
         "prerequisites": [
             []
@@ -368,7 +368,7 @@
         "name": "Microprocessor-Based Systems",
         "shorthand": "ECE355",
         "terms_offered": [
-            "F"
+            "fall"
         ],
         "prerequisites": [
             []
@@ -379,7 +379,7 @@
         "name": "Digital Logic and Computer Organization",
         "shorthand": "CSC355",
         "terms_offered": [
-            "F"
+            "fall"
         ],
         "prerequisites": [
             []
@@ -390,9 +390,9 @@
         "name": "Foundations of Computer Science",
         "shorthand": "CSC320",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -403,9 +403,9 @@
         "name": "Operating Systems",
         "shorthand": "CSC360",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -416,9 +416,9 @@
         "name": "Database Systems",
         "shorthand": "CSC370",
         "terms_offered": [
-            "F",
-            "Sp",
-            "Su"
+            "fall",
+            "spring",
+            "summer"
         ],
         "prerequisites": [
             []
@@ -429,7 +429,7 @@
         "name": "Software Architecture and Design",
         "shorthand": "SENG350",
         "terms_offered": [
-            "F"
+            "fall"
         ],
         "prerequisites": [
             []
@@ -440,7 +440,7 @@
         "name": "Security Engineering",
         "shorthand": "SENG360",
         "terms_offered": [
-            "F"
+            "fall"
         ],
         "prerequisites": [
             []
@@ -451,7 +451,7 @@
         "name": "Software Quality Engineering",
         "shorthand": "SENG426",
         "terms_offered": [
-            "Su"
+            "summer"
         ],
         "prerequisites": [
             []
@@ -462,7 +462,7 @@
         "name": "Embedded Systems",
         "shorthand": "SENG440",
         "terms_offered": [
-            "Su"
+            "summer"
         ],
         "prerequisites": [
             []
@@ -473,7 +473,7 @@
         "name": "Design Project II",
         "shorthand": "SENG499",
         "terms_offered": [
-            "Su"
+            "summer"
         ],
         "prerequisites": [
             []
@@ -484,7 +484,7 @@
         "name": "Real Time Computer Systems Design Project",
         "shorthand": "ECE455",
         "terms_offered": [
-            "Sp"
+            "spring"
         ],
         "prerequisites": [
             []
@@ -495,7 +495,7 @@
         "name": "Design and Analysis of Real-Time Systems",
         "shorthand": "CSC460",
         "terms_offered": [
-            "Sp"
+            "spring"
         ],
         "prerequisites": [
             []
@@ -506,7 +506,7 @@
         "name": "Social and Professional Issues",
         "shorthand": "SENG401",
         "terms_offered": [
-            "Sp"
+            "spring"
         ],
         "prerequisites": [
             []

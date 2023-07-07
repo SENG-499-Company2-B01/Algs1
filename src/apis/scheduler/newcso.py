@@ -31,10 +31,10 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         has_pref_flag = 0
         for course in professor['course_pref']:
             if course.replace(" ", "") == assigned_class['shorthand']:
-                has_pref_flag = 1
+                has_pref_flag += 1
                 
-        if has_pref_flag == 1:
-            fitness += 5
+        if has_pref_flag >= 1:
+            fitness += 2 * has_pref_flag
             #print('nice')
         else:
             fitness -= 1

@@ -31,10 +31,10 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         has_pref_flag = 0
         for course in professor['course_pref']:
             if course.replace(" ", "") == assigned_class['shorthand']:
-                has_pref_flag += 1
+                has_pref_flag = 1
                 
-        if has_pref_flag >= 1:
-            fitness += 2 * has_pref_flag
+        if has_pref_flag == 1:
+            fitness += 5
             #print('nice')
         else:
             fitness -= 1
@@ -109,6 +109,7 @@ def update_cat_position(cat, population, best_solution, c1, c2, w):
 def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_size, max_iterations):
     # Initialize the population
     population = []
+    best_solution = {}
     for _ in range(population_size):
         solution = {
             'professor_assignments': {},

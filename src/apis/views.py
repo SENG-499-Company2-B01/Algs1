@@ -5,7 +5,7 @@ from rest_framework import status
 
 import random
 
-from .scheduler.newcso import main
+from .scheduler.cat_swarm import main
 
 
 # SRS_CMP2 page 18

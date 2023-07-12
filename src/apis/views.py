@@ -1,4 +1,5 @@
 #from django.shortcuts import render
+import json
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
@@ -23,14 +24,14 @@ def generate(request):
         def in_term(course):
             match term.lower():
                 case "fall":
-                    return "fall" in [x.lower() for x in course["terms_offered"]]
+                    return "fall" in [x.strip().lower() for x in course["terms_offered"]]
                 case "summer":
-                    return "summer" in [x.lower() for x in course["terms_offered"]]
+                    return "summer" in [x.strip().lower() for x in course["terms_offered"]]
                 case "spring":
-                    return "spring" in [x.lower() for x in course["terms_offered"]]
+                    return "spring" in [x.strip().lower() for x in course["terms_offered"]]
                 
         term_courses = list(filter(in_term, courses))
-
+        
         for course in term_courses:
             if "estimates" in capacity:
                 for courseEstimate in capacity["estimates"]:
@@ -38,7 +39,6 @@ def generate(request):
                         course["num_seats"] = courseEstimate["estimate"]
             if "num_seats" not in course:
                 course["num_seats"] = random.randint(80, 100)
-
         scheduled_courses = main(users, term_courses, classrooms)
         schedule = {
             "year": year, 

@@ -1,0 +1,1294 @@
+{
+    "year": 2023,
+    "term": "Fall",
+    "users": [
+      {
+        "username": "Celina.Berg",
+        "email": "celinag@uvic.ca",
+        "password": "$2b$12$J8ZXjOCTrUc1v4pTd5WhuOq0a6bDiLriEQQBeNXbhqN/tqyQukF7u",
+        "firstname": "Celina",
+        "lastname": "Berg",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " SENG 310",
+          " SENG 435"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Bill.Bird",
+        "email": "bbird@uvic.ca",
+        "password": "$2b$12$EiANKrxsd.Xzn/AXI/U6PeZg3SFzz6bXDk0yYB10dn7qgbgLxF68W",
+        "firstname": "Bill",
+        "lastname": "Bird",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 355",
+          " SENG 310",
+          " SENG 435",
+          " SENG 466"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Sean.Chester",
+        "email": "schester@uvic.ca",
+        "password": "$2b$12$RohukQGYaH3XfJP5IKeY9.LpodoMmNsOHO29ZcjQE8FfduvO9KCNC",
+        "firstname": "Sean",
+        "lastname": "Chester",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " SENG 275",
+          " CSC 361",
+          " CSC 460"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Jason.Corless",
+        "email": "-",
+        "password": "$2b$12$R7oIkmgCVFldh70yUdAxE.BJEgNcmCGpAKZ3KHTre14QN5SoocnMC",
+        "firstname": "Jason",
+        "lastname": "Corless",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 225",
+          " CSC 226",
+          " CSC 230",
+          " CSC 355",
+          " CSC 361",
+          " CSC 460"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Daniela.Damian",
+        "email": "danielad@uvic.ca",
+        "password": "$2b$12$fncqpk7mjTbuxVgHp.3azOCrkGYvXyIaPy1fEwYRegwowx/DMMRWG",
+        "firstname": "Daniela",
+        "lastname": "Damian",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 225",
+          " CSC 230",
+          " CSC 355",
+          " CSC 360",
+          " CSC 370",
+          " SENG 421"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Neil.Ernst",
+        "email": "nernst@uvic.ca",
+        "password": "$2b$12$GDL2A39l/Fn5VI6t7d2hBugdIVhyMDvVEggzM.5Rhc2MJ7ruaZEu.",
+        "firstname": "Neil",
+        "lastname": "Ernst",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 225",
+          " CSC 230",
+          " CSC 355",
+          " CSC 360",
+          " SENG 310",
+          " SENG 401",
+          " SENG 411",
+          " SENG 421",
+          " SENG 435",
+          " SENG 466",
+          " SENG 474"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Anthony.Estey",
+        "email": "aestey@uvic.ca",
+        "password": "$2b$12$Dr5I6.wGLMxTycel.a3Z9eCkTDze5WLzaASYOaK7Df7qo0.dkoxum",
+        "firstname": "Anthony",
+        "lastname": "Estey",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 115",
+          " CSC 226",
+          " SENG 275"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Sudhakar.Ganti",
+        "email": "sganti@uvic.ca",
+        "password": "$2b$12$6AtDiWW2/lNqdKD/zYhNTusgVvFdeIYNz.YgvCZSSN3C1QzrDMHZS",
+        "firstname": "Sudhakar",
+        "lastname": "Ganti",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 355"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Daniel.German",
+        "email": "dmg@uvic.ca",
+        "password": "$2b$12$QOJPEmmKU28mY1XrFqToDOAqsHW19JsvO89uDOplCfd.iPo5Leo.C",
+        "firstname": "Daniel",
+        "lastname": "German",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " CSC 230",
+          " SENG 265",
+          " CSC 361",
+          " SENG 321",
+          " SENG 350",
+          " CSC 460",
+          " SENG 401",
+          " SENG 421"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "username": "Brandon.Haworth",
+        "email": "bhaworth@uvic.ca",
+        "password": "$2b$12$7GZVed0agTZA0ZrBYwzD6udutkD1S1tTFGo9yx8KBtKXz5CmJSZCG",
+        "firstname": "Brandon",
+        "lastname": "Haworth",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 226",
+          " CSC 355",
+          " CSC 360"
+        ],
+        "available": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      }
+    ],
+    "courses": [
+      {
+        "shorthand": "CSC 111",
+        "name": "Fundamentals of Programming with Engineering Applications",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring"
+        ]
+      },
+      {
+        "shorthand": "ENGR 110",
+        "name": "Design and Communication I",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall"
+        ]
+      },
+      {
+        "shorthand": "ENGR 130",
+        "name": "Introduction to Professional Practice",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring"
+        ]
+      },
+      {
+        "shorthand": "MATH 100",
+        "name": "Calculus I",
+        "prerequisites": [
+          [
+            " \"\""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "MATH 109",
+        "name": "Introduction to Calculus",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "MATH 110",
+        "name": "Matrix Algebra for Engineers",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall"
+        ]
+      },
+      {
+        "shorthand": "PHYS 110",
+        "name": "Introductory Physics I",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring"
+        ]
+      },
+      {
+        "shorthand": "CSC 115",
+        "name": "Fundamentals of Programming II",
+        "prerequisites": [
+          [
+            "CSC110"
+          ],
+          [
+            "CSC111"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "ENGR 120",
+        "name": "Design and Communication II",
+        "prerequisites": [
+          [
+            "ENGR110",
+            "CSC111"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring"
+        ]
+      },
+      {
+        "shorthand": "ENGR 141",
+        "name": "Engineering Mechanics",
+        "prerequisites": [
+          [
+            "MATH100",
+            "MATH110"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "MATH 101",
+        "name": "Calculus II",
+        "prerequisites": [
+          [
+            "MATH100"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "PHYS 111",
+        "name": "Introductory Physics II",
+        "prerequisites": [
+          [
+            "PHYS110"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "ECE 255",
+        "name": "Introduction to Computer Architecture",
+        "prerequisites": [
+          [
+            "CSC111"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall"
+        ]
+      },
+      {
+        "shorthand": "CSC 230",
+        "name": "Introduction to Computer Architecture",
+        "prerequisites": [
+          [
+            "CSC115"
+          ],
+          [
+            "CSC116"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "CHEM 101",
+        "name": "Fundamentals of Chemistry from Atoms to Materials",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "ECE 260",
+        "name": "Continuous-Time Signals and Systems",
+        "prerequisites": [
+          [
+            "MATH101",
+            "MATH110"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "MATH 122",
+        "name": "Logic and Foundations",
+        "prerequisites": [
+          [
+            "MATH100"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "SENG 265",
+        "name": "Software Development Methods",
+        "prerequisites": [
+          [
+            "CSC115"
+          ],
+          [
+            "CSC116"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "STAT 260",
+        "name": "Introduction to Probability and Statistics I",
+        "prerequisites": [
+          [
+            "MATH101"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "CSC 225",
+        "name": "Algorithms and Data Structures I",
+        "prerequisites": [
+          [
+            "CSC115",
+            "MATH122"
+          ],
+          [
+            "CSC116",
+            "MATH122"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall. spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "ECE 310",
+        "name": "Digital Signal Processing I",
+        "prerequisites": [
+          [
+            "ECE260"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "ECON 180 ",
+        "name": "Introduction to Economics and Financial Project Evaluation",
+        "prerequisites": [
+          [
+            "MATH101"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "SENG 275",
+        "name": "Software Testing",
+        "prerequisites": [
+          [
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "SENG 310",
+        "name": "Human Computer Interaction",
+        "prerequisites": [
+          [
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "ECE 363",
+        "name": "Communication Networks",
+        "prerequisites": [
+          [
+            "ECE255"
+          ],
+          [
+            "CSC230"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring"
+        ]
+      },
+      {
+        "shorthand": "CSC 361",
+        "name": "Computer Communications and Networks",
+        "prerequisites": [
+          [
+            "SENG265",
+            "CSC230"
+          ],
+          [
+            "SENG265",
+            "ECE255"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring"
+        ]
+      },
+      {
+        "shorthand": "CSC 226",
+        "name": "Algorithms and Data Structures II",
+        "prerequisites": [
+          [
+            "CSC225"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "ECE 360",
+        "name": "Control Theory and Systems I",
+        "prerequisites": [
+          [
+            "ECE260"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring"
+        ]
+      },
+      {
+        "shorthand": "SENG 321",
+        "name": "Requirements Engineering",
+        "prerequisites": [
+          [
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring"
+        ]
+      },
+      {
+        "shorthand": "SENG 371",
+        "name": "Software Evolution",
+        "prerequisites": [
+          [
+            "SENG275"
+          ],
+          [
+            "SENG321"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring"
+        ]
+      },
+      {
+        "shorthand": "ECE 355",
+        "name": "Microprocessor-Based Systems",
+        "prerequisites": [
+          [
+            "MATH122",
+            "ECE255"
+          ],
+          [
+            "MATH122",
+            "CSC230"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall"
+        ]
+      },
+      {
+        "shorthand": "CSC 355",
+        "name": "Digital Logic and Computer Organization",
+        "prerequisites": [
+          [
+            "MATH122",
+            "ECE255"
+          ],
+          [
+            "MATH122",
+            "CSC230"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall"
+        ]
+      },
+      {
+        "shorthand": "CSC 320",
+        "name": "Foundations of Computer Science",
+        "prerequisites": [
+          [
+            "CSC226"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "CSC 360",
+        "name": "Operating Systems",
+        "prerequisites": [
+          [
+            "CSC225",
+            "SENG265",
+            "CSC230"
+          ],
+          [
+            "CSC225",
+            "SENG265",
+            "ECE255"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "CSC 370",
+        "name": "Database Systems",
+        "prerequisites": [
+          [
+            "CSC255",
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall",
+          " spring",
+          " summer"
+        ]
+      },
+      {
+        "shorthand": "SENG 350",
+        "name": "Software Architecture and Design",
+        "prerequisites": [
+          [
+            "SENG275"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall"
+        ]
+      },
+      {
+        "shorthand": "SENG 360",
+        "name": "Security Engineering",
+        "prerequisites": [
+          [
+            "SENG265",
+            "ECE363"
+          ],
+          [
+            "SENG265",
+            "CSC361"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "fall"
+        ]
+      },
+      {
+        "shorthand": "SENG 426",
+        "name": "Software Quality Engineering",
+        "prerequisites": [
+          [
+            "SENG275",
+            "SENG321"
+          ],
+          [
+            "SENG275",
+            "SENG371"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "summer"
+        ]
+      },
+      {
+        "shorthand": "SENG 440",
+        "name": "Embedded Systems",
+        "prerequisites": [
+          [
+            "ECE355"
+          ],
+          [
+            "CSC355"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "summer"
+        ]
+      },
+      {
+        "shorthand": "SENG 499",
+        "name": "Design Project II",
+        "prerequisites": [
+          [
+            "SENG350",
+            "CSC361",
+            "CSC370",
+            "SENG321"
+          ],
+          [
+            "SENG350",
+            "ECE363",
+            "CSC370",
+            "SENG321"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "summer"
+        ]
+      },
+      {
+        "shorthand": "ECE 455",
+        "name": "Real Time Computer Systems Design Project",
+        "prerequisites": [
+          [
+            "CSC355"
+          ],
+          [
+            "ECE355"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring"
+        ]
+      },
+      {
+        "shorthand": "CSC 460",
+        "name": "Design and Analysis of Real-Time Systems",
+        "prerequisites": [
+          [
+            "CSC360",
+            "CSC355"
+          ],
+          [
+            "CSC360",
+            "ECE355"
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring"
+        ]
+      },
+      {
+        "shorthand": "SENG 401",
+        "name": "Social and Professional Issues",
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "terms_offered": [
+          "spring"
+        ]
+      }
+    ],
+    "classrooms": [
+      {
+        "shorthand": "ELL",
+        "building": "ELLIOTT",
+        "capacity": 68,
+        "room": "61"
+      },
+      {
+        "shorthand": "ELL",
+        "building": "ELLIOTT",
+        "capacity": 80,
+        "room": "62"
+      },
+      {
+        "shorthand": "ELL",
+        "building": "ELLIOTT",
+        "capacity": 48,
+        "room": "160"
+      },
+      {
+        "shorthand": "ELL",
+        "building": "ELLIOTT",
+        "capacity": 24,
+        "room": "161"
+      },
+      {
+        "shorthand": "ELL",
+        "building": "ELLIOTT",
+        "capacity": 54,
+        "room": "162"
+      },
+      {
+        "shorthand": "ELL",
+        "building": "ELLIOTT",
+        "capacity": 148,
+        "room": "167"
+      },
+      {
+        "shorthand": "ELL",
+        "building": "ELLIOTT",
+        "capacity": 180,
+        "room": "168"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 60,
+        "room": "104"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 60,
+        "room": "108"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 117,
+        "room": "116"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 299,
+        "room": "123"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 78,
+        "room": "124"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 151,
+        "room": "125"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 18,
+        "room": "128"
+      },
+      {
+        "shorthand": "ECS",
+        "building": "ENGINEERING/COMPUTER SCIE",
+        "capacity": 34,
+        "room": "130"
+      },
+      {
+        "shorthand": "MCK",
+        "building": "MCKINNON",
+        "capacity": 107,
+        "room": "150"
+      },
+      {
+        "shorthand": "MCK",
+        "building": "MCKINNON",
+        "capacity": 38,
+        "room": "155"
+      }
+    ],
+    "capacity": [
+      {
+        "estimates": null
+      }
+    ]
+  }

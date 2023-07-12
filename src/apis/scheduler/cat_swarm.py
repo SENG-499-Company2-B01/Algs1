@@ -3,6 +3,16 @@ import copy
 import json
 
 VERY_LOW_VALUE = -50000
+ROOM_TOO_SMALL_PUNISHMENT = -10000
+
+def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
+    assigned_class = classes[class_id]
+    assigned_room = rooms[room_id]
+    # Check if the room capacity is sufficient
+    if assigned_room['capacity'] < assigned_class['num_seats']:
+        fitness += ROOM_TOO_SMALL_PUNISHMENT
+    return fitness
+
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
@@ -51,13 +61,7 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
 
     # Evaluate room assignments
     for class_id, room_id in room_assignments.items():
-        assigned_class = classes[class_id]
-        assigned_room = rooms[room_id]
-        assigned_class['capacity'] = 50 #change
-        # Check if the room capacity is sufficient
-        if assigned_room['capacity'] < assigned_class['capacity']:
-            fitness -= 1
-    
+        fitness = fitness_room_assignments(classes, rooms, class_id, room_id, fitness)    
     
     #Evaluate time_block Assignments
     #todo

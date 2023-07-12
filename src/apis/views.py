@@ -30,7 +30,6 @@ def generate(request):
                     return "spring" in [x.strip().lower() for x in course["terms_offered"]]
                 
         term_courses = list(filter(in_term, courses))
-        
         for course in term_courses:
             if "estimates" in capacity:
                 for courseEstimate in capacity["estimates"]:

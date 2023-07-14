@@ -2,8 +2,14 @@ import random
 import copy
 import json
 
+#Punishments
 VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
+PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT = -1
+
+#Rewards
+PROFESSOR_PREFERRED_COURSE_MATCH_REWARD = 5
+
 
 def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
     assigned_class = classes[class_id]
@@ -13,6 +19,20 @@ def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
         fitness += ROOM_TOO_SMALL_PUNISHMENT
     return fitness
 
+# Moving Dylan's preferred courses fitness function to a separate function
+def preferred_course_match(professor, assigned_class, fitness):
+    # Increment fitness for each preferred course assigned
+    has_pref_flag = 0
+    for course in professor['course_pref']:
+        if course.replace(" ", "") == assigned_class['shorthand']:
+            has_pref_flag = 1
+                
+    if has_pref_flag == 1:
+        fitness += PROFESSOR_PREFERRED_COURSE_MATCH_REWARD
+        #print('nice')
+    else:
+        fitness += PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT
+        #print('not nice')
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
@@ -36,19 +56,8 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         # # Check if the professor has preferences
         # if professor['course_pref'] and assigned_class['shorthand'] not in professor['course_pref']:
         #     fitness -= 1
-        
-        # Increment fitness for each preferred course assigned
-        has_pref_flag = 0
-        for course in professor['course_pref']:
-            if course.replace(" ", "") == assigned_class['shorthand']:
-                has_pref_flag = 1
-                
-        if has_pref_flag == 1:
-            fitness += 5
-            #print('nice')
-        else:
-            fitness -= 1
-            #print('not nice')
+
+        preferred_course_match(professor, assigned_class, fitness)
                 
         # Increment fitness for course below max limit
         res = 0

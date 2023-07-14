@@ -4,7 +4,7 @@ import json
 
 VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
-PREREQ_SAME_TIME_REWARD = 5000
+PREREQ_SAME_TIME_REWARD = 10
 
 def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
     assigned_class = classes[class_id]
@@ -75,7 +75,9 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     
     #Evaluate time_block Assignments
     #todo
-    #for class_id, time_block in class_timeslots.items():
+    for class_id, time_block in class_timeslots.items():
+        
+        fitness = fitness_prerequisites(classes,class_timeslots,class_id,fitness)
 
     # Evaluate prof's clash fitness
     # list(set()) just returns the unique values in a list.

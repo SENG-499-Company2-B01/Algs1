@@ -9,7 +9,7 @@ def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
     assigned_class = classes[class_id]
     assigned_room = rooms[room_id]
     # Check if the room capacity is sufficient
-    if assigned_room['capacity'] < assigned_class['num_seats']:
+    if assigned_room['capacity'] < assigned_class['pre_enroll']:
         fitness += ROOM_TOO_SMALL_PUNISHMENT
     return fitness
 
@@ -30,17 +30,17 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         assigned_class = classes[class_id]
         
         # Check if the professor is available
-        if professor['available'].get(class_timeslots[class_id]):
+        if professor['time_pref'].get(class_timeslots[class_id]):
             fitness += 1
         
         # # Check if the professor has preferences
-        # if professor['course_pref'] and assigned_class['shorthand'] not in professor['course_pref']:
+        # if professor['course_pref'] and assigned_class['course'] not in professor['course_pref']:
         #     fitness -= 1
         
         # Increment fitness for each preferred course assigned
         has_pref_flag = 0
         for course in professor['course_pref']:
-            if course.replace(" ", "") == assigned_class['shorthand']:
+            if course.replace(" ", "") == assigned_class['course']:
                 has_pref_flag = 1
                 
         if has_pref_flag == 1:
@@ -238,11 +238,12 @@ def main(input_profs, input_courses, input_classrooms):
             section_dict = {}
             #prof_num = list(best_solution['professor_assignments'].keys())[list(best_solution['professor_assignments'].values()).index(i)]
             prof_num = best_solution['professor_assignments'][i]
-            prof = input_profs[prof_num]["username"]
+            prof = input_profs[prof_num]["name"]
             
             room_num = best_solution['room_assignments'][i]
-            room = f'{input_classrooms[room_num]["shorthand"]} {input_classrooms[room_num]["room"]}'
-            num_seats = course['num_seats']
+            building = input_classrooms[room_num]["building"]
+            room = input_classrooms[room_num]["room"]
+            pre_enroll = course['pre_enroll']
             
             time_letter = best_solution['class_timeslots'][i]
             for key in input_timeblocks[time_letter].keys():
@@ -251,8 +252,10 @@ def main(input_profs, input_courses, input_classrooms):
             end_time = input_timeblocks[time_letter][days[0]]["end"]
             
             section_dict['num'] = section
-            section_dict['building'] = room
-            section_dict['num_seats'] = num_seats
+            section_dict['building'] = building
+            section_dict['room'] = room
+            section_dict['num_seats'] = pre_enroll
+            section_dict['num_enroll'] = pre_enroll
             section_dict['professor'] = prof
             section_dict['days'] = days
             section_dict['start_time'] = start_time
@@ -260,7 +263,7 @@ def main(input_profs, input_courses, input_classrooms):
             
             sections_list.append(section_dict)
         
-        timetable_dict['course'] = course['shorthand']
+        timetable_dict['course'] = course['course']
         timetable_dict['sections'] = sections_list
         timetable_list.append(timetable_dict)
         i += 1

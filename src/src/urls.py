@@ -16,9 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from apis.views import generate, verify
+from apis.views import generate
 
 urlpatterns = [
     path("generate", generate),
-    path("verify", verify),
 ]

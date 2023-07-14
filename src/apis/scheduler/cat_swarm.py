@@ -7,6 +7,7 @@ VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
 PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT = -1
 PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT = -10000
+COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT = -10000
 
 #Rewards
 PROFESSOR_PREFERRED_COURSE_MATCH_REWARD = 5
@@ -52,6 +53,22 @@ def prof_maximum_courses_exceeded_constraint(professor, professor_assignments, p
 
     return fitness
 
+def corequisite_coschedule_constraint(class_id, time_block, classes, fitness):
+    course = classes[class_id]
+
+    #Find course corequisites
+    corequisite_list = course["corequisites"]
+    if corequisite_list == None:
+        return fitness
+    
+    for coreqs in corequisite_list:
+        # TODO: Iteratively go through each coreq and read corequisite_time_block
+
+        if corequisite_time_block == time_block:
+            fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
+    
+    return fitness
+
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
     professor_assignments = solution['professor_assignments']
@@ -93,8 +110,8 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         fitness = fitness_room_assignments(classes, rooms, class_id, room_id, fitness)    
     
     #Evaluate time_block Assignments
-    #todo
-    #for class_id, time_block in class_timeslots.items():
+    for class_id, time_block in class_timeslots.items():
+        fitness = corequisite_coschedule_constraint(class_id, time_block)
 
     # Evaluate prof's clash fitness
     # list(set()) just returns the unique values in a list.

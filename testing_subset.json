@@ -480,64 +480,85 @@
       },
       {
         "course": "ENGR 110",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null
-      },
-      { 
-        "course": "ENGR 130",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null
-      },
-      {
-        "course": "MATH 100",
-        "prerequisites": [
-          [
-            " \"\""
-          ]
-        ],
-        "corequisites": null
-      },
-      {
-        "course": "MATH 109",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null
-      },
-      {
-        "course": "MATH 110",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null
-      },
-      {
-        "course": "PHYS 110",
+        "peng": false,
         "prerequisites": [
           [
             ""
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
+        "pre_enroll": 75,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      { 
+        "course": "ENGR 130", 
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null, 
+        "pre_enroll": 89, 
+        "min_enroll": 5, 
+        "hours": [3, 0, 0]
       },
       {
+        "course": "MATH 100",
+        "peng": false,
+        "prerequisites": [
+          [
+            " \"\""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 57,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "MATH 109",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 63,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "MATH 110",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 72,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "PHYS 110",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 96,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
+      {
         "course": "CSC 115",
+        "peng": false,
         "prerequisites": [
           [
             "CSC110"
@@ -547,14 +568,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 81,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "ENGR 120",
+        "peng": false,
         "prerequisites": [
           [
             "ENGR110",
@@ -562,12 +582,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
-      },
+        "pre_enroll": 93,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
       {
         "course": "ENGR 141",
+        "peng": false,
         "prerequisites": [
           [
             "MATH100",
@@ -575,52 +596,52 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 77,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
       {
         "course": "MATH 101",
+        "peng": false,
         "prerequisites": [
           [
             "MATH100"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "PHYS 111",
+        "peng": false,
         "prerequisites": [
           [
             "PHYS110"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 63,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
       {
         "course": "ECE 255",
+        "peng": false,
         "prerequisites": [
           [
             "CSC111"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
+        "pre_enroll": 59,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
       {
         "course": "CSC 230",
+        "peng": false,
         "prerequisites": [
           [
             "CSC115"
@@ -630,27 +651,26 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 53,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "CHEM 101",
+        "peng": false,
         "prerequisites": [
           [
             ""
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " summer"
-        ]
-      },
+        "pre_enroll": 80,
+        "min_enroll": 5,
+        "hours": [3, 0, 3]
+        },
       {
         "course": "ECE 260",
+        "peng": false,
         "prerequisites": [
           [
             "MATH101",
@@ -658,27 +678,26 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " summer"
-        ]
-      },
+        "pre_enroll": 46,
+        "min_enroll": 5,
+        "hours": [3, 0, 3]
+        },
       {
         "course": "MATH 122",
+        "peng": false,
         "prerequisites": [
           [
             "MATH100"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 75,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "SENG 265",
+        "peng": false,
         "prerequisites": [
           [
             "CSC115"
@@ -688,28 +707,26 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 53,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "STAT 260",
+        "peng": false,
         "prerequisites": [
           [
             "MATH101"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 66,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "CSC 225",
+        "peng": false,
         "prerequisites": [
           [
             "CSC115",
@@ -721,67 +738,65 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall. spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 63,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "ECE 310",
+        "peng": false,
         "prerequisites": [
           [
             "ECE260"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 72,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
       {
         "course": "ECON 180 ",
+        "peng": false,
         "prerequisites": [
           [
             "MATH101"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 46,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "SENG 275",
+        "peng": false,
         "prerequisites": [
           [
             "SENG265"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 54,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
       {
         "course": "SENG 310",
+        "peng": false,
         "prerequisites": [
           [
             "SENG265"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 59,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "ECE 363",
+        "peng": false,
         "prerequisites": [
           [
             "ECE255"
@@ -791,12 +806,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
-      },
+        "pre_enroll": 56,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
       {
         "course": "CSC 361",
+        "peng": false,
         "prerequisites": [
           [
             "SENG265",
@@ -808,53 +824,52 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
+        "pre_enroll": 48,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
       {
         "course": "CSC 226",
+        "peng": false,
         "prerequisites": [
           [
             "CSC225"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 58,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "ECE 360",
+        "peng": false,
         "prerequisites": [
           [
             "ECE260"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
+        "pre_enroll": 57,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
       {
         "course": "SENG 321",
+        "peng": false,
         "prerequisites": [
           [
             "SENG265"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
+        "pre_enroll": 52,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
       {
         "course": "SENG 371",
+        "peng": false,
         "prerequisites": [
           [
             "SENG275"
@@ -864,12 +879,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
-      },
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
       {
         "course": "ECE 355",
+        "peng": false,
         "prerequisites": [
           [
             "MATH122",
@@ -881,12 +897,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
+        "pre_enroll": 52,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
       {
         "course": "CSC 355",
+        "peng": false,
         "prerequisites": [
           [
             "MATH122",
@@ -898,26 +915,26 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
+        "pre_enroll": 58,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
       {
         "course": "CSC 320",
+        "peng": false,
         "prerequisites": [
           [
             "CSC226"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "CSC 360",
+        "peng": false,
         "prerequisites": [
           [
             "CSC225",
@@ -931,14 +948,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 65,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "CSC 370",
+        "peng": false,
         "prerequisites": [
           [
             "CSC255",
@@ -946,26 +962,26 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
+        "pre_enroll": 56,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
       {
         "course": "SENG 350",
+        "peng": false,
         "prerequisites": [
           [
             "SENG275"
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
+        "pre_enroll": 53,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
       {
         "course": "SENG 360",
+        "peng": false,
         "prerequisites": [
           [
             "SENG265",
@@ -977,12 +993,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
+        "pre_enroll": 74,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
       {
         "course": "SENG 426",
+        "peng": false,
         "prerequisites": [
           [
             "SENG275",
@@ -994,12 +1011,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "summer"
-        ]
-      },
+        "pre_enroll": 50,
+        "min_enroll": 5,
+        "hours": [0, 0, 3]
+        },
       {
         "course": "SENG 440",
+        "peng": false,
         "prerequisites": [
           [
             "ECE355"
@@ -1009,12 +1027,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "summer"
-        ]
-      },
+        "pre_enroll": 52,
+        "min_enroll": 5,
+        "hours": [0, 0, 3]
+        },
       {
         "course": "SENG 499",
+        "peng": false,
         "prerequisites": [
           [
             "SENG350",
@@ -1030,12 +1049,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "summer"
-        ]
-      },
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [0, 0, 3]
+        },
       {
         "course": "ECE 455",
+        "peng": false,
         "prerequisites": [
           [
             "CSC355"
@@ -1045,12 +1065,13 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
-      },
+        "pre_enroll": 59,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
       {
         "course": "CSC 460",
+        "peng": false,
         "prerequisites": [
           [
             "CSC360",
@@ -1062,22 +1083,23 @@
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
-      },
+        "pre_enroll": 76,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
       {
         "course": "SENG 401",
+        "peng": false,
         "prerequisites": [
           [
             ""
           ]
         ],
         "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
-      }
+        "pre_enroll": 65,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        }
     ],
     "classrooms": [
       {

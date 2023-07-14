@@ -7,7 +7,7 @@ VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
 PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT = -1
 PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT = -10000
-COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT = -10000
+COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT = -10000 # Gets cumulated for every coreq mismatch pairs. 
 
 #Rewards
 PROFESSOR_PREFERRED_COURSE_MATCH_REWARD = 5
@@ -53,19 +53,23 @@ def prof_maximum_courses_exceeded_constraint(professor, professor_assignments, p
 
     return fitness
 
-def corequisite_coschedule_constraint(class_id, time_block, classes, fitness):
+def corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness):
     course = classes[class_id]
 
     #Find course corequisites
     corequisite_list = course["corequisites"]
-    if corequisite_list == None:
+    if corequisite_list == None or len(corequisite_list) == 0:
         return fitness
     
-    for coreqs in corequisite_list:
-        # TODO: Iteratively go through each coreq and read corequisite_time_block
+    for coreqs_subarray in corequisite_list:
+        #Iteratively go through each coreq and read corequisite_time_block   
+        for coreq in coreqs_subarray:
+            coreqs_course = list(filter(lambda x: x["shorthand"] == coreq, classes))[0]
+            coreq_course_id = classes.index(coreqs_course)
+            corequisite_time_block = class_timeslots[coreq_course_id]
 
-        if corequisite_time_block == time_block:
-            fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
+            if corequisite_time_block == time_block:
+                fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
     
     return fitness
 
@@ -111,7 +115,7 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     
     #Evaluate time_block Assignments
     for class_id, time_block in class_timeslots.items():
-        fitness = corequisite_coschedule_constraint(class_id, time_block)
+        fitness = corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness)
 
     # Evaluate prof's clash fitness
     # list(set()) just returns the unique values in a list.

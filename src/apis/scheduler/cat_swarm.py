@@ -6,6 +6,7 @@ import json
 VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
 PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT = -1
+PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT = -10000
 
 #Rewards
 PROFESSOR_PREFERRED_COURSE_MATCH_REWARD = 5
@@ -35,7 +36,21 @@ def preferred_course_match(professor, assigned_class, fitness):
         #print('not nice')
     return fitness
 
+def prof_maximum_courses_exceeded_constraint(professor, professor_assignments, professor_id, fitness):
+    #get max course of each prof from input
+    max_course_val = professor["max_courses"]
 
+    count_of_course_assignments = 0
+
+    #get number of courses assigned to prof
+    for profs in professor_assignments.items():
+        if professor_id == profs:
+            count_of_course_assignments += 1
+    
+    if count_of_course_assignments > max_course_val and max_course_val > 0:
+        fitness += PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT
+
+    return fitness
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
@@ -61,6 +76,8 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         #     fitness -= 1
 
         fitness = preferred_course_match(professor, assigned_class, fitness)
+
+        fitness = prof_maximum_courses_exceeded_constraint(professor=professor, professor_assignments=professor_assignments ,professor_id=professor_id, fitness=fitness)
                 
         # Increment fitness for course below max limit
         res = 0

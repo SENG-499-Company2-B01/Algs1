@@ -33,6 +33,9 @@ def preferred_course_match(professor, assigned_class, fitness):
     else:
         fitness += PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT
         #print('not nice')
+    return fitness
+
+
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
@@ -57,7 +60,7 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         # if professor['course_pref'] and assigned_class['shorthand'] not in professor['course_pref']:
         #     fitness -= 1
 
-        preferred_course_match(professor, assigned_class, fitness)
+        fitness = preferred_course_match(professor, assigned_class, fitness)
                 
         # Increment fitness for course below max limit
         res = 0

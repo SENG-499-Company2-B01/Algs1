@@ -4,6 +4,7 @@ import json
 
 VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
+PREREQ_SAME_TIME_REWARD = 5000
 
 def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
     assigned_class = classes[class_id]
@@ -13,6 +14,15 @@ def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
         fitness += ROOM_TOO_SMALL_PUNISHMENT
     return fitness
 
+def fitness_prerequisites(classes,class_timeslots, class_id, fitness):
+    assigned_class = classes[class_id]
+    for group in assigned_class["prerequisites"]:
+        for pq in group:
+            prereq = next((i for i, item in enumerate(classes) if item["shorthand"].replace(" ","") == pq.replace(" ","")), None)
+            if prereq != None:
+                if class_timeslots[prereq] == class_timeslots[class_id]:
+                    fitness += PREREQ_SAME_TIME_REWARD
+    return fitness
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution

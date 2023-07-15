@@ -2,8 +2,16 @@ import random
 import copy
 import json
 
+#Punishments
 VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
+PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT = -1
+PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT = -10000
+COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT = -10000 # Gets cumulated for every coreq mismatch pairs. 
+
+#Rewards
+PROFESSOR_PREFERRED_COURSE_MATCH_REWARD = 5
+
 
 def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
     assigned_class = classes[class_id]
@@ -13,6 +21,57 @@ def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
         fitness += ROOM_TOO_SMALL_PUNISHMENT
     return fitness
 
+# Moving Dylan's preferred courses fitness function to a separate function
+def preferred_course_match(professor, assigned_class, fitness):
+    # Increment fitness for each preferred course assigned
+    has_pref_flag = 0
+    for course in professor['course_pref']:
+        if course.replace(" ", "") == assigned_class['course']:
+            has_pref_flag = 1
+                
+    if has_pref_flag == 1:
+        fitness += PROFESSOR_PREFERRED_COURSE_MATCH_REWARD
+        #print('nice')
+    else:
+        fitness += PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT
+        #print('not nice')
+    return fitness
+
+def prof_maximum_courses_exceeded_constraint(professor, professor_assignments, professor_id, fitness):
+    #get max course of each prof from input
+    max_course_val = professor["max_courses"]
+
+    count_of_course_assignments = 0
+
+    #get number of courses assigned to prof
+    for profs in professor_assignments.items():
+        if professor_id == profs:
+            count_of_course_assignments += 1
+    
+    if count_of_course_assignments > max_course_val and max_course_val > 0:
+        fitness += PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT
+
+    return fitness
+
+def corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness):
+    course = classes[class_id]
+
+    #Find course corequisites
+    corequisite_list = course["corequisites"]
+    if corequisite_list == None or len(corequisite_list) == 0:
+        return fitness
+    
+    for coreqs_subarray in corequisite_list:
+        #Iteratively go through each coreq and read corequisite_time_block   
+        for coreq in coreqs_subarray:
+            coreqs_course = list(filter(lambda x: x["shorthand"] == coreq, classes))[0]
+            coreq_course_id = classes.index(coreqs_course)
+            corequisite_time_block = class_timeslots[coreq_course_id]
+
+            if corequisite_time_block == time_block:
+                fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
+    
+    return fitness
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
@@ -36,19 +95,10 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         # # Check if the professor has preferences
         # if professor['course_pref'] and assigned_class['course'] not in professor['course_pref']:
         #     fitness -= 1
-        
-        # Increment fitness for each preferred course assigned
-        has_pref_flag = 0
-        for course in professor['course_pref']:
-            if course.replace(" ", "") == assigned_class['course']:
-                has_pref_flag = 1
-                
-        if has_pref_flag == 1:
-            fitness += 5
-            #print('nice')
-        else:
-            fitness -= 1
-            #print('not nice')
+
+        fitness = preferred_course_match(professor, assigned_class, fitness)
+
+        fitness = prof_maximum_courses_exceeded_constraint(professor=professor, professor_assignments=professor_assignments ,professor_id=professor_id, fitness=fitness)
                 
         # Increment fitness for course below max limit
         res = 0
@@ -64,8 +114,8 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         fitness = fitness_room_assignments(classes, rooms, class_id, room_id, fitness)    
     
     #Evaluate time_block Assignments
-    #todo
-    #for class_id, time_block in class_timeslots.items():
+    for class_id, time_block in class_timeslots.items():
+        fitness = corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness)
 
     # Evaluate prof's clash fitness
     # list(set()) just returns the unique values in a list.

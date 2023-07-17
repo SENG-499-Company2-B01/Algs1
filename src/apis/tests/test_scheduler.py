@@ -14,7 +14,7 @@ f=open("time_blocks.json","r")
 data = f.read()
 input_timeblocks = json.loads(data)
 def test_cso():
-    best_solution = cat_swarm.cat_swarm_optimization(input_profs, input_courses, input_classrooms, input_timeblocks, len(input_profs), 1000)
+    best_solution = cat_swarm.cat_swarm_optimization(input_profs, input_courses, input_classrooms, input_timeblocks,50, 1000)
     assert best_solution['fitness'] >=0
     return 0
 def fitness_room_assignments_test():

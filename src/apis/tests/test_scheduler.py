@@ -1,13 +1,14 @@
 from scheduler import cat_swarm
-with open('/testing_subset.json') as f:
-        data = f.read()
-        input_data=json.loads(data)
-    input_profs=input_data["users"]
-    input_courses=input_data["courses"]
-    input_classrooms=input_data["classrooms"]
-with open('/app/time_blocks.json') as f:
-        data = f.read()
-        input_timeblocks = json.loads(data)
+f=open('/testing_subset.json')
+data = f.read()
+input_data=json.loads(data)
+input_profs=input_data["users"]
+input_courses=input_data["courses"]
+input_classrooms=input_data["classrooms"]
+f.close()
+f=open('/app/time_blocks.json')
+data = f.read()
+input_timeblocks = json.loads(data)
 def test_cso():
     best_solution = cat_swarm_optimization(input_profs, input_courses, input_classrooms, input_timeblocks, len(input_profs), 1000)
     assert best_solution['fitness'] >=0

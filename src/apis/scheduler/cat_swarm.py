@@ -118,6 +118,7 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         fitness = corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness)
 
     # Evaluate prof's clash fitness
+
     # list(set()) just returns the unique values in a list.
     assigned_profs = list(set(professor_assignments.values()))
     for prof in assigned_profs:

@@ -1,0 +1,1196 @@
+{
+    "year": 2023,
+    "term": "Fall",
+    "users": [
+      {
+        "name": "Celina.Berg",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " SENG 310",
+          " SENG 435"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Bill.Bird",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 355",
+          " SENG 310",
+          " SENG 435",
+          " SENG 466"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Sean.Chester",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " SENG 275",
+          " CSC 361",
+          " CSC 460"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Jason.Corless",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 225",
+          " CSC 226",
+          " CSC 230",
+          " CSC 355",
+          " CSC 361",
+          " CSC 460"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Daniela.Damian",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 225",
+          " CSC 230",
+          " CSC 355",
+          " CSC 360",
+          " CSC 370",
+          " SENG 421"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Neil.Ernst",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 6,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 225",
+          " CSC 230",
+          " CSC 355",
+          " CSC 360",
+          " SENG 310",
+          " SENG 401",
+          " SENG 411",
+          " SENG 421",
+          " SENG 435",
+          " SENG 466",
+          " SENG 474"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Anthony.Estey",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 115",
+          " CSC 226",
+          " SENG 275"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Sudhakar.Ganti",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 355"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Daniel.German",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " CSC 230",
+          " SENG 265",
+          " CSC 361",
+          " SENG 321",
+          " SENG 350",
+          " CSC 460",
+          " SENG 401",
+          " SENG 421"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "Brandon.Haworth",
+        "peng": false,
+        "pref_approved": false,
+        "max_courses": 2,
+        "course_pref": [
+          "CSC 111",
+          " CSC 115",
+          " CSC 226",
+          " CSC 355",
+          " CSC 360"
+        ],
+        "time_pref": {
+          "F": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "M": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "R": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "T": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ],
+          "W": [
+            [
+              "08:30",
+              "16:00"
+            ]
+          ]
+        }
+      }
+    ],
+    "courses": [
+      {
+        "course": "CSC 111",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 56,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "ENGR 110",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 75,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      { 
+        "course": "ENGR 130", 
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null, 
+        "pre_enroll": 89, 
+        "min_enroll": 5, 
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "MATH 100",
+        "peng": false,
+        "prerequisites": [
+          [
+            " \"\""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 57,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "MATH 109",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 63,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "MATH 110",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 72,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+      },
+      {
+        "course": "PHYS 110",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 96,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
+      {
+        "course": "CSC 115",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC110"
+          ],
+          [
+            "CSC111"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 81,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "ENGR 120",
+        "peng": false,
+        "prerequisites": [
+          [
+            "ENGR110",
+            "CSC111"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 93,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
+      {
+        "course": "ENGR 141",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH100",
+            "MATH110"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 77,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
+      {
+        "course": "MATH 101",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH100"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "PHYS 111",
+        "peng": false,
+        "prerequisites": [
+          [
+            "PHYS110"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 63,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
+      {
+        "course": "ECE 255",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC111"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 59,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
+      {
+        "course": "CSC 230",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC115"
+          ],
+          [
+            "CSC116"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 53,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "CHEM 101",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 80,
+        "min_enroll": 5,
+        "hours": [3, 0, 3]
+        },
+      {
+        "course": "ECE 260",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH101",
+            "MATH110"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 46,
+        "min_enroll": 5,
+        "hours": [3, 0, 3]
+        },
+      {
+        "course": "MATH 122",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH100"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 75,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "SENG 265",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC115"
+          ],
+          [
+            "CSC116"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 53,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "STAT 260",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH101"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 66,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "CSC 225",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC115",
+            "MATH122"
+          ],
+          [
+            "CSC116",
+            "MATH122"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 63,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "ECE 310",
+        "peng": false,
+        "prerequisites": [
+          [
+            "ECE260"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 72,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
+      {
+        "course": "ECON 180 ",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH101"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 46,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "SENG 275",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 54,
+        "min_enroll": 5,
+        "hours": [0, 3, 3]
+        },
+      {
+        "course": "SENG 310",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 59,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "ECE 363",
+        "peng": false,
+        "prerequisites": [
+          [
+            "ECE255"
+          ],
+          [
+            "CSC230"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 56,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
+      {
+        "course": "CSC 361",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG265",
+            "CSC230"
+          ],
+          [
+            "SENG265",
+            "ECE255"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 48,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
+      {
+        "course": "CSC 226",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC225"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 58,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "ECE 360",
+        "peng": false,
+        "prerequisites": [
+          [
+            "ECE260"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 57,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
+      {
+        "course": "SENG 321",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 52,
+        "min_enroll": 5,
+        "hours": [3, 3, 0]
+        },
+      {
+        "course": "SENG 371",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG275"
+          ],
+          [
+            "SENG321"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
+      {
+        "course": "ECE 355",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH122",
+            "ECE255"
+          ],
+          [
+            "MATH122",
+            "CSC230"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 52,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
+      {
+        "course": "CSC 355",
+        "peng": false,
+        "prerequisites": [
+          [
+            "MATH122",
+            "ECE255"
+          ],
+          [
+            "MATH122",
+            "CSC230"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 58,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
+      {
+        "course": "CSC 320",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC226"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "CSC 360",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC225",
+            "SENG265",
+            "CSC230"
+          ],
+          [
+            "CSC225",
+            "SENG265",
+            "ECE255"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 65,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "CSC 370",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC255",
+            "SENG265"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 56,
+        "min_enroll": 5,
+        "hours": [3, 3, 3]
+        },
+      {
+        "course": "SENG 350",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG275"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 53,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
+      {
+        "course": "SENG 360",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG265",
+            "ECE363"
+          ],
+          [
+            "SENG265",
+            "CSC361"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 74,
+        "min_enroll": 5,
+        "hours": [3, 0, 0]
+        },
+      {
+        "course": "SENG 426",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG275",
+            "SENG321"
+          ],
+          [
+            "SENG275",
+            "SENG371"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 50,
+        "min_enroll": 5,
+        "hours": [0, 0, 3]
+        },
+      {
+        "course": "SENG 440",
+        "peng": false,
+        "prerequisites": [
+          [
+            "ECE355"
+          ],
+          [
+            "CSC355"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 52,
+        "min_enroll": 5,
+        "hours": [0, 0, 3]
+        },
+      {
+        "course": "SENG 499",
+        "peng": false,
+        "prerequisites": [
+          [
+            "SENG350",
+            "CSC361",
+            "CSC370",
+            "SENG321"
+          ],
+          [
+            "SENG350",
+            "ECE363",
+            "CSC370",
+            "SENG321"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 73,
+        "min_enroll": 5,
+        "hours": [0, 0, 3]
+        },
+      {
+        "course": "ECE 455",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC355"
+          ],
+          [
+            "ECE355"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 59,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
+      {
+        "course": "CSC 460",
+        "peng": false,
+        "prerequisites": [
+          [
+            "CSC360",
+            "CSC355"
+          ],
+          [
+            "CSC360",
+            "ECE355"
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 76,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        },
+      {
+        "course": "SENG 401",
+        "peng": false,
+        "prerequisites": [
+          [
+            ""
+          ]
+        ],
+        "corequisites": null,
+        "pre_enroll": 65,
+        "min_enroll": 5,
+        "hours": [0, 3, 0]
+        }
+    ],
+    "classrooms": [
+      {
+        "building": "ELL",
+        "capacity": 68,
+        "room": "61"
+      },
+      {
+        "building": "ELL",
+        "capacity": 80,
+        "room": "62"
+      },
+      {
+        "building": "ELL",
+        "capacity": 48,
+        "room": "160"
+      },
+      {
+        "building": "ELL",
+        "capacity": 24,
+        "room": "161"
+      },
+      {
+        "building": "ELL",
+        "capacity": 54,
+        "room": "162"
+      },
+      {
+        "building": "ELL",
+        "capacity": 148,
+        "room": "167"
+      },
+      {
+        "building": "ELL",
+        "capacity": 180,
+        "room": "168"
+      },
+      {
+        "building": "ECS",
+        "capacity": 60,
+        "room": "104"
+      },
+      {
+        "building": "ECS",
+        "capacity": 60,
+        "room": "108"
+      },
+      {
+        "building": "ECS",
+        "capacity": 117,
+        "room": "116"
+      },
+      {
+        "building": "ECS",
+        "capacity": 299,
+        "room": "123"
+      },
+      {
+        "building": "ECS",
+        "capacity": 78,
+        "room": "124"
+      },
+      {
+        "building": "ECS",
+        "capacity": 151,
+        "room": "125"
+      },
+      {
+        "building": "ECS",
+        "capacity": 18,
+        "room": "128"
+      },
+      {
+        "building": "ECS",
+        "capacity": 34,
+        "room": "130"
+      },
+      {
+        "building": "MCK",
+        "capacity": 107,
+        "room": "150"
+      },
+      {
+        "building": "MCK",
+        "capacity": 38,
+        "room": "155"
+      }
+    ],
+    "capacity": [
+      {
+        "estimates": null
+      }
+    ]
+  }

@@ -28,16 +28,18 @@ def generate(request):
     #             return "spring" in [x.strip().lower() for x in course["terms_offered"]]
             
     # term_courses = list(filter(in_term, courses))
-    for course in courses:
-        if "pre_enroll" not in course:
-            course["pre_enroll"] = random.randint(80, 100)
-    scheduled_courses = main(users, courses, classrooms)
-    schedule = {
-        "year": year, 
-        "terms": [{
-            "term": term,
-            "courses": scheduled_courses
-        }]
-    }    
-    return Response(schedule, status=status.HTTP_200_OK)
-    
+    # for course in courses:
+    #     if "pre_enroll" not in course:
+    #         course["pre_enroll"] = random.randint(80, 100)
+    try:
+        scheduled_courses = main(users, courses, classrooms)
+        schedule = {
+            "year": year, 
+            "terms": [{
+                "term": term,
+                "courses": scheduled_courses
+            }]
+        }    
+        return Response(schedule, status=status.HTTP_200_OK)
+    except:
+        return Response(status=status.HTTP_400_BAD_REQUEST)

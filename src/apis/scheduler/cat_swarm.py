@@ -118,6 +118,11 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         fitness = corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness)
 
     # Evaluate prof's clash fitness
+    profescunt=[0 for n in range(len(professors))]
+    for class_id, professor_id in professor_assignments.items():
+        profescunt[professor_id]=profescunt[professor_id]+1
+        if profescunt[professor_id]>professors[professor_id]["max_courses"]:
+            fitness = fitness+PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT
     # list(set()) just returns the unique values in a list.
     assigned_profs = list(set(professor_assignments.values()))
     for prof in assigned_profs:

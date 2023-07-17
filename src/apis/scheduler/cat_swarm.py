@@ -2,7 +2,76 @@ import random
 import copy
 import json
 
+#Punishments
 VERY_LOW_VALUE = -50000
+ROOM_TOO_SMALL_PUNISHMENT = -10000
+PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT = -1
+PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT = -10000
+COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT = -10000 # Gets cumulated for every coreq mismatch pairs. 
+
+#Rewards
+PROFESSOR_PREFERRED_COURSE_MATCH_REWARD = 5
+
+
+def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
+    assigned_class = classes[class_id]
+    assigned_room = rooms[room_id]
+    # Check if the room capacity is sufficient
+    if assigned_room['capacity'] < assigned_class['pre_enroll']:
+        fitness += ROOM_TOO_SMALL_PUNISHMENT
+    return fitness
+
+# Moving Dylan's preferred courses fitness function to a separate function
+def preferred_course_match(professor, assigned_class, fitness):
+    # Increment fitness for each preferred course assigned
+    has_pref_flag = 0
+    for course in professor['course_pref']:
+        if course.replace(" ", "") == assigned_class['course']:
+            has_pref_flag = 1
+                
+    if has_pref_flag == 1:
+        fitness += PROFESSOR_PREFERRED_COURSE_MATCH_REWARD
+        #print('nice')
+    else:
+        fitness += PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT
+        #print('not nice')
+    return fitness
+
+def prof_maximum_courses_exceeded_constraint(professor, professor_assignments, professor_id, fitness):
+    #get max course of each prof from input
+    max_course_val = professor["max_courses"]
+
+    count_of_course_assignments = 0
+
+    #get number of courses assigned to prof
+    for profs in professor_assignments.items():
+        if professor_id == profs:
+            count_of_course_assignments += 1
+    
+    if count_of_course_assignments > max_course_val and max_course_val > 0:
+        fitness += PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT
+
+    return fitness
+
+def corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness):
+    course = classes[class_id]
+
+    #Find course corequisites
+    corequisite_list = course["corequisites"]
+    if corequisite_list == None or len(corequisite_list) == 0:
+        return fitness
+    
+    for coreqs_subarray in corequisite_list:
+        #Iteratively go through each coreq and read corequisite_time_block   
+        for coreq in coreqs_subarray:
+            coreqs_course = list(filter(lambda x: x["shorthand"] == coreq, classes))[0]
+            coreq_course_id = classes.index(coreqs_course)
+            corequisite_time_block = class_timeslots[coreq_course_id]
+
+            if corequisite_time_block == time_block:
+                fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
+    
+    return fitness
 
 def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     # Extract information from the solution
@@ -20,25 +89,16 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         assigned_class = classes[class_id]
         
         # Check if the professor is available
-        if professor['available'].get(class_timeslots[class_id]):
+        if professor['time_pref'].get(class_timeslots[class_id]):
             fitness += 1
         
         # # Check if the professor has preferences
-        # if professor['course_pref'] and assigned_class['shorthand'] not in professor['course_pref']:
+        # if professor['course_pref'] and assigned_class['course'] not in professor['course_pref']:
         #     fitness -= 1
-        
-        # Increment fitness for each preferred course assigned
-        has_pref_flag = 0
-        for course in professor['course_pref']:
-            if course.replace(" ", "") == assigned_class['shorthand']:
-                has_pref_flag = 1
-                
-        if has_pref_flag == 1:
-            fitness += 5
-            #print('nice')
-        else:
-            fitness -= 1
-            #print('not nice')
+
+        fitness = preferred_course_match(professor, assigned_class, fitness)
+
+        fitness = prof_maximum_courses_exceeded_constraint(professor=professor, professor_assignments=professor_assignments ,professor_id=professor_id, fitness=fitness)
                 
         # Increment fitness for course below max limit
         res = 0
@@ -51,17 +111,11 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
 
     # Evaluate room assignments
     for class_id, room_id in room_assignments.items():
-        assigned_class = classes[class_id]
-        assigned_room = rooms[room_id]
-        assigned_class['capacity'] = 50 #change
-        # Check if the room capacity is sufficient
-        if assigned_room['capacity'] < assigned_class['capacity']:
-            fitness -= 1
-    
+        fitness = fitness_room_assignments(classes, rooms, class_id, room_id, fitness)    
     
     #Evaluate time_block Assignments
-    #todo
-    #for class_id, time_block in class_timeslots.items():
+    for class_id, time_block in class_timeslots.items():
+        fitness = corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness)
 
     # Evaluate prof's clash fitness
     # list(set()) just returns the unique values in a list.
@@ -109,6 +163,7 @@ def update_cat_position(cat, population, best_solution, c1, c2, w):
 def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_size, max_iterations):
     # Initialize the population
     population = []
+    best_solution = {}
     for _ in range(population_size):
         solution = {
             'professor_assignments': {},
@@ -233,11 +288,12 @@ def main(input_profs, input_courses, input_classrooms):
             section_dict = {}
             #prof_num = list(best_solution['professor_assignments'].keys())[list(best_solution['professor_assignments'].values()).index(i)]
             prof_num = best_solution['professor_assignments'][i]
-            prof = input_profs[prof_num]["username"]
+            prof = input_profs[prof_num]["name"]
             
             room_num = best_solution['room_assignments'][i]
-            room = f'{input_classrooms[room_num]["shorthand"]} {input_classrooms[room_num]["room"]}'
-            num_seats = course['num_seats']
+            building = input_classrooms[room_num]["building"]
+            room = input_classrooms[room_num]["room"]
+            pre_enroll = course['pre_enroll']
             
             time_letter = best_solution['class_timeslots'][i]
             for key in input_timeblocks[time_letter].keys():
@@ -246,8 +302,10 @@ def main(input_profs, input_courses, input_classrooms):
             end_time = input_timeblocks[time_letter][days[0]]["end"]
             
             section_dict['num'] = section
-            section_dict['building'] = room
-            section_dict['num_seats'] = num_seats
+            section_dict['building'] = building
+            section_dict['room'] = room
+            section_dict['num_seats'] = pre_enroll
+            section_dict['num_enroll'] = pre_enroll
             section_dict['professor'] = prof
             section_dict['days'] = days
             section_dict['start_time'] = start_time
@@ -255,7 +313,7 @@ def main(input_profs, input_courses, input_classrooms):
             
             sections_list.append(section_dict)
         
-        timetable_dict['course'] = course['shorthand']
+        timetable_dict['course'] = course['course']
         timetable_dict['sections'] = sections_list
         timetable_list.append(timetable_dict)
         i += 1

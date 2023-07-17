@@ -1,4 +1,6 @@
 from scheduler import cat_swarm
+import random
+import json
 f=open('/testing_subset.json')
 data = f.read()
 input_data=json.loads(data)
@@ -10,7 +12,7 @@ f=open('/app/time_blocks.json')
 data = f.read()
 input_timeblocks = json.loads(data)
 def test_cso():
-    best_solution = cat_swarm_optimization(input_profs, input_courses, input_classrooms, input_timeblocks, len(input_profs), 1000)
+    best_solution = cat_swarm.cat_swarm_optimization(input_profs, input_courses, input_classrooms, input_timeblocks, len(input_profs), 1000)
     assert best_solution['fitness'] >=0
     return 0
 def fitness_room_assignments_test():
@@ -20,9 +22,9 @@ def fitness_room_assignments_test():
     assigned_room = input_classrooms[room_id]
     # Check if the room capacity is sufficient
     if assigned_room['capacity'] < assigned_class['pre_enroll']:
-        assert fitness_room_assignments(input_classrooms,input_courses, class_id, room_id,0)==ROOM_TOO_SMALL_PUNISHMENT
+        assert cat_swarm.fitness_room_assignments(input_classrooms,input_courses, class_id, room_id,0)==cat_swarm.ROOM_TOO_SMALL_PUNISHMENT
     else:
-        assert fitness_room_assignments(input_classrooms,input_courses, class_id, room_id,0)==0
+        assert cat_swarm.fitness_room_assignments(input_classrooms,input_courses, class_id, room_id,0)==0
     return 0
 def preferred_course_match_test():
     # Increment fitness for each preferred course assigned
@@ -35,9 +37,9 @@ def preferred_course_match_test():
         if "".join(course.split()) == assigned_class['course']:
             has_pref_flag = 1   
     if has_pref_flag == 1:
-        assert preferred_course_match(professor, assigned_class,0)==PROFESSOR_PREFERRED_COURSE_MATCH_REWARD
+        assert cat_swarm.preferred_course_match(professor, assigned_class,0)==cat_swarm.PROFESSOR_PREFERRED_COURSE_MATCH_REWARD
     else:
-        assert preferred_course_match(professor, assigned_class,0)==PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT
+        assert cat_swarm.preferred_course_match(professor, assigned_class,0)==cat_swarm.PROFESSOR_PREFERRED_COURSE_MATCH_PUNISHMENT
     return 0
 def prof_maximum_courses_exceeded_constraint_test(professor, professor_assignments, professor_id, fitness):
     #get max course of each prof from input
@@ -54,7 +56,7 @@ def prof_maximum_courses_exceeded_constraint_test(professor, professor_assignmen
             count_of_course_assignments += 1
     
     if count_of_course_assignments > max_course_val and max_course_val > 0:
-        assert prof_maximum_courses_exceeded_constraint_test(professor,professor_assignments,professor_id,0)==PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT
+        assert prof_maximum_courses_exceeded_constraint_test(professor,professor_assignments,professor_id,0)==cat_swarm.PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT
     else:
         assert prof_maximum_courses_exceeded_constraint_test(professor,professor_assignments,professor_id,0)==0
     return 0
@@ -79,6 +81,6 @@ def corequisite_coschedule_constraint(class_id, time_block, classes, class_times
             corequisite_time_block = class_timeslots[coreq_course_id]
 
             if corequisite_time_block == randtime:
-                fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
+                fitness += cat_swarm.COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
     
-    assert assert corequisite_coschedule_constraint(course_id,randtime,input_courses,class_timeslots,fitness)==fitness
+    assert  corequisite_coschedule_constraint(course_id,randtime,input_courses,class_timeslots,fitness)==fitness

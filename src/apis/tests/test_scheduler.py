@@ -1,4 +1,4 @@
-from ../scheduler import cat_swarm
+from scheduler import cat_swarm
 def test_cso():
     with open('/testing_subset.json') as f:
         data = f.read()

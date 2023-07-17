@@ -1,4 +1,5 @@
-from scheduler import cat_swarm
+from ..scheduler import cat_swarm
+
 import random
 import json
 f=open('/testing_subset.json')

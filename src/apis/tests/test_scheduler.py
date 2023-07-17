@@ -2,14 +2,18 @@ from ..scheduler import cat_swarm
 
 import random
 import json
-f=open("../../../testing_subset.json","r")
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, "testing_subset.json")
+f=open(file_path,"r")
 data = f.read()
 input_data=json.loads(data)
 input_profs=input_data["users"]
 input_courses=input_data["courses"]
 input_classrooms=input_data["classrooms"]
 f.close()
-f=open("../../../time_blocks.json","r")
+file_path = os.path.join(script_dir, "time_blocks.json")
+f=open(file_path,"r")
 data = f.read()
 input_timeblocks = json.loads(data)
 def test_cso():

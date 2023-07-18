@@ -16,6 +16,9 @@ def generate(request):
         classrooms = algs1_request["classrooms"]
 
         scheduled_courses = main(users, courses, classrooms)
-        return Response(scheduled_courses, status=status.HTTP_200_OK)
+        schedule = {
+            "schedule": scheduled_courses
+        }
+        return Response(schedule, status=status.HTTP_200_OK)
     except:
         return Response(status=status.HTTP_400_BAD_REQUEST)

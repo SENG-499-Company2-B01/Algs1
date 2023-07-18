@@ -1,4424 +1,4364 @@
 {
-    "year": 2023,
-    "term": "Fall",
-    "users": [
+  "year": "2023",
+  "term": "fall",
+  "users": [
       {
-        "username": "Celina.Berg",
-        "email": "celinag@uvic.ca",
-        "password": "$2b$12$J8ZXjOCTrUc1v4pTd5WhuOq0a6bDiLriEQQBeNXbhqN/tqyQukF7u",
-        "firstname": "Celina",
-        "lastname": "Berg",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " SENG 310",
-          " SENG 435"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Celina.Berg",
+          "email": "celinag@uvic.ca",
+          "password": "$2b$12$FJLReHufm05Kh4aguzCBTOpjLPQDQ/c8UT6uN1CYOJz3l.1vCxK1O",
+          "name": "Celina Berg",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " SENG 310",
+              " SENG 435"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Bill.Bird",
-        "email": "bbird@uvic.ca",
-        "password": "$2b$12$EiANKrxsd.Xzn/AXI/U6PeZg3SFzz6bXDk0yYB10dn7qgbgLxF68W",
-        "firstname": "Bill",
-        "lastname": "Bird",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 355",
-          " SENG 310",
-          " SENG 435",
-          " SENG 466"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Bill.Bird",
+          "email": "bbird@uvic.ca",
+          "password": "$2b$12$hn957HD2jZtqRC7jOWm7TO02oGgwmZ/xW6clywX3toXqGCZ0.3Ose",
+          "name": "Bill Bird",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 355",
+              " SENG 310",
+              " SENG 435",
+              " SENG 466"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Sean.Chester",
-        "email": "schester@uvic.ca",
-        "password": "$2b$12$RohukQGYaH3XfJP5IKeY9.LpodoMmNsOHO29ZcjQE8FfduvO9KCNC",
-        "firstname": "Sean",
-        "lastname": "Chester",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " SENG 275",
-          " CSC 361",
-          " CSC 460"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Sean.Chester",
+          "email": "schester@uvic.ca",
+          "password": "$2b$12$r2fwA5jHiMqIrpsyHnUXuOniHRoa0RguYbRGKzIXNvlZD6DgK2Ofa",
+          "name": "Sean Chester",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " SENG 275",
+              " CSC 361",
+              " CSC 460"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Jason.Corless",
-        "email": "-",
-        "password": "$2b$12$R7oIkmgCVFldh70yUdAxE.BJEgNcmCGpAKZ3KHTre14QN5SoocnMC",
-        "firstname": "Jason",
-        "lastname": "Corless",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 225",
-          " CSC 226",
-          " CSC 230",
-          " CSC 355",
-          " CSC 361",
-          " CSC 460"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Jason.Corless",
+          "email": "-",
+          "password": "$2b$12$7YfQiYl7r0vV1Pr1RrE3HO72yMIo5ze0Fu0A9vR1v1SZUe1HxL1jS",
+          "name": "Jason Corless",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 225",
+              " CSC 226",
+              " CSC 230",
+              " CSC 355",
+              " CSC 361",
+              " CSC 460"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Daniela.Damian",
-        "email": "danielad@uvic.ca",
-        "password": "$2b$12$fncqpk7mjTbuxVgHp.3azOCrkGYvXyIaPy1fEwYRegwowx/DMMRWG",
-        "firstname": "Daniela",
-        "lastname": "Damian",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 225",
-          " CSC 230",
-          " CSC 355",
-          " CSC 360",
-          " CSC 370",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Daniela.Damian",
+          "email": "danielad@uvic.ca",
+          "password": "$2b$12$MA0otJWPSPVuGkt5EnIIL.kC.pI2jd0pGpCcQ7nwzT20d18Q/eyFu",
+          "name": "Daniela Damian",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 225",
+              " CSC 230",
+              " CSC 355",
+              " CSC 360",
+              " CSC 370",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Neil.Ernst",
-        "email": "nernst@uvic.ca",
-        "password": "$2b$12$GDL2A39l/Fn5VI6t7d2hBugdIVhyMDvVEggzM.5Rhc2MJ7ruaZEu.",
-        "firstname": "Neil",
-        "lastname": "Ernst",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 225",
-          " CSC 230",
-          " CSC 355",
-          " CSC 360",
-          " SENG 310",
-          " SENG 401",
-          " SENG 411",
-          " SENG 421",
-          " SENG 435",
-          " SENG 466",
-          " SENG 474"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Neil.Ernst",
+          "email": "nernst@uvic.ca",
+          "password": "$2b$12$IOXR876aPEnHO3Mk2OmkCOCE7KtjzxKN8J3XxJujQ0kaNvQwm4mhW",
+          "name": "Neil Ernst",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 225",
+              " CSC 230",
+              " CSC 355",
+              " CSC 360",
+              " SENG 310",
+              " SENG 401",
+              " SENG 411",
+              " SENG 421",
+              " SENG 435",
+              " SENG 466",
+              " SENG 474"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Anthony.Estey",
-        "email": "aestey@uvic.ca",
-        "password": "$2b$12$Dr5I6.wGLMxTycel.a3Z9eCkTDze5WLzaASYOaK7Df7qo0.dkoxum",
-        "firstname": "Anthony",
-        "lastname": "Estey",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 115",
-          " CSC 226",
-          " SENG 275"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Anthony.Estey",
+          "email": "aestey@uvic.ca",
+          "password": "$2b$12$WgUtjAqyiCrwIGIE1ww8xe336aA4b5sR2c/2cLfKDO0L.91qKv7wa",
+          "name": "Anthony Estey",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 115",
+              " CSC 226",
+              " SENG 275"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Sudhakar.Ganti",
-        "email": "sganti@uvic.ca",
-        "password": "$2b$12$6AtDiWW2/lNqdKD/zYhNTusgVvFdeIYNz.YgvCZSSN3C1QzrDMHZS",
-        "firstname": "Sudhakar",
-        "lastname": "Ganti",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 355"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Sudhakar.Ganti",
+          "email": "sganti@uvic.ca",
+          "password": "$2b$12$NwYF.Wr1RtkT9/9eEYswmuuGEVG9.9Ptw798b/kQ7rpiglloXgFUa",
+          "name": "Sudhakar Ganti",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 355"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Daniel.German",
-        "email": "dmg@uvic.ca",
-        "password": "$2b$12$QOJPEmmKU28mY1XrFqToDOAqsHW19JsvO89uDOplCfd.iPo5Leo.C",
-        "firstname": "Daniel",
-        "lastname": "German",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 230",
-          " SENG 265",
-          " CSC 361",
-          " SENG 321",
-          " SENG 350",
-          " CSC 460",
-          " SENG 401",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Daniel.German",
+          "email": "dmg@uvic.ca",
+          "password": "$2b$12$PUH5TkfkOLLr2ZGWTwobv.8DjJHeM64wyetIQp9cvU/PqhTXnZB4O",
+          "name": "Daniel German",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 230",
+              " SENG 265",
+              " CSC 361",
+              " SENG 321",
+              " SENG 350",
+              " CSC 460",
+              " SENG 401",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Brandon.Haworth",
-        "email": "bhaworth@uvic.ca",
-        "password": "$2b$12$7GZVed0agTZA0ZrBYwzD6udutkD1S1tTFGo9yx8KBtKXz5CmJSZCG",
-        "firstname": "Brandon",
-        "lastname": "Haworth",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 226",
-          " CSC 355",
-          " CSC 360"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Brandon.Haworth",
+          "email": "bhaworth@uvic.ca",
+          "password": "$2b$12$X9kd8zvWURu4XzMQDEjDceotzSoPe58BDaN8ysnvgemSMX/ZwQWEy",
+          "name": "Brandon Haworth",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 226",
+              " CSC 355",
+              " CSC 360"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Hosna.Jabbari",
-        "email": "jabbari@uvic.ca",
-        "password": "$2b$12$xQLzNa6TTPjXl3duyDdB9OyYN6NPdZs0jhwfkGvKPQvsCXkcDlrFK",
-        "firstname": "Hosna",
-        "lastname": "Jabbari",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Hosna.Jabbari",
+          "email": "jabbari@uvic.ca",
+          "password": "$2b$12$FYoNUhCpK4rsjKlGKLBAnuoYnpSjgTDK85I3I1Ea/8WcWshLZiX42",
+          "name": "Hosna Jabbari",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "LillAnne.Jackson",
-        "email": "engradu@uvic.ca",
-        "password": "$2b$12$8M6/0Ks9ZeVTPQtmpKouDe83GmvoOI7cf.jf0BYy62YnfrIcggEJu",
-        "firstname": "LillAnne",
-        "lastname": "Jackson",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 225",
-          " CSC 226",
-          " SENG 371"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "LillAnne.Jackson",
+          "email": "engradu@uvic.ca",
+          "password": "$2b$12$wClcLDzryGUwTQ3.oDPrYe.Dvyxhk9ujjDzK1Ou.Np4wnB7Nz1/Aa",
+          "name": "LillAnne Jackson",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 225",
+              " CSC 226",
+              " SENG 371"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Bruce.Kapron",
-        "email": "bmkapron@uvic.ca",
-        "password": "$2b$12$6Be0RHC5jqYkrG3WwYVqgu1kw.A4E23m9TWf6ZnI3.MO/26DVHSqG",
-        "firstname": "Bruce",
-        "lastname": "Kapron",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 225",
-          " CSC 355",
-          " CSC 361",
-          " CSC 370"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Bruce.Kapron",
+          "email": "bmkapron@uvic.ca",
+          "password": "$2b$12$AvJZ5C8qP7XWrpkpZc3icufbH9Hhftr0wWu15w/k4/i.ve7Zrw2hi",
+          "name": "Bruce Kapron",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 225",
+              " CSC 355",
+              " CSC 361",
+              " CSC 370"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Valerie.King",
-        "email": "val@uvic.ca",
-        "password": "$2b$12$1ck/tmVATZPPWnqLkbMY5Odgfp.LRHk2oI/eH.jv7v65DscH309HC",
-        "firstname": "Valerie",
-        "lastname": "King",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 230",
-          " SENG 265",
-          " CSC 370",
-          " SENG 321",
-          " SENG 350",
-          " SENG 360",
-          " SENG 401",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Valerie.King",
+          "email": "val@uvic.ca",
+          "password": "$2b$12$LvTVUKJvwPjXctdLa43Os.IogarFJbOwAkXJH7ymJeDBCgxk.iGsi",
+          "name": "Valerie King",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 230",
+              " SENG 265",
+              " CSC 370",
+              " SENG 321",
+              " SENG 350",
+              " SENG 360",
+              " SENG 401",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Sajin.Koroth",
-        "email": "skoroth@uvic.ca",
-        "password": "$2b$12$agFsxItW4TwVvgshAgvqQujRMVL0oz2s9vqRYr2FvuN/OYabXBK1O",
-        "firstname": "Sajin",
-        "lastname": "Koroth",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 355",
-          " SENG 310",
-          " SENG 435",
-          " SENG 466"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Sajin.Koroth",
+          "email": "skoroth@uvic.ca",
+          "password": "$2b$12$A6yEzYoMeErF6UBtb7IJsOxchzBWG1hhgktsq5V8q11XHcFeeWFgS",
+          "name": "Sajin Koroth",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 355",
+              " SENG 310",
+              " SENG 435",
+              " SENG 466"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Rich.Little",
-        "email": "rlittle@uvic.ca",
-        "password": "$2b$12$f/2codqAqKhgLKofTLoza.W7NJKSL9dnBA1rRs7pGzx1xJY72lPDG",
-        "firstname": "Rich",
-        "lastname": "Little",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "SENG 265",
-          " SENG 310",
-          " CSC 460",
-          " SENG 421",
-          " SENG 435",
-          " SENG 466"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Rich.Little",
+          "email": "rlittle@uvic.ca",
+          "password": "$2b$12$s1zLxYruC3kE7mV4CbG7nOB2nQFqOsLeTWMqbW44pRoeA108ddSOy",
+          "name": "Rich Little",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "SENG 265",
+              " SENG 310",
+              " CSC 460",
+              " SENG 421",
+              " SENG 435",
+              " SENG 466"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Nishant.Mehta",
-        "email": "nmehta@uvic.ca",
-        "password": "$2b$12$ZlnVHAygB.NtxeKueb40YeuoTkrGt5.t0Y7JNbBS49ebf3uxNBLZ2",
-        "firstname": "Nishant",
-        "lastname": "Mehta",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 115",
-          " CSC 226",
-          " SENG 275"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Nishant.Mehta",
+          "email": "nmehta@uvic.ca",
+          "password": "$2b$12$vc5iT67GC9HygMWW5dmkKeSXoV2p9FwkXqRdKJvEaqeg9dDBbVbhy",
+          "name": "Nishant Mehta",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 115",
+              " CSC 226",
+              " SENG 275"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Hausi.Muller",
-        "email": "hausi@uvic.ca",
-        "password": "$2b$12$EP52SEFpj64xk/QXgiq2bO.pfq6x9zqLoJJf3.qan4ont6DjsbSw6",
-        "firstname": "Hausi",
-        "lastname": "Muller",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 225",
-          " CSC 226",
-          " CSC 230",
-          " SENG 265",
-          " SENG 275",
-          " CSC 320",
-          " CSC 355",
-          " CSC 360"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Hausi.Muller",
+          "email": "hausi@uvic.ca",
+          "password": "$2b$12$2bTYtRva55Hb1EY.EYw/k.tGW6j/oqGjTjvKi1B9oZF0GKrCfigau",
+          "name": "Hausi Muller",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 225",
+              " CSC 226",
+              " CSC 230",
+              " SENG 265",
+              " SENG 275",
+              " CSC 320",
+              " CSC 355",
+              " CSC 360"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Miguel.Nacenta",
-        "email": "nacenta@uvic.ca",
-        "password": "$2b$12$eoMQxe7zENTT1jvRrXEXa.f0RJtB1gWs.sUBcyrY9wxXpESIddmMW",
-        "firstname": "Miguel",
-        "lastname": "Nacenta",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 230",
-          " SENG 310",
-          " SENG 321",
-          " SENG 421",
-          " SENG 435",
-          " SENG 466"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Miguel.Nacenta",
+          "email": "nacenta@uvic.ca",
+          "password": "$2b$12$Xr5OilOvopT1t/.tqDGhVeJubgNIRVDYp3mhjjGGn2pHT7NB5XM72",
+          "name": "Miguel Nacenta",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 230",
+              " SENG 310",
+              " SENG 321",
+              " SENG 421",
+              " SENG 435",
+              " SENG 466"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Ibrahim.Numanagić",
-        "email": "inumanag@uvic.ca",
-        "password": "$2b$12$jF.kSX1cYq3T/AF3O.w1JeXfx6Ywt8g.Q2s2tljFLcIkzC40cpXt.",
-        "firstname": "Ibrahim",
-        "lastname": "Numanagić",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "SENG 310",
-          " SENG 435",
-          " SENG 474",
-          " CSC 330"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Ibrahim.Numanagić",
+          "email": "inumanag@uvic.ca",
+          "password": "$2b$12$moGxeC6Momp0s.fNeTqebOGkXeJZRBgkMXlNLpgeD0JhufStnkAJi",
+          "name": "Ibrahim Numanagić",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "SENG 310",
+              " SENG 435",
+              " SENG 474",
+              " CSC 330"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Jianping.Pan",
-        "email": "pan@uvic.ca",
-        "password": "$2b$12$z3Qfvffjujgln0vGEKeKEu0fUDh.l5n/m0m6r0HrpAIcwHXsD3JPy",
-        "firstname": "Jianping",
-        "lastname": "Pan",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 226",
-          " SENG 371",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Jianping.Pan",
+          "email": "pan@uvic.ca",
+          "password": "$2b$12$5ElOtPo5q1DX7TCLdwiX2OzNFFiF/VQeOIK/foMR.7EiF1lNCfPEi",
+          "name": "Jianping Pan",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 226",
+              " SENG 371",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Charles.Perin",
-        "email": "cperin@uvic.ca",
-        "password": "$2b$12$AID9QlvZIM8W2uWLwnS6EONN6IWAXcygm0jLII0Oh5wQV5uEz3Li6",
-        "firstname": "Charles",
-        "lastname": "Perin",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 225",
-          " CSC 226",
-          " SENG 275",
-          " CSC 355",
-          " CSC 370",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Charles.Perin",
+          "email": "cperin@uvic.ca",
+          "password": "$2b$12$4AaWIXpDNQjB/WTJL1C2ruMlpv.PTJ5BYhTz/wttiBJgSVxrQRoHq",
+          "name": "Charles Perin",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 225",
+              " CSC 226",
+              " SENG 275",
+              " CSC 355",
+              " CSC 370",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Teseo.Schneider",
-        "email": "teseo@uvic.ca",
-        "password": "$2b$12$YXz6LyQ/iMFDMy.CMYDaBuh15P7aGN7putgVyIlhQHOG1U.HaVIJy",
-        "firstname": "Teseo",
-        "lastname": "Schneider",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 115",
-          " CSC 226",
-          " CSC 230",
-          " CSC 355",
-          " CSC 361",
-          " SENG 321",
-          " SENG 401",
-          " SENG 411"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Teseo.Schneider",
+          "email": "teseo@uvic.ca",
+          "password": "$2b$12$BJ37nZlMB1kiM3mwoQbo/O7ltslIOPOr3twJMLrEAnAjw5nno65SK",
+          "name": "Teseo Schneider",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 115",
+              " CSC 226",
+              " CSC 230",
+              " CSC 355",
+              " CSC 361",
+              " SENG 321",
+              " SENG 401",
+              " SENG 411"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Sowmya.Somanath",
-        "email": "sowmyasomanath@uvic.ca",
-        "password": "$2b$12$k.hoOWQyBLrnKP0yP0sN/OwFSlcVfAmSmDOwhQLD3w5liH.nTypWO",
-        "firstname": "Sowmya",
-        "lastname": "Somanath",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 225",
-          " CSC 230",
-          " CSC 320",
-          " CSC 355",
-          " CSC 360",
-          " CSC 361",
-          " SENG 350"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Sowmya.Somanath",
+          "email": "sowmyasomanath@uvic.ca",
+          "password": "$2b$12$/ps5i8lG.toVXBxCuLMfruysPsoVKL3aKlVneN/oT9DA8dejL34/m",
+          "name": "Sowmya Somanath",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 225",
+              " CSC 230",
+              " CSC 320",
+              " CSC 355",
+              " CSC 360",
+              " CSC 361",
+              " SENG 350"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Venkatesh.Srinivasan",
-        "email": "srinivas@uvic.ca",
-        "password": "$2b$12$eNENSETbVEv4VbH8Au3iEuQuZy.ehOGhS0dNLfXm.VRdpoFmLuqWG",
-        "firstname": "Venkatesh",
-        "lastname": "Srinivasan",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 225",
-          " CSC 320",
-          " CSC 355",
-          " CSC 360",
-          " SENG 350"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Venkatesh.Srinivasan",
+          "email": "srinivas@uvic.ca",
+          "password": "$2b$12$HGZJZawnIOIal/YOQsIHsOg0YCEQNdBtoGtnTMOZwvuhjOypnqXZG",
+          "name": "Venkatesh Srinivasan",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 225",
+              " CSC 320",
+              " CSC 355",
+              " CSC 360",
+              " SENG 350"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Ulrike.Stege",
-        "email": "ustege@uvic.ca",
-        "password": "$2b$12$2fREIsnTS0R8iLpsq56UpeDgwL47uILv8s/G0CxJFG124jz20rO4C",
-        "firstname": "Ulrike",
-        "lastname": "Stege",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 115"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Ulrike.Stege",
+          "email": "ustege@uvic.ca",
+          "password": "$2b$12$aOlbcpzCHJuACTPlLZW3JubucSaLgNdwg04a92vNuZLMUetZnbDJG",
+          "name": "Ulrike Stege",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 115"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Margaret-Anne.Storey",
-        "email": "mstorey@uvic.ca",
-        "password": "$2b$12$Q0Thi0wK1MEJRL/qo1ccDeKkDHvGvts5JaKFqbVfqNfvM168Ouw9G",
-        "firstname": "Margaret-Anne",
-        "lastname": "Storey",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 226",
-          " SENG 371",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Margaret-Anne.Storey",
+          "email": "mstorey@uvic.ca",
+          "password": "$2b$12$i2ONkwTl0jne9obdicgEMe/ZUH7VErziCv9Mx9bMYGXy4PVCUs5Yu",
+          "name": "Margaret-Anne Storey",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 226",
+              " SENG 371",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Cecilia.Summers",
-        "email": "-",
-        "password": "$2b$12$50DSkppsYybEnDs71NyyLecz8RLzf3muN00aK65tgX9fCn45Zkt/S",
-        "firstname": "Cecilia",
-        "lastname": "Summers",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 226",
-          " SENG 275",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Cecilia.Summers",
+          "email": "-",
+          "password": "$2b$12$CdqFwOBjqyowKflsjQc42Og/65BhsjaCGx8rwc8AR46gtG4ehydPu",
+          "name": "Cecilia Summers",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 226",
+              " SENG 275",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Alex.Thomo",
-        "email": "thomo@uvic.ca",
-        "password": "$2b$12$NHKzx8T20gdMAkyNbDunNeVAABhfPpVd4W5Tu8sz4gG.N/cZTpwQC",
-        "firstname": "Alex",
-        "lastname": "Thomo",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 226",
-          " CSC 370",
-          " SENG 371"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Alex.Thomo",
+          "email": "thomo@uvic.ca",
+          "password": "$2b$12$pjU5vO34IwZZ.tFGH7/LEeiFLY/mzMxRJnR3JxE5Ch6NwIG/X4e5m",
+          "name": "Alex Thomo",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 226",
+              " CSC 370",
+              " SENG 371"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "George.Tzanetakis",
-        "email": "gtzan@cs.uvic.ca",
-        "password": "$2b$12$3YHq6fIK7LjeY99AEWNXteuViPTW8AgOSIAyQZhpr3rBGMb.Mkaoa",
-        "firstname": "George",
-        "lastname": "Tzanetakis",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 115",
-          " CSC 355",
-          " CSC 370",
-          " SENG 371"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "George.Tzanetakis",
+          "email": "gtzan@cs.uvic.ca",
+          "password": "$2b$12$8xr/n7pth8Vhf1CPKDgCbOJrbUV.BPy3DwhCW8y4aJa1NiG1Cl31S",
+          "name": "George Tzanetakis",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 115",
+              " CSC 355",
+              " CSC 370",
+              " SENG 371"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Jens.Weber",
-        "email": "jens@uvic.ca",
-        "password": "$2b$12$pOaQrALU/CDLlSGpgWHFPOrbsXfTJihV8UfOtOthpD13DwE845mii",
-        "firstname": "Jens",
-        "lastname": "Weber",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 230",
-          " SENG 321"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Jens.Weber",
+          "email": "jens@uvic.ca",
+          "password": "$2b$12$2bU7cQ9wcuf0x/Ea/k3XMusRnzSQ9dCEHP6kfvmb4h6BJMR.ypBm6",
+          "name": "Jens Weber",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 230",
+              " SENG 321"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Kui.Wu",
-        "email": "wkui@uvic.ca",
-        "password": "$2b$12$iK4Vh/pmcN/lcPM1t/7M9uJGYGUUmmXSIIbD2l6/AZXahCxAbogMC",
-        "firstname": "Kui",
-        "lastname": "Wu",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 225",
-          " CSC 230",
-          " CSC 355",
-          " CSC 360",
-          " SENG 360",
-          " SENG 411",
-          " SENG 421"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Kui.Wu",
+          "email": "wkui@uvic.ca",
+          "password": "$2b$12$FiMNcFfVf.eRJe98I1rl9eWQUsONGGQpVA3uLDwD9aNaYjYOMMuE6",
+          "name": "Kui Wu",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 225",
+              " CSC 230",
+              " CSC 355",
+              " CSC 360",
+              " SENG 360",
+              " SENG 411",
+              " SENG 421"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Michael.Zastre",
-        "email": "zastre@uvic.ca",
-        "password": "$2b$12$HJImGxmQGybbUrdxk6gIyumJTYliY2bP9sBdPVyxm.D5VewJfykRG",
-        "firstname": "Michael",
-        "lastname": "Zastre",
-        "peng": false,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "CSC 111",
-          " CSC 115",
-          " CSC 225",
-          " CSC 226",
-          " CSC 230",
-          " SENG 275",
-          " CSC 355",
-          " CSC 360",
-          " SENG 310"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Michael.Zastre",
+          "email": "zastre@uvic.ca",
+          "password": "$2b$12$21lAGOpgD.1w/uAnV2T40uih.ThI4QiUaed1XhbwslhflJS2FpdW2",
+          "name": "Michael Zastre",
+          "peng": false,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "CSC 111",
+              " CSC 115",
+              " CSC 225",
+              " CSC 226",
+              " CSC 230",
+              " SENG 275",
+              " CSC 355",
+              " CSC 360",
+              " SENG 310"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Michael.Adams",
-        "email": "frodo@uvic.ca",
-        "password": "$2b$12$pOk6.l4FR35RweNiVE.TrecqwP984/bIhbNDL3lgOFCw7.LImLYkW",
-        "firstname": "Michael",
-        "lastname": "Adams",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "ECE 260",
-          " SENG 475"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Michael.Adams",
+          "email": "frodo@uvic.ca",
+          "password": "$2b$12$IREPf6nNiewMvZBgBoWieuMG5EmW1TW7U/rK.6k5z5.YDOdMqz6QS",
+          "name": "Michael Adams",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "ECE 260",
+              " SENG 475"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Panajotis.Agathoklis",
-        "email": "panagath@ece.uvic.ca",
-        "password": "$2b$12$JEGAmJqDwWhuH9Cz2bI1k.P/KVwYh5uWwL6K0S9TKVOhMC0s/lqlC",
-        "firstname": "Panajotis",
-        "lastname": "Agathoklis",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "ECE 310",
-          " ECE 360"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Panajotis.Agathoklis",
+          "email": "panagath@ece.uvic.ca",
+          "password": "$2b$12$EI4W/9eapbIPUB18rrH55OY6uoQfyxCq4ygNxbkTM1dXDQIUkOghG",
+          "name": "Panajotis Agathoklis",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "ECE 310",
+              " ECE 360"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Riham.AlTawy",
-        "email": "raltawy@uvic.ca",
-        "password": "$2b$12$5CCJzL8lGVbJHB4un8ctaeVhVMMQV/mfvwHWMf6lWmaPm/T3FZLNq",
-        "firstname": "Riham",
-        "lastname": "AlTawy",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Riham.AlTawy",
+          "email": "raltawy@uvic.ca",
+          "password": "$2b$12$oE7zfmBkSxYi6cwsp0aqsu3Ls08EjFZsSy74ZpmgM9wC0t.nm9k3K",
+          "name": "Riham AlTawy",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Amirali.Baniasadi",
-        "email": "amiralib@uvic.ca",
-        "password": "$2b$12$EqvHmDL8kf5MlDNY6Cdg8OZg0RGqo36pjZjtGF40zdfRfQNWvcU6K",
-        "firstname": "Amirali",
-        "lastname": "Baniasadi",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Amirali.Baniasadi",
+          "email": "amiralib@uvic.ca",
+          "password": "$2b$12$UgyOK1Y4HTSYpiq7RGlsf.LMQwip/Iv4VRCljIDjdaTKHulaMshtW",
+          "name": "Amirali Baniasadi",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Jens.Bornemann",
-        "email": "jbornema@ece.uvic.ca",
-        "password": "$2b$12$pf56uYowj/QU0E5kh6JOYuL92DpO3Q/vkzMTj3Z7Kkrn8/W615bNW",
-        "firstname": "Jens",
-        "lastname": "Bornemann",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Jens.Bornemann",
+          "email": "jbornema@ece.uvic.ca",
+          "password": "$2b$12$2rycVkJ0.32a0R9.0t6Az.HvZh4FhoyWcRCJGdnch2lhz.6nSCk7u",
+          "name": "Jens Bornemann",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Alexandra.Branzan Albu",
-        "email": "aalbu@uvic.ca",
-        "password": "$2b$12$lgDJxUsg2TC9JiboKpD1juQo2FRYg20hVV028RnY/AN0egQT6Rjc2",
-        "firstname": "Alexandra",
-        "lastname": "Branzan Albu",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Alexandra.Branzan Albu",
+          "email": "aalbu@uvic.ca",
+          "password": "$2b$12$0SMSQcOWGzGSa87cugGdxuQmJ2JzrFcq3UX6EKazIadI94yiYpFyS",
+          "name": "Alexandra Branzan Albu",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Lin.Cai",
-        "email": "cai@ece.uvic.ca",
-        "password": "$2b$12$qRRfV5HpCxEUv4JJQp/pjuNI1eF/rIOHDlQtgKjn2S12BQVci9GES",
-        "firstname": "Lin",
-        "lastname": "Cai",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Lin.Cai",
+          "email": "cai@ece.uvic.ca",
+          "password": "$2b$12$Z/OXva9V4VxQtR4HprnWkOItsXi4eKQjmwGLepIk5kD2Yc3uza7ju",
+          "name": "Lin Cai",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "David.Capson",
-        "email": "capson@uvic.ca",
-        "password": "$2b$12$pY9dzR50FFcdAY1JzQi2Yu9uDN3KTIcTVswaOZzjLytm4BpemyGC6",
-        "firstname": "David",
-        "lastname": "Capson",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "ECE 355"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "David.Capson",
+          "email": "capson@uvic.ca",
+          "password": "$2b$12$nXUbpVULNkovjQ28SZkvmu70IuKWNiUE5Yn6j0U.dcR9A8UzMu.2u",
+          "name": "David Capson",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "ECE 355"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Thomas.Darcie",
-        "email": "tdarcie@uvic.ca",
-        "password": "$2b$12$9uApeQlpLMM/es/a2tO0e.Glom5cSGLrcS07HzvbyWtPEeFhO.kaK",
-        "firstname": "Thomas",
-        "lastname": "Darcie",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Thomas.Darcie",
+          "email": "tdarcie@uvic.ca",
+          "password": "$2b$12$igz/sTQ9kvxMvE5Tu2WdaOrce7kjxoZQq.2qjsGntXuIqR7lXSMdG",
+          "name": "Thomas Darcie",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Nikitas.Dimopoulos",
-        "email": "nikitas@ece.uvic.ca",
-        "password": "$2b$12$cTWSqpW2fdqaDuF7Uhrsc.IRM9EbMh3/y.H9fyrZYksUdZ6ySHcPy",
-        "firstname": "Nikitas",
-        "lastname": "Dimopoulos",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Nikitas.Dimopoulos",
+          "email": "nikitas@ece.uvic.ca",
+          "password": "$2b$12$0ZacTY1D0bE1IxgERTrfp.1XFmRDOyL3GmqOycKqnVRqaOqwbqZ0K",
+          "name": "Nikitas Dimopoulos",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Xiaodai.Dong",
-        "email": "xdong@ece.uvic.ca",
-        "password": "$2b$12$keFEmMamuF1XqmxRUzo2buVvpYLMkjxXMEWZeP/Hf0y6dQiz6BUQS",
-        "firstname": "Xiaodai",
-        "lastname": "Dong",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Xiaodai.Dong",
+          "email": "xdong@ece.uvic.ca",
+          "password": "$2b$12$mLqXQFkG.a1/rOmT4ycI2O/t.hhSp5IpgzXWXqG2LqMRFVSwhw8DK",
+          "name": "Xiaodai Dong",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Peter.Driessen",
-        "email": "peter@ece.uvic.ca",
-        "password": "$2b$12$GmKOifJzXDYXm8lrIfgy8O6MInoho.eCEyBI5/7IafuQ3d3OFLnVG",
-        "firstname": "Peter",
-        "lastname": "Driessen",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Peter.Driessen",
+          "email": "peter@ece.uvic.ca",
+          "password": "$2b$12$4lA0ohDzF9ok3iwizVFNQusUPIj0Ek5Ua8roCNEyHnZyUT1v7teLO",
+          "name": "Peter Driessen",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Fayez.Gebali",
-        "email": "-",
-        "password": "$2b$12$63J0v1ojlrnamj/Zs.PUVOSr9pC01GHlREeQcjTnZXmeAd4k6zoOe",
-        "firstname": "Fayez",
-        "lastname": "Gebali",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "ECE 360"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Fayez.Gebali",
+          "email": "-",
+          "password": "$2b$12$9iRT0UZDVVCN4vP0O489iupeT7njyPpQSOJeLbc.FYjlPRpTiwFSS",
+          "name": "Fayez Gebali",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "ECE 360"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Reuven.Gordon",
-        "email": "rgordon@uvic.ca",
-        "password": "$2b$12$scHWC8LZ3ma.coZGE2HH0eydfarNCpZFrJ5ezeG2OSVa8KkSzero2",
-        "firstname": "Reuven",
-        "lastname": "Gordon",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Reuven.Gordon",
+          "email": "rgordon@uvic.ca",
+          "password": "$2b$12$W3wsQHTmmuTeeaPLB1aBZud.m51/s55xMXx41/dxmRp6pcyBSr.7G",
+          "name": "Reuven Gordon",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Aaron.Gulliver",
-        "email": "agullive@engr.uvic.ca",
-        "password": "$2b$12$eykyVJrlmfGtpv84KtmBVetYqDR1eYmwsDHM/rMOWMASBYa02HaVa",
-        "firstname": "Aaron",
-        "lastname": "Gulliver",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Aaron.Gulliver",
+          "email": "agullive@engr.uvic.ca",
+          "password": "$2b$12$4uqI8TctziYmGS87sgN0T.U1DmLV6LWsKYeABrWwP.LbzisPNjnH.",
+          "name": "Aaron Gulliver",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Kin Fun.Li",
-        "email": "kinli@uvic.ca",
-        "password": "$2b$12$XyWAONsXaiSsaBokhO2xSeavYSbmFFKxGGFJe7iZ2BXpPv5nt33LS",
-        "firstname": "Kin Fun",
-        "lastname": "Li",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Kin Fun.Li",
+          "email": "kinli@uvic.ca",
+          "password": "$2b$12$1.WC9FZyPpvbZXvaErNLOeXx4edwbJbA5h.wCOa0H/c2E./O1dT1u",
+          "name": "Kin Fun Li",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Tao.Lu",
-        "email": "taolu@ece.uvic.ca",
-        "password": "$2b$12$oVwMvKeQRPRHxedycNCVu.6xYNzb6iN6CUvmLFJ6NbW5VXoLcJxMG",
-        "firstname": "Tao",
-        "lastname": "Lu",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Tao.Lu",
+          "email": "taolu@ece.uvic.ca",
+          "password": "$2b$12$5/BCZK8HdSg7PUJRbDU92upBb5.G.XZlzzq2rsQ98QhFJcSNYAYo6",
+          "name": "Tao Lu",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Michael.McGuire",
-        "email": "mmcguire@uvic.ca",
-        "password": "$2b$12$HotV4Aq1jTjxZGNIZfIi2.iHwKOsKzw0DbYTgITaS0ySeVEIrAada",
-        "firstname": "Michael",
-        "lastname": "McGuire",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "ECE 310",
-          " ECE 360",
-          " ECE 485"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Michael.McGuire",
+          "email": "mmcguire@uvic.ca",
+          "password": "$2b$12$g8uh2qLmyRJ7vQX0tvwtSeJnXsg2XBgMTvGJEySkMYWZLKyYl7oY.",
+          "name": "Michael McGuire",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "ECE 310",
+              " ECE 360",
+              " ECE 485"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Stephen.Neville",
-        "email": "sneville@ece.uvic.ca",
-        "password": "$2b$12$zI3gOgGXWOxAgigbnDgxze5f8F/.bkBX1AQyPqsahYX3Oh2qltHXy",
-        "firstname": "Stephen",
-        "lastname": "Neville",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "ECE 485",
-          " SENG 468",
-          " SENG 499"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Stephen.Neville",
+          "email": "sneville@ece.uvic.ca",
+          "password": "$2b$12$GVyhIpv6ErialSljT7PnjOEXzb7KMX99/0aVFY9QwZMlwg5nu8bHi",
+          "name": "Stephen Neville",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "ECE 485",
+              " SENG 468",
+              " SENG 499"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Christo.Papadopoulos",
-        "email": "papdop@uvic.ca",
-        "password": "$2b$12$ISL8q6G6kFYEWSwqBExpJun7gDolYVwJz6A7aKLjjEkCcWmO6pfPq",
-        "firstname": "Christo",
-        "lastname": "Papadopoulos",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Christo.Papadopoulos",
+          "email": "papdop@uvic.ca",
+          "password": "$2b$12$XoanaxHml.smz7jOxEol1.0vs3tufziRK90D9fRWVddLQ52bcwJdq",
+          "name": "Christo Papadopoulos",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Navneet.Popli",
-        "email": "npopli@uvic.ca",
-        "password": "$2b$12$UIO8zT6t.ZnOc3m93Itz1.FWne/UypOa0tWQQMl4aAw3UTw3YceYm",
-        "firstname": "Navneet",
-        "lastname": "Popli",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "SENG 499",
-          " SENG 468",
-          " ECE 458",
-          " SENG 275"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Navneet.Popli",
+          "email": "npopli@uvic.ca",
+          "password": "$2b$12$QzSidTU7AYx53I1LLqBUW.etiOR./xAJMNhBLqNOhqDvDVgWTlJva",
+          "name": "Navneet Popli",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "SENG 499",
+              " SENG 468",
+              " ECE 458",
+              " SENG 275"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Daler.Rakhmatov",
-        "email": "daler@ece.uvic.ca",
-        "password": "$2b$12$DAarljN0DcT9TaPyKxUTHuMfX622xDiVBSYh9/dOZf4.CrYQSXirG",
-        "firstname": "Daler",
-        "lastname": "Rakhmatov",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Daler.Rakhmatov",
+          "email": "daler@ece.uvic.ca",
+          "password": "$2b$12$CA9Y9yCwwr4V9t.nYAxe8.Oh0UpuET/4QM2EYkcyuKj7JQy/bdlRS",
+          "name": "Daler Rakhmatov",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Makhsud.Saidaminov",
-        "email": "msaidaminov@uvic.ca",
-        "password": "$2b$12$d6zsCkWQKYMgj9gFghxcjOlPinZYuTh80OPoCUlWBbTuzxCi4Leei",
-        "firstname": "Makhsud",
-        "lastname": "Saidaminov",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Makhsud.Saidaminov",
+          "email": "msaidaminov@uvic.ca",
+          "password": "$2b$12$QxLqCaMeX.nK7C3GKadGdOASS0AAwatkM6TfEBp0KOdzSEUmaxeA2",
+          "name": "Makhsud Saidaminov",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Sana.Shuja",
-        "email": "sanashuja@uvic.ca",
-        "password": "$2b$12$8Ab7aDZ5jgra6UKAS6fwke5i55jn3s.h0.An59YJlkjM/ynCz0Eu.",
-        "firstname": "Sana",
-        "lastname": "Shuja",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "ECE 310",
-          " ECE 360",
-          " ECE 355"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Sana.Shuja",
+          "email": "sanashuja@uvic.ca",
+          "password": "$2b$12$3HnBL8qQiamQYMODwR1SzuVbY8sknTCocB3u961d0vAfqqo78vHES",
+          "name": "Sana Shuja",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "ECE 310",
+              " ECE 360",
+              " ECE 355"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Mihai.Sima",
-        "email": "msima@ece.uvic.ca",
-        "password": "$2b$12$vmvTINjAWqU7R6TStVkwYe54pHtwGAcnF7wdWg/rXebGCPFj9Pb.G",
-        "firstname": "Mihai",
-        "lastname": "Sima",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          "SENG 440"
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Mihai.Sima",
+          "email": "msima@ece.uvic.ca",
+          "password": "$2b$12$ssAaV030/EbX090wVQc9NepvGacjcSOAN1KRURFSHiD8C6mh9Ws1e",
+          "name": "Mihai Sima",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              "SENG 440"
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Levi.Smith",
-        "email": "levismith@uvic.ca",
-        "password": "$2b$12$0pxl1F3V.MWljnghLgXzCuJXUPMShoBG7o01IeldkWmTVEWcPQWp.",
-        "firstname": "Levi",
-        "lastname": "Smith",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Levi.Smith",
+          "email": "levismith@uvic.ca",
+          "password": "$2b$12$F5UBbulOpOXyqUaTQUDxQelkcHB5qu2LyQ84SnglJFILc5Ng4I5N6",
+          "name": "Levi Smith",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Poman.So",
-        "email": "poman.so@uvic.ca",
-        "password": "$2b$12$t6B8Xq1Of.96ilUfvlD0d.4UwJDtu3Hndt56waxdOtjkzr0LgiZ82",
-        "firstname": "Poman",
-        "lastname": "So",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Poman.So",
+          "email": "poman.so@uvic.ca",
+          "password": "$2b$12$q4S.vXVgXg/OGHcipZJVrORsAbzFJ5r4k9PhJuTihMHVg7YgnBkgi",
+          "name": "Poman So",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Ilamparithi.Thirumarai Chelvan",
-        "email": "ilampari@uvic.ca",
-        "password": "$2b$12$wmZJ00wGkFgkwlF9UCW55uEtPRY2mtOL8OdKDXsjsxor7.MDtKhme",
-        "firstname": "Ilamparithi",
-        "lastname": "Thirumarai Chelvan",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Ilamparithi.Thirumarai Chelvan",
+          "email": "ilampari@uvic.ca",
+          "password": "$2b$12$RtfxmIwSJNP/SeNOMvS9i.CpRtlIqrIjvIXM55HJ/dEBVj2iqx/9m",
+          "name": "Ilamparithi Thirumarai Chelvan",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Issa.Traore",
-        "email": "itraore@ece.uvic.ca",
-        "password": "$2b$12$hsCwhVLHO1UYQJVCaHPZY.vZInUb9euC10JE2gun7U.SCYfTggole",
-        "firstname": "Issa",
-        "lastname": "Traore",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Issa.Traore",
+          "email": "itraore@ece.uvic.ca",
+          "password": "$2b$12$5HGyC1FBkz7hwWlZvDD7Werebnv74sq/mfKRphGXUFE1FuQV2fat.",
+          "name": "Issa Traore",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       },
       {
-        "username": "Hong-Chuan.Yang",
-        "email": "hy@uvic.ca",
-        "password": "$2b$12$GZ8vNkS.r5SUtniylzw.wu53l8Q4ItzAklKsHEznYSKRCR8oYNnXe",
-        "firstname": "Hong-Chuan",
-        "lastname": "Yang",
-        "peng": true,
-        "pref_approved": false,
-        "max_courses": 0,
-        "course_pref": [
-          ""
-        ],
-        "available": {
-          "F": [
-            [
-              "08:30",
-              "16:00"
-            ]
+          "username": "Hong-Chuan.Yang",
+          "email": "hy@uvic.ca",
+          "password": "$2b$12$oGmIgbMakdOIFZD2ct2iNe9/RGQNQmBvOQdGX5v.nKThiLYVbh7XC",
+          "name": "Hong-Chuan Yang",
+          "peng": true,
+          "pref_approved": false,
+          "max_courses": 6,
+          "course_pref": [
+              ""
           ],
-          "M": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "R": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "T": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ],
-          "W": [
-            [
-              "08:30",
-              "16:00"
-            ]
-          ]
-        }
+          "time_pref": {
+              "F": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "M": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "R": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "T": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ],
+              "W": [
+                  [
+                      "08:30",
+                      "16:00"
+                  ]
+              ]
+          }
       }
-    ],
-    "courses": [
+  ],
+  "courses": [
       {
-        "shorthand": "CSC 111",
-        "name": "Fundamentals of Programming with Engineering Applications",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
-      {
-        "shorthand": "ENGR 110",
-        "name": "Design and Communication I",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
-      {
-        "shorthand": "ENGR 130",
-        "name": "Introduction to Professional Practice",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
-      {
-        "shorthand": "MATH 100",
-        "name": "Calculus I",
-        "prerequisites": [
-          [
-            " \"\""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "MATH 109",
-        "name": "Introduction to Calculus",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "MATH 110",
-        "name": "Matrix Algebra for Engineers",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
-      {
-        "shorthand": "PHYS 110",
-        "name": "Introductory Physics I",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
-      {
-        "shorthand": "CSC 115",
-        "name": "Fundamentals of Programming II",
-        "prerequisites": [
-          [
-            "CSC110"
+          "course": "CSC111",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "CSC111"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
       },
       {
-        "shorthand": "ENGR 120",
-        "name": "Design and Communication II",
-        "prerequisites": [
-          [
-            "ENGR110",
-            "CSC111"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
-      },
-      {
-        "shorthand": "ENGR 141",
-        "name": "Engineering Mechanics",
-        "prerequisites": [
-          [
-            "MATH100",
-            "MATH110"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "MATH 101",
-        "name": "Calculus II",
-        "prerequisites": [
-          [
-            "MATH100"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "PHYS 111",
-        "name": "Introductory Physics II",
-        "prerequisites": [
-          [
-            "PHYS110"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "ECE 255",
-        "name": "Introduction to Computer Architecture",
-        "prerequisites": [
-          [
-            "CSC111"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
-      {
-        "shorthand": "CSC 230",
-        "name": "Introduction to Computer Architecture",
-        "prerequisites": [
-          [
-            "CSC115"
+          "course": "ENGR110",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "CSC116"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
       },
       {
-        "shorthand": "CHEM 101",
-        "name": "Fundamentals of Chemistry from Atoms to Materials",
-        "prerequisites": [
-          [
-            ""
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "ECE 260",
-        "name": "Continuous-Time Signals and Systems",
-        "prerequisites": [
-          [
-            "MATH101",
-            "MATH110"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "MATH 122",
-        "name": "Logic and Foundations",
-        "prerequisites": [
-          [
-            "MATH100"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "SENG 265",
-        "name": "Software Development Methods",
-        "prerequisites": [
-          [
-            "CSC115"
+          "course": "ENGR130",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "CSC116"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
       },
       {
-        "shorthand": "STAT 260",
-        "name": "Introduction to Probability and Statistics I",
-        "prerequisites": [
-          [
-            "MATH101"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "CSC 225",
-        "name": "Algorithms and Data Structures I",
-        "prerequisites": [
-          [
-            "CSC115",
-            "MATH122"
+          "course": "MATH100",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "CSC116",
-            "MATH122"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall. spring",
-          " summer"
-        ]
       },
       {
-        "shorthand": "ECE 310",
-        "name": "Digital Signal Processing I",
-        "prerequisites": [
-          [
-            "ECE260"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "ECON 180 ",
-        "name": "Introduction to Economics and Financial Project Evaluation",
-        "prerequisites": [
-          [
-            "MATH101"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "SENG 275",
-        "name": "Software Testing",
-        "prerequisites": [
-          [
-            "SENG265"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "SENG 310",
-        "name": "Human Computer Interaction",
-        "prerequisites": [
-          [
-            "SENG265"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "ECE 363",
-        "name": "Communication Networks",
-        "prerequisites": [
-          [
-            "ECE255"
+          "course": "MATH109",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "CSC230"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
       },
       {
-        "shorthand": "CSC 361",
-        "name": "Computer Communications and Networks",
-        "prerequisites": [
-          [
-            "SENG265",
-            "CSC230"
+          "course": "MATH110",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "SENG265",
-            "ECE255"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
       },
       {
-        "shorthand": "CSC 226",
-        "name": "Algorithms and Data Structures II",
-        "prerequisites": [
-          [
-            "CSC225"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "ECE 360",
-        "name": "Control Theory and Systems I",
-        "prerequisites": [
-          [
-            "ECE260"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
-      {
-        "shorthand": "SENG 321",
-        "name": "Requirements Engineering",
-        "prerequisites": [
-          [
-            "SENG265"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring"
-        ]
-      },
-      {
-        "shorthand": "SENG 371",
-        "name": "Software Evolution",
-        "prerequisites": [
-          [
-            "SENG275"
+          "course": "PHYS110",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "SENG321"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
       },
       {
-        "shorthand": "ECE 355",
-        "name": "Microprocessor-Based Systems",
-        "prerequisites": [
-          [
-            "MATH122",
-            "ECE255"
+          "course": "CSC115",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC110"
+              ],
+              [
+                  "CSC111"
+              ]
           ],
-          [
-            "MATH122",
-            "CSC230"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
       },
       {
-        "shorthand": "CSC 355",
-        "name": "Digital Logic and Computer Organization",
-        "prerequisites": [
-          [
-            "MATH122",
-            "ECE255"
+          "course": "ENGR120",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "ENGR110",
+                  "CSC111"
+              ]
           ],
-          [
-            "MATH122",
-            "CSC230"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
       },
       {
-        "shorthand": "CSC 320",
-        "name": "Foundations of Computer Science",
-        "prerequisites": [
-          [
-            "CSC226"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "CSC 360",
-        "name": "Operating Systems",
-        "prerequisites": [
-          [
-            "CSC225",
-            "SENG265",
-            "CSC230"
+          "course": "ENGR141",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH100",
+                  "MATH110"
+              ]
           ],
-          [
-            "CSC225",
-            "SENG265",
-            "ECE255"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
       },
       {
-        "shorthand": "CSC 370",
-        "name": "Database Systems",
-        "prerequisites": [
-          [
-            "CSC255",
-            "SENG265"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall",
-          " spring",
-          " summer"
-        ]
-      },
-      {
-        "shorthand": "SENG 350",
-        "name": "Software Architecture and Design",
-        "prerequisites": [
-          [
-            "SENG275"
-          ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
-      },
-      {
-        "shorthand": "SENG 360",
-        "name": "Security Engineering",
-        "prerequisites": [
-          [
-            "SENG265",
-            "ECE363"
+          "course": "MATH101",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH100"
+              ]
           ],
-          [
-            "SENG265",
-            "CSC361"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "fall"
-        ]
       },
       {
-        "shorthand": "SENG 426",
-        "name": "Software Quality Engineering",
-        "prerequisites": [
-          [
-            "SENG275",
-            "SENG321"
+          "course": "PHYS111",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "PHYS110"
+              ]
           ],
-          [
-            "SENG275",
-            "SENG371"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "summer"
-        ]
       },
       {
-        "shorthand": "SENG 440",
-        "name": "Embedded Systems",
-        "prerequisites": [
-          [
-            "ECE355"
+          "course": "ECE255",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC111"
+              ]
           ],
-          [
-            "CSC355"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "summer"
-        ]
       },
       {
-        "shorthand": "SENG 499",
-        "name": "Design Project II",
-        "prerequisites": [
-          [
-            "SENG350",
-            "CSC361",
-            "CSC370",
-            "SENG321"
+          "course": "CSC230",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC115"
+              ],
+              [
+                  "CSC116"
+              ]
           ],
-          [
-            "SENG350",
-            "ECE363",
-            "CSC370",
-            "SENG321"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "summer"
-        ]
       },
       {
-        "shorthand": "ECE 455",
-        "name": "Real Time Computer Systems Design Project",
-        "prerequisites": [
-          [
-            "CSC355"
+          "course": "CHEM101",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
           ],
-          [
-            "ECE355"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
       },
       {
-        "shorthand": "CSC 460",
-        "name": "Design and Analysis of Real-Time Systems",
-        "prerequisites": [
-          [
-            "CSC360",
-            "CSC355"
+          "course": "ECE260",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH101",
+                  "MATH110"
+              ]
           ],
-          [
-            "CSC360",
-            "ECE355"
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
       },
       {
-        "shorthand": "SENG 401",
-        "name": "Social and Professional Issues",
-        "prerequisites": [
-          [
-            ""
+          "course": "MATH122",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH100"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
           ]
-        ],
-        "corequisites": null,
-        "terms_offered": [
-          "spring"
-        ]
+      },
+      {
+          "course": "SENG265",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC115"
+              ],
+              [
+                  "CSC116"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "STAT260",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH101"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC225",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC115",
+                  "MATH122"
+              ],
+              [
+                  "CSC116",
+                  "MATH122"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "ECE310",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "ECE260"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "ECON180 ",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH101"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG275",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG265"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG310",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG265"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "ECE363",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "ECE255"
+              ],
+              [
+                  "CSC230"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC361",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG265",
+                  "CSC230"
+              ],
+              [
+                  "SENG265",
+                  "ECE255"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC226",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC225"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "ECE360",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "ECE260"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG321",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG265"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG371",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG275"
+              ],
+              [
+                  "SENG321"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "ECE355",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH122",
+                  "ECE255"
+              ],
+              [
+                  "MATH122",
+                  "CSC230"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC355",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "MATH122",
+                  "ECE255"
+              ],
+              [
+                  "MATH122",
+                  "CSC230"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC320",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC226"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC360",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC225",
+                  "SENG265",
+                  "CSC230"
+              ],
+              [
+                  "CSC225",
+                  "SENG265",
+                  "ECE255"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC370",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC255",
+                  "SENG265"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG350",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG275"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG360",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG265",
+                  "ECE363"
+              ],
+              [
+                  "SENG265",
+                  "CSC361"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG426",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG275",
+                  "SENG321"
+              ],
+              [
+                  "SENG275",
+                  "SENG371"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG440",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "ECE355"
+              ],
+              [
+                  "CSC355"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG499",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "SENG350",
+                  "CSC361",
+                  "CSC370",
+                  "SENG321"
+              ],
+              [
+                  "SENG350",
+                  "ECE363",
+                  "CSC370",
+                  "SENG321"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "ECE455",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC355"
+              ],
+              [
+                  "ECE355"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "CSC460",
+          "peng": false,
+          "prerequisites": [
+              [
+                  "CSC360",
+                  "CSC355"
+              ],
+              [
+                  "CSC360",
+                  "ECE355"
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
+      },
+      {
+          "course": "SENG401",
+          "peng": false,
+          "prerequisites": [
+              [
+                  ""
+              ]
+          ],
+          "corequisites": null,
+          "pre_enroll": 100,
+          "min_enroll": 5,
+          "hours": [
+              3,
+              0,
+              0
+          ]
       }
-    ],
-    "classrooms": [
+  ],
+  "classrooms": [
       {
-        "shorthand": "BWC",
-        "building": "BOB WRIGHT CENTRE",
-        "capacity": 140,
-        "room": "A104"
+          "building": "BWC",
+          "capacity": 140,
+          "room": "A104"
       },
       {
-        "shorthand": "BWC",
-        "building": "BOB WRIGHT CENTRE",
-        "capacity": 358,
-        "room": "B150"
+          "building": "BWC",
+          "capacity": 358,
+          "room": "B150"
       },
       {
-        "shorthand": "B&E",
-        "building": "BUSINESS AND ECONOMICS",
-        "capacity": 30,
-        "room": "363"
+          "building": "B\u0026E",
+          "capacity": 30,
+          "room": "363"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 24,
-        "room": "A118"
+          "building": "CLE",
+          "capacity": 24,
+          "room": "A118"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 105,
-        "room": "A127"
+          "building": "CLE",
+          "capacity": 105,
+          "room": "A127"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 59,
-        "room": "A207"
+          "building": "CLE",
+          "capacity": 59,
+          "room": "A207"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 43,
-        "room": "A208"
+          "building": "CLE",
+          "capacity": 43,
+          "room": "A208"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 32,
-        "room": "A216"
+          "building": "CLE",
+          "capacity": 32,
+          "room": "A216"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 31,
-        "room": "A217"
+          "building": "CLE",
+          "capacity": 31,
+          "room": "A217"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 22,
-        "room": "A221"
+          "building": "CLE",
+          "capacity": 22,
+          "room": "A221"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 86,
-        "room": "A224"
+          "building": "CLE",
+          "capacity": 86,
+          "room": "A224"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 35,
-        "room": "A225"
+          "building": "CLE",
+          "capacity": 35,
+          "room": "A225"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 12,
-        "room": "A308"
+          "building": "CLE",
+          "capacity": 12,
+          "room": "A308"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 30,
-        "room": "A312"
+          "building": "CLE",
+          "capacity": 30,
+          "room": "A312"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 46,
-        "room": "A313"
+          "building": "CLE",
+          "capacity": 46,
+          "room": "A313"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 47,
-        "room": "A317"
+          "building": "CLE",
+          "capacity": 47,
+          "room": "A317"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 45,
-        "room": "A320"
+          "building": "CLE",
+          "capacity": 45,
+          "room": "A320"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 21,
-        "room": "A325"
+          "building": "CLE",
+          "capacity": 21,
+          "room": "A325"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 23,
-        "room": "A326"
+          "building": "CLE",
+          "capacity": 23,
+          "room": "A326"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 30,
-        "room": "A329"
+          "building": "CLE",
+          "capacity": 30,
+          "room": "A329"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 22,
-        "room": "A330"
+          "building": "CLE",
+          "capacity": 22,
+          "room": "A330"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 20,
-        "room": "B215"
+          "building": "CLE",
+          "capacity": 20,
+          "room": "B215"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 20,
-        "room": "B315"
+          "building": "CLE",
+          "capacity": 20,
+          "room": "B315"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 20,
-        "room": "B415"
+          "building": "CLE",
+          "capacity": 20,
+          "room": "B415"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 32,
-        "room": "C108"
+          "building": "CLE",
+          "capacity": 32,
+          "room": "C108"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 35,
-        "room": "C109"
+          "building": "CLE",
+          "capacity": 35,
+          "room": "C109"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 42,
-        "room": "C110"
+          "building": "CLE",
+          "capacity": 42,
+          "room": "C110"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 28,
-        "room": "C111"
+          "building": "CLE",
+          "capacity": 28,
+          "room": "C111"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 69,
-        "room": "C112"
+          "building": "CLE",
+          "capacity": 69,
+          "room": "C112"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 28,
-        "room": "C113"
+          "building": "CLE",
+          "capacity": 28,
+          "room": "C113"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 30,
-        "room": "C115"
+          "building": "CLE",
+          "capacity": 30,
+          "room": "C115"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 12,
-        "room": "C116"
+          "building": "CLE",
+          "capacity": 12,
+          "room": "C116"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 12,
-        "room": "C118"
+          "building": "CLE",
+          "capacity": 12,
+          "room": "C118"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 22,
-        "room": "C214"
+          "building": "CLE",
+          "capacity": 22,
+          "room": "C214"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 20,
-        "room": "C316"
+          "building": "CLE",
+          "capacity": 20,
+          "room": "C316"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 27,
-        "room": "D125"
+          "building": "CLE",
+          "capacity": 27,
+          "room": "D125"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 30,
-        "room": "D126"
+          "building": "CLE",
+          "capacity": 30,
+          "room": "D126"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 21,
-        "room": "D130"
+          "building": "CLE",
+          "capacity": 21,
+          "room": "D130"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 27,
-        "room": "D131"
+          "building": "CLE",
+          "capacity": 27,
+          "room": "D131"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 36,
-        "room": "D132"
+          "building": "CLE",
+          "capacity": 36,
+          "room": "D132"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 21,
-        "room": "D134"
+          "building": "CLE",
+          "capacity": 21,
+          "room": "D134"
       },
       {
-        "shorthand": "CLE",
-        "building": "CLEARIHUE",
-        "capacity": 14,
-        "room": "D285"
+          "building": "CLE",
+          "capacity": 14,
+          "room": "D285"
       },
       {
-        "shorthand": "CON",
-        "building": "CONTINUING STUDIES",
-        "capacity": 20,
-        "room": "20"
+          "building": "CON",
+          "capacity": 20,
+          "room": "20"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 81,
-        "room": "A120"
+          "building": "COR",
+          "capacity": 81,
+          "room": "A120"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 71,
-        "room": "A121"
+          "building": "COR",
+          "capacity": 71,
+          "room": "A121"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 65,
-        "room": "A125"
+          "building": "COR",
+          "capacity": 65,
+          "room": "A125"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 32,
-        "room": "A128"
+          "building": "COR",
+          "capacity": 32,
+          "room": "A128"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 61,
-        "room": "A129"
+          "building": "COR",
+          "capacity": 61,
+          "room": "A129"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 14,
-        "room": "A132"
+          "building": "COR",
+          "capacity": 14,
+          "room": "A132"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 93,
-        "room": "A221"
+          "building": "COR",
+          "capacity": 93,
+          "room": "A221"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 64,
-        "room": "S225"
+          "building": "COR",
+          "capacity": 64,
+          "room": "S225"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 62,
-        "room": "A229"
+          "building": "COR",
+          "capacity": 62,
+          "room": "A229"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 60,
-        "room": "B107"
+          "building": "COR",
+          "capacity": 60,
+          "room": "B107"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 71,
-        "room": "B108"
+          "building": "COR",
+          "capacity": 71,
+          "room": "B108"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 50,
-        "room": "B111"
+          "building": "COR",
+          "capacity": 50,
+          "room": "B111"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 71,
-        "room": "B112"
+          "building": "COR",
+          "capacity": 71,
+          "room": "B112"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 67,
-        "room": "B129"
+          "building": "COR",
+          "capacity": 67,
+          "room": "B129"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 80,
-        "room": "B135"
+          "building": "COR",
+          "capacity": 80,
+          "room": "B135"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 77,
-        "room": "B143"
+          "building": "COR",
+          "capacity": 77,
+          "room": "B143"
       },
       {
-        "shorthand": "COR",
-        "building": "CORNETT",
-        "capacity": 36,
-        "room": "B145"
+          "building": "COR",
+          "capacity": 36,
+          "room": "B145"
       },
       {
-        "shorthand": "CUN",
-        "building": "CUNNINGHAM",
-        "capacity": 58,
-        "room": "146"
+          "building": "CUN",
+          "capacity": 58,
+          "room": "146"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 45,
-        "room": "C108"
+          "building": "DSB",
+          "capacity": 45,
+          "room": "C108"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 20,
-        "room": "C114"
+          "building": "DSB",
+          "capacity": 20,
+          "room": "C114"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 64,
-        "room": "C116"
+          "building": "DSB",
+          "capacity": 64,
+          "room": "C116"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 74,
-        "room": "C118"
+          "building": "DSB",
+          "capacity": 74,
+          "room": "C118"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 64,
-        "room": "C122"
+          "building": "DSB",
+          "capacity": 64,
+          "room": "C122"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 20,
-        "room": "C124"
+          "building": "DSB",
+          "capacity": 20,
+          "room": "C124"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 35,
-        "room": "C126"
+          "building": "DSB",
+          "capacity": 35,
+          "room": "C126"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 35,
-        "room": "C128"
+          "building": "DSB",
+          "capacity": 35,
+          "room": "C128"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID F. STRONG BUILDING",
-        "capacity": 35,
-        "room": "C130"
+          "building": "DSB",
+          "capacity": 35,
+          "room": "C130"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID TURPIN BUILDING",
-        "capacity": 110,
-        "room": "A102"
+          "building": "DSB",
+          "capacity": 110,
+          "room": "A102"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID TURPIN BUILDING",
-        "capacity": 110,
-        "room": "A104"
+          "building": "DSB",
+          "capacity": 110,
+          "room": "A104"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID TURPIN BUILDING",
-        "capacity": 140,
-        "room": "A110"
+          "building": "DSB",
+          "capacity": 140,
+          "room": "A110"
       },
       {
-        "shorthand": "DSB",
-        "building": "DAVID TURPIN BUILDING",
-        "capacity": 250,
-        "room": "A120"
+          "building": "DSB",
+          "capacity": 250,
+          "room": "A120"
       },
       {
-        "shorthand": "DSB",
-        "building": "DSB MATTHEWS/MCQUEEN THEATRE",
-        "capacity": 186,
-        "room": "C103"
+          "building": "DSB",
+          "capacity": 186,
+          "room": "C103"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 68,
-        "room": "60"
+          "building": "ELL",
+          "capacity": 68,
+          "room": "60"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 68,
-        "room": "61"
+          "building": "ELL",
+          "capacity": 68,
+          "room": "61"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 80,
-        "room": "62"
+          "building": "ELL",
+          "capacity": 80,
+          "room": "62"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 48,
-        "room": "160"
+          "building": "ELL",
+          "capacity": 48,
+          "room": "160"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 24,
-        "room": "161"
+          "building": "ELL",
+          "capacity": 24,
+          "room": "161"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 54,
-        "room": "162"
+          "building": "ELL",
+          "capacity": 54,
+          "room": "162"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 148,
-        "room": "167"
+          "building": "ELL",
+          "capacity": 148,
+          "room": "167"
       },
       {
-        "shorthand": "ELL",
-        "building": "ELLIOTT",
-        "capacity": 180,
-        "room": "168"
+          "building": "ELL",
+          "capacity": 180,
+          "room": "168"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 60,
-        "room": "104"
+          "building": "ECS",
+          "capacity": 60,
+          "room": "104"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 60,
-        "room": "108"
+          "building": "ECS",
+          "capacity": 60,
+          "room": "108"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 117,
-        "room": "116"
+          "building": "ECS",
+          "capacity": 117,
+          "room": "116"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 299,
-        "room": "123"
+          "building": "ECS",
+          "capacity": 299,
+          "room": "123"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 78,
-        "room": "124"
+          "building": "ECS",
+          "capacity": 78,
+          "room": "124"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 151,
-        "room": "125"
+          "building": "ECS",
+          "capacity": 151,
+          "room": "125"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 18,
-        "room": "128"
+          "building": "ECS",
+          "capacity": 18,
+          "room": "128"
       },
       {
-        "shorthand": "ECS",
-        "building": "ENGINEERING/COMPUTER SCIE",
-        "capacity": 34,
-        "room": "130"
+          "building": "ECS",
+          "capacity": 34,
+          "room": "130"
       },
       {
-        "shorthand": "FIN",
-        "building": "FINE ARTS BUILDING",
-        "capacity": 50,
-        "room": "103"
+          "building": "FIN",
+          "capacity": 50,
+          "room": "103"
       },
       {
-        "shorthand": "FIN",
-        "building": "FINE ARTS BUILDING",
-        "capacity": 28,
-        "room": "104"
+          "building": "FIN",
+          "capacity": 28,
+          "room": "104"
       },
       {
-        "shorthand": "FIN",
-        "building": "FINE ARTS BUILDING",
-        "capacity": 20,
-        "room": "209"
+          "building": "FIN",
+          "capacity": 20,
+          "room": "209"
       },
       {
-        "shorthand": "FRA",
-        "building": "FRASER",
-        "capacity": 284,
-        "room": "159"
+          "building": "FRA",
+          "capacity": 284,
+          "room": "159"
       },
       {
-        "shorthand": "HCK",
-        "building": "HICKMAN",
-        "capacity": 215,
-        "room": "105"
+          "building": "HCK",
+          "capacity": 215,
+          "room": "105"
       },
       {
-        "shorthand": "HCK",
-        "building": "HICKMAN",
-        "capacity": 46,
-        "room": "110"
+          "building": "HCK",
+          "capacity": 46,
+          "room": "110"
       },
       {
-        "shorthand": "HCK",
-        "building": "HICKMAN",
-        "capacity": 40,
-        "room": "116"
+          "building": "HCK",
+          "capacity": 40,
+          "room": "116"
       },
       {
-        "shorthand": "HSD",
-        "building": "HUMAN&SOCIAL DEVLPMNT",
-        "capacity": 154,
-        "room": "A240"
+          "building": "HSD",
+          "capacity": 154,
+          "room": "A240"
       },
       {
-        "shorthand": "HSD",
-        "building": "HUMAN&SOCIAL DEVLPMNT",
-        "capacity": 24,
-        "room": "A250"
+          "building": "HSD",
+          "capacity": 24,
+          "room": "A250"
       },
       {
-        "shorthand": "HSD",
-        "building": "HUMAN&SOCIAL DEVLPMNT",
-        "capacity": 30,
-        "room": "A264"
+          "building": "HSD",
+          "capacity": 30,
+          "room": "A264"
       },
       {
-        "shorthand": "HSD",
-        "building": "HUMAN&SOCIAL DEVLPMNT",
-        "capacity": 30,
-        "room": "A270"
+          "building": "HSD",
+          "capacity": 30,
+          "room": "A270"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 317,
-        "room": "A144"
+          "building": "MAC",
+          "capacity": 317,
+          "room": "A144"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 16,
-        "room": "A326"
+          "building": "MAC",
+          "capacity": 16,
+          "room": "A326"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 45,
-        "room": "D010"
+          "building": "MAC",
+          "capacity": 45,
+          "room": "D010"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 40,
-        "room": "D016"
+          "building": "MAC",
+          "capacity": 40,
+          "room": "D016"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 36,
-        "room": "D101"
+          "building": "MAC",
+          "capacity": 36,
+          "room": "D101"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 36,
-        "room": "D103"
+          "building": "MAC",
+          "capacity": 36,
+          "room": "D103"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 17,
-        "room": "D105"
+          "building": "MAC",
+          "capacity": 17,
+          "room": "D105"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 15,
-        "room": "D107"
+          "building": "MAC",
+          "capacity": 15,
+          "room": "D107"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 20,
-        "room": "D109"
+          "building": "MAC",
+          "capacity": 20,
+          "room": "D109"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 47,
-        "room": "D110"
+          "building": "MAC",
+          "capacity": 47,
+          "room": "D110"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 29,
-        "room": "D111"
+          "building": "MAC",
+          "capacity": 29,
+          "room": "D111"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 37,
-        "room": "D114"
+          "building": "MAC",
+          "capacity": 37,
+          "room": "D114"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 60,
-        "room": "D115"
+          "building": "MAC",
+          "capacity": 60,
+          "room": "D115"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 59,
-        "room": "D116"
+          "building": "MAC",
+          "capacity": 59,
+          "room": "D116"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 34,
-        "room": "D203"
+          "building": "MAC",
+          "capacity": 34,
+          "room": "D203"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 79,
-        "room": "D207"
+          "building": "MAC",
+          "capacity": 79,
+          "room": "D207"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 55,
-        "room": "D283"
+          "building": "MAC",
+          "capacity": 55,
+          "room": "D283"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 40,
-        "room": "D287"
+          "building": "MAC",
+          "capacity": 40,
+          "room": "D287"
       },
       {
-        "shorthand": "MAC",
-        "building": "MACLAURIN",
-        "capacity": 79,
-        "room": "D288"
+          "building": "MAC",
+          "capacity": 79,
+          "room": "D288"
       },
       {
-        "shorthand": "MCK",
-        "building": "MCKINNON",
-        "capacity": 107,
-        "room": "150"
+          "building": "MCK",
+          "capacity": 107,
+          "room": "150"
       },
       {
-        "shorthand": "MCK",
-        "building": "MCKINNON",
-        "capacity": 38,
-        "room": "155"
+          "building": "MCK",
+          "capacity": 38,
+          "room": "155"
       }
-    ],
-    "capacity": [
-      {
-        "estimates": null
-      }
-    ]
-  }
+  ]
+}

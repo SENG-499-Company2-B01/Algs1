@@ -379,7 +379,7 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
                     for class_id, time_id in cat_solution['class_timeslots'].items():
                         cat_solution['class_timeslots'][class_id] = cat_copies[cat_num]['position'][2][class_id]
 
-                    print(cat_solution)
+                    #print(cat_solution)
                     time.sleep(2)
                     cat_solution['fitness'] = evaluate_fitness(cat_solution, professors, classes, rooms, time_blocks)
                     cat_solutions.append(cat_solution)

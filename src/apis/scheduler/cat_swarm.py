@@ -504,9 +504,10 @@ def time_in_range(start, end, x):
 def main(input_profs, input_courses, input_classrooms):
 
     population_size = 25
-    max_iterations = 500
+    #max_iterations = 500
+    max_iterations = 100
 
-    with open('time_blocks.json') as f:
+    with open('/app/time_blocks.json') as f:
         data = f.read()
         input_timeblocks = json.loads(data)
     #convert input_profs time_pref to time_block
@@ -559,7 +560,7 @@ def main(input_profs, input_courses, input_classrooms):
             room_seats = input_classrooms[room_num]["capacity"]
             
             time_letter = best_solution['class_timeslots'][i]
-            time_letter = chr(ord('@')+int(time_letter))
+            time_letter = chr(ord("@")+int(time_letter))
             for key in input_timeblocks[time_letter].keys():
                 days.append(key)
             start_time = input_timeblocks[time_letter][days[0]]["start"]

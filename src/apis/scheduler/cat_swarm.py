@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import numpy as np
 import heapq
 import math
+import time
 #Punishments
 VERY_LOW_VALUE = -50000
 ROOM_TOO_SMALL_PUNISHMENT = -10000
@@ -21,7 +22,7 @@ PROF_PENG_CLASS_REQ_PENG = 20
 
 def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
     assigned_class = classes[class_id]
-    print(room_id)
+    #print(room_id)
     assigned_room = rooms[room_id]
     # Check if the room capacity is sufficient
     # print(assigned_room['capacity'])
@@ -64,7 +65,7 @@ def prof_maximum_courses_exceeded_constraint(professor, professor_assignments, p
     
     if count_of_course_assignments > max_course_val and max_course_val > 0:
         fitness += PROFESSOR_MAXIMUM_COURSES_EXCEEDED_PUNISHMENT
-        print(3)
+        #print(3)
     return fitness
 
 def corequisite_coschedule_constraint(class_id, time_block, classes, class_timeslots, fitness):
@@ -84,7 +85,7 @@ def corequisite_coschedule_constraint(class_id, time_block, classes, class_times
 
             if corequisite_time_block == time_block:
                 fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
-                print(4)
+                #print(4)
     return fitness
 
 def prof_timepref_constraint(professor, class_timeslots, class_id, time_blocks,fitness):
@@ -104,7 +105,7 @@ def prof_peng_constraint(professor, assigned_class, fitness):
     
     if assigned_class["peng"] == True and professor["peng"] == False:
         fitness += PROF_NOT_PENG_CLASS_REQ_PENG
-        print(6)
+        #print(6)
     elif assigned_class["peng"] == True and professor["peng"] == True:
         fitness += PROF_PENG_CLASS_REQ_PENG
     return fitness
@@ -114,13 +115,18 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
     professor_assignments = solution['professor_assignments']
     room_assignments = solution['room_assignments']
     class_timeslots = solution['class_timeslots']
-    
+    # print(solution)
+    # print(professors)
+    # print(professors[0])
+    #print(rooms)
+    # time.sleep(5)
     # Initialize fitness score
     fitness = 0
     
     # Evaluate professor assignments
     for class_id, professor_id in professor_assignments.items():
-        print(professor_id)
+        #print(professor_id)
+
         professor = professors[professor_id]
         assigned_class = classes[class_id]
         
@@ -136,7 +142,7 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
 
         fitness = preferred_course_match(professor, assigned_class, fitness)
 
-        fitness = prof_maximum_courses_exceeded_constraint(professor=professor, professor_assignments=professor_assignments ,professor_id=professor_id, fitness=fitness)
+        fitness = prof_maximum_courses_exceeded_constraint(professor, professor_assignments ,professor_id, fitness)
                 
         # Increment fitness for course below max limit
         res = 0
@@ -149,6 +155,10 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
 
     # Evaluate room assignments
     for class_id, room_id in room_assignments.items():
+        #print(room_id)
+    
+        #print(rooms[room_id])
+        #time.sleep(5)
         fitness = fitness_room_assignments(classes, rooms, class_id, room_id, fitness)    
     
     #Evaluate time_block Assignments
@@ -193,7 +203,7 @@ def update_cat_position(cat, population, best_solution, c1, c2, w, max_prof_rang
         #print(cat['velocity'][i])
         #cat['velocity'][i] = w * cat['velocity'][i] + c1 * r1 * (cat['best_position'][i] - cat['position'][i]) + c2 * r2 * (best_solution['best_position'][i] - cat['position'][i]) #best_solution['position'][i]
         for j in range(len(cat['position'][i])):
-            print(cat['velocity'][i][j])
+            #print(cat['velocity'][i][j])
             cat['velocity'][i][j] = w * cat['velocity'][i][j] + c1 * r1 * (best_solution['best_position'][i][j] - cat['position'][i][j]) #best_solution['position'][i]
 
             
@@ -201,8 +211,9 @@ def update_cat_position(cat, population, best_solution, c1, c2, w, max_prof_rang
             #     cat['velocity'][i] = 1
             # elif cat['velocity'][i] > -1 and cat['velocity'][i] < 0:
             #     cat['velocity'][i] = -1
-            range_val = int(0.2*ranges[i])
-            cat['velocity'][i][j] = [max(min(number, range_val), -range_val) for number in cat['velocity'][i][j]]
+            range_val = (0.2*ranges[i])
+            #cat['velocity'][i][j] = [max(min(number, range_val), -range_val) for number in list(cat['velocity'][i])]
+            cat['velocity'][i] = np.clip(cat['velocity'][i], -range_val, range_val).tolist()
             cat['position'][i][j] = round(cat['position'][i][j] + cat['velocity'][i][j])
             #print(cat['velocity'][i])
             #Apply boundary constraints if needed
@@ -221,18 +232,18 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
     cats = []
     best_cats = []
     best_solutions = {}    
-    max_class_range = len(classes) -1
-    max_prof_range = len(professors) -1
-    max_room_range = len(rooms)-1
+    max_class_range = len(classes) 
+    max_prof_range = len(professors) -1 
+    max_room_range = len(rooms) -1
     max_timeblock_range = len(time_blocks)-1
-    
+    ranges = [max_prof_range, max_room_range, max_timeblock_range]
     dim = 3 #dimention of solution
     swarm_size = population_size  # Number of cats in the swarm
     c1 = 1  # Cognitive parameter
     c2 = 1.5 # Social parameter
     w = 0.5   # Inertia weight
     spc = True #self-position considering
-    smp = 5 #seeking memory pool
+    smp = 3 #seeking memory pool
     cdc = 1 #counts of dimension to change 80% maybe
     srd = 0.2 #seeking range of the selected dimension
     mr = 10 #number of cats that hunt 
@@ -353,20 +364,23 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
                         tmp = random.randint(0, dim-1)
                         
                         for posi in range(len(cat_copies[cat_num]['position'][tmp])):
-                            #print(cat_copies[cat_num]['position'][tmp][posi])
+                        
                             cat_copies[cat_num]['position'][tmp][posi] = int(cat_copies[cat_num]['position'][tmp][posi] + (cat_copies[cat_num]['position'][tmp][posi] * random.choice([-1,1]) * srd))
-
+                            cat_copies[cat_num]['position'][tmp] = np.clip(cat_copies[cat_num]['position'][tmp], 0, ranges[tmp]).tolist()
+                            # print(cat_copies[cat_num]['position'][tmp])
                 
                 
                     cat_solution = copy.deepcopy(population[i])
-                    for pos in range(max_class_range):
-                        for class_id, professor_id in cat_solution['professor_assignments'].items():
-                            cat_solution['professor_assignments'][class_id] = cat_copies[cat_num]['position'][0][pos]
-                        for class_id, room_id in cat_solution['room_assignments'].items():
-                            cat_solution['room_assignments'][class_id] = cat_copies[cat_num]['position'][1][pos]
-                        for class_id, time_id in cat_solution['class_timeslots'].items():
-                            cat_solution['class_timeslots'][class_id] = cat_copies[cat_num]['position'][2][pos]
-                
+                    #for pos in range(max_class_range):
+                    for class_id, professor_id in cat_solution['professor_assignments'].items():
+                        cat_solution['professor_assignments'][class_id] = cat_copies[cat_num]['position'][0][class_id]
+                    for class_id, room_id in cat_solution['room_assignments'].items():
+                        cat_solution['room_assignments'][class_id] = cat_copies[cat_num]['position'][1][class_id]
+                    for class_id, time_id in cat_solution['class_timeslots'].items():
+                        cat_solution['class_timeslots'][class_id] = cat_copies[cat_num]['position'][2][class_id]
+
+                    print(cat_solution)
+                    time.sleep(2)
                     cat_solution['fitness'] = evaluate_fitness(cat_solution, professors, classes, rooms, time_blocks)
                     cat_solutions.append(cat_solution)
                 
@@ -417,17 +431,19 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
             else:
                 cat_solution2 = {}
                 # Update position and velocity for each cat
+                # print(best_cats[0])
+                # time.sleep(5)
                 cat = update_cat_position(cat, population, best_cats[0], cc1, cc1, ww, max_prof_range, max_room_range, max_timeblock_range)
                 
                 
                 cat_solution2 = copy.deepcopy(population[i])
-                for pos in range(max_class_range):
-                    for class_id, professor_id in cat_solution2['professor_assignments'].items():
-                        cat_solution2['professor_assignments'][class_id] = cat['position'][0][pos]
-                    for class_id, room_id in cat_solution2['room_assignments'].items():
-                        cat_solution2['room_assignments'][class_id] = cat['position'][1][pos]
-                    for class_id, time_id in cat_solution2['class_timeslots'].items():
-                        cat_solution2['class_timeslots'][class_id] = cat['position'][2][pos]
+                #for pos in range(max_class_range):
+                for class_id, professor_id in cat_solution2['professor_assignments'].items():
+                    cat_solution2['professor_assignments'][class_id] = cat['position'][0][class_id]
+                for class_id, room_id in cat_solution2['room_assignments'].items():
+                    cat_solution2['room_assignments'][class_id] = cat['position'][1][class_id]
+                for class_id, time_id in cat_solution2['class_timeslots'].items():
+                    cat_solution2['class_timeslots'][class_id] = cat['position'][2][class_id]
             
                 cat_solution2['fitness'] = evaluate_fitness(cat_solution2, professors, classes, rooms, time_blocks)
                 
@@ -463,7 +479,7 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
                 #         population[int(cat['position'][0])] = new_solution
             
             cats[i]['position'] = cat['position']
-
+            i += 1
             
         #ww = w + (max_iterations - iteration) / (2 * max_iterations)
         #cc1 = c1 - (max_iterations - iteration) / (2 * max_iterations)

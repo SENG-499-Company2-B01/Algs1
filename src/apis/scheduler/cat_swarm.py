@@ -505,7 +505,7 @@ def main(input_profs, input_courses, input_classrooms):
 
     population_size = 25
     #max_iterations = 500
-    max_iterations = 100
+    max_iterations = 20
 
     with open('/app/time_blocks.json') as f:
         data = f.read()
@@ -569,8 +569,8 @@ def main(input_profs, input_courses, input_classrooms):
             section_dict['num'] = section
             section_dict['building'] = building
             section_dict['room'] = room
-            section_dict['num_seats'] = room_seats
-            section_dict['num_enroll'] = pre_enroll
+            section_dict['num_seats'] = pre_enroll
+            section_dict['num_enroll'] = room_seats
             section_dict['professor'] = prof
             section_dict['days'] = days
             section_dict['start_time'] = start_time

@@ -380,7 +380,7 @@ def cat_swarm_optimization(professors, classes, rooms, time_blocks, population_s
                         cat_solution['class_timeslots'][class_id] = cat_copies[cat_num]['position'][2][class_id]
 
                     #print(cat_solution)
-                    time.sleep(2)
+                    #time.sleep(2)
                     cat_solution['fitness'] = evaluate_fitness(cat_solution, professors, classes, rooms, time_blocks)
                     cat_solutions.append(cat_solution)
                 
@@ -559,6 +559,7 @@ def main(input_profs, input_courses, input_classrooms):
             room_seats = input_classrooms[room_num]["capacity"]
             
             time_letter = best_solution['class_timeslots'][i]
+            time_letter = chr(ord('@')+int(time_letter))
             for key in input_timeblocks[time_letter].keys():
                 days.append(key)
             start_time = input_timeblocks[time_letter][days[0]]["start"]

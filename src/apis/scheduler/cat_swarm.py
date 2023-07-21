@@ -17,6 +17,7 @@ PROF_NOT_PENG_CLASS_REQ_PENG = -500
 
 #Rewards
 PROFESSOR_PREFERRED_COURSE_MATCH_REWARD = 5
+PREREQ_SAME_TIME_REWARD = 10
 PROFESSOR_PREFERRED_TIMEBLOCK = 5
 PROF_PENG_CLASS_REQ_PENG = 20
 
@@ -33,7 +34,7 @@ def fitness_room_assignments(classes, rooms, class_id, room_id, fitness):
     else:
         fitness += 1
     return fitness
-
+                    
 # Moving Dylan's preferred courses fitness function to a separate function
 def preferred_course_match(professor, assigned_class, fitness):
     # Increment fitness for each preferred course assigned
@@ -85,7 +86,6 @@ def corequisite_coschedule_constraint(class_id, time_block, classes, class_times
 
             if corequisite_time_block == time_block:
                 fitness += COREQUISITE_COSCHEDULE_CONSTRAINT_PUNISHMENT
-                #print(4)
     return fitness
 
 def prof_timepref_constraint(professor, class_timeslots, class_id, time_blocks,fitness):
@@ -99,7 +99,17 @@ def prof_timepref_constraint(professor, class_timeslots, class_id, time_blocks,f
         fitness += PROFESSOR_UNAVAILABLE_TIMEBLOCK
         #print(5)
     return fitness
-    
+
+def fitness_prerequisites(classes,class_timeslots, class_id, fitness):
+    assigned_class = classes[class_id]
+    for group in assigned_class["prerequisites"]:
+        for pq in group:
+            prereq = next((i for i, item in enumerate(classes) if item["course"].replace(" ","") == pq.replace(" ","")), None)
+            if prereq != None:
+                if class_timeslots[prereq] == class_timeslots[class_id]:
+                    fitness += PREREQ_SAME_TIME_REWARD
+    return fitness
+
 #fitness function if a course requires a peng and check to see if professor has peng
 def prof_peng_constraint(professor, assigned_class, fitness):
     
@@ -166,6 +176,7 @@ def evaluate_fitness(solution, professors, classes, rooms, time_blocks):
         time_block_num = class_timeslots[class_id]
         time_block_letter = chr(ord('@')+int(time_block_num))
         fitness = corequisite_coschedule_constraint(class_id, time_block_letter, classes, class_timeslots, fitness)
+        fitness = fitness_prerequisites(classes,class_timeslots,class_id,fitness)
 
     # Evaluate prof's clash fitness
     # list(set()) just returns the unique values in a list.

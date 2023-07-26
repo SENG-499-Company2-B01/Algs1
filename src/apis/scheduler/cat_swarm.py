@@ -39,8 +39,8 @@ def preferred_course_match(professor, assigned_class, fitness):
     # Increment fitness for each preferred course assigned
     has_pref_flag = 0
     for course in professor['course_pref']:
-        #if course.replace(" ", "") == assigned_class['course']:
-        if course == assigned_class['course']:
+        # if course.replace(" ", "") == assigned_class['course']:
+        if course.strip() == assigned_class['course']:
             has_pref_flag = 1
                 
     if has_pref_flag == 1:
@@ -504,7 +504,7 @@ def time_in_range(start, end, x):
 def main(input_profs, input_courses, input_classrooms):
 
     population_size = 25
-    #max_iterations = 500
+    # max_iterations = 300
     max_iterations = 20
 
     with open('/app/time_blocks.json') as f:

@@ -22,3 +22,16 @@ def generate(request):
         return Response(schedule, status=status.HTTP_200_OK)
     except Exception as e:
         return Response(e, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['POST'])
+def schedule(request):
+        algs1_request = request.data
+        professors = algs1_request["professors"]
+        courses = algs1_request["courses"]
+        classrooms = algs1_request["classrooms"]
+
+        scheduled_courses = main(professors, courses, classrooms)
+        schedule = {
+            "schedule": scheduled_courses
+        }
+        return Response(schedule, status=status.HTTP_200_OK)

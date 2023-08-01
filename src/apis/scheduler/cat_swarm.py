@@ -471,6 +471,8 @@ def main(input_profs, input_courses, input_classrooms):
             room_seats = input_classrooms[room_num]["capacity"]
             
             time_letter = best_solution['class_timeslots'][i]
+            if int(time_letter) == 0:
+                time_letter = 1
             time_letter = chr(ord("@")+int(time_letter))
             for key in input_timeblocks[time_letter].keys():
                 days.append(key)

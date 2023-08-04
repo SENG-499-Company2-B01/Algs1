@@ -1,4 +1,5 @@
 #from django.shortcuts import render
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
@@ -21,10 +22,14 @@ def generate(request):
         }
         return Response(schedule, status=status.HTTP_200_OK)
     except Exception as e:
-        return Response(e, status=status.HTTP_400_BAD_REQUEST)
+        response = {
+            "error": str(e)
+        }
+        return JsonResponse(response, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 @api_view(['POST'])
 def schedule(request):
+    try:
         algs1_request = request.data
         professors = algs1_request["professors"]
         courses = algs1_request["courses"]
@@ -35,3 +40,8 @@ def schedule(request):
             "schedule": scheduled_courses
         }
         return Response(schedule, status=status.HTTP_200_OK)
+    except Exception as e:
+        response = {
+            "error": str(e)
+        }
+        return JsonResponse(response, status=status.HTTP_422_UNPROCESSABLE_ENTITY)

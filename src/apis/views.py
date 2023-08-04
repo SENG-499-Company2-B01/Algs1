@@ -42,6 +42,6 @@ def schedule(request):
         return Response(schedule, status=status.HTTP_200_OK)
     except Exception as e:
         response = {
-            "error": e
+            "error": str(e)
         }
         return JsonResponse(response, status=status.HTTP_422_UNPROCESSABLE_ENTITY)

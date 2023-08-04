@@ -31,11 +31,11 @@ def generate(request):
 def schedule(request):
     try:
         algs1_request = request.data
-        users = algs1_request["users"]
+        professors = algs1_request["professors"]
         courses = algs1_request["courses"]
         classrooms = algs1_request["classrooms"]
 
-        scheduled_courses = main(users, courses, classrooms)
+        scheduled_courses = main(professors, courses, classrooms)
         schedule = {
             "schedule": scheduled_courses
         }
